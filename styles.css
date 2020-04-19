@@ -3,6 +3,7 @@ body {
     margin: 0px;
 }
 
+/* sContainer class holding main display view */
 .container {
     display: grid;
     grid-template-columns: 100%;
