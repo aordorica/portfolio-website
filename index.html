@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Alan's Portfolio Site</title>
+
+    <link rel="stylesheet" href="css/superslides.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="navigation_wrapper">
-            <div class="left_side">
-                <div class="nav_link_wrapper">
-                    <a href="index.html">Home</a>
-                </div>
 
-                <div class="nav_link_wrapper">
-                    <a href="about.html ">About</a>
-                </div>
-            </div>
+    <!-- Code to implement superslides images -->
+    <div id="slides">
 
-            <div class="right_side">
-                <div class="brand_name">
-                    <div>ALAN ORDORICA</div>
-                </div>
+        <div class= "overlay"></div>
+
+        <!-- Slides images -->
+        <div class="slides-container">
+            <img src="images/TankWars_StartScreen.jpg" alt="">
+            <img src="images/infinity_board.jpeg" alt="">
+            <img src="images/lake.jpg" alt="">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <nav class="slides-navigation">
+            <a href="#" class="next"></a>
+            <a href="#" class="prev"></a>
+        </nav>
+
+        <div class="titleMessage">
+            <div class="heading">
+                <p class="main">ALAN ORDORICA</p>
+                <P class="sub-head">Software Engineer</P>
             </div>
         </div>
+    </div>
+
+    <!-- Inlude superslides JS script files -->
+    <script src="js/jquery.superslides.min.js "></script>
+
+    <!-- Include popper JS script -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <!-- /* JS script to import Bootstrap JS file*/ -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- /* Include script.js file*/ -->
+    <script src="js/script.js"></script>
 
 </body>
 
