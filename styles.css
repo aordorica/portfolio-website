@@ -1,0 +1,40 @@
+
+body {
+    margin: 0px;
+}
+
+/* sContainer class holding main display view */
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.navigation_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left_side {
+    display: flex;
+}
+
+.navigation_wrapper > .left_side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav_link_wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav_link_wrapper :hover {
+    border-bottom: 1px solid black ;
+}
+
+.nav_link_wrapper a:hover {
+    color: black
+}
