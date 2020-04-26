@@ -5,3 +5,13 @@ $(document).ready(function () {
         pagination: false
     });
 });
+
+var options = {
+    strings: ['Computer Engineer.', 'Web Developer.', 'Student'],
+    typeSpeed: 70,
+    showCursor: false,
+    loop: true,
+    startDelay: 1000
+};
+
+var typed = new Typed('.typed', options);
