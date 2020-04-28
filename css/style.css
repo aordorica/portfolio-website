@@ -26,7 +26,7 @@
 
 .slides-navigation a.prev {
     left: 20px;
-    background-image: url(../images/icons/back.png);
+    background-image: url(../images/icons/prev.png);
 
 }
 
@@ -64,6 +64,10 @@
 
 .section {
 	padding: 100px 0;
+}
+
+.skillsSection {
+    background-color: #66DCD6;
 }
 
 .aboutMeImage{

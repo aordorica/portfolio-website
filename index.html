@@ -5,7 +5,8 @@
 <head>
     <title>Alan's Portfolio Site</title>
 
-    <link rel="stylesheet" href="css/superslides.css">
+    <link rel="stylesheet" type="text/css" href="css/superslides.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -53,13 +54,13 @@
                 <div class="col-md-5">
                     <img class="aboutMeImage" src="images/profile_pic.JPG" alt="">
                 </div>
-            
+
                 <div class="col-md-7">
                     <h4>Hi! My name is Alan</h4>
 
                     <p>
-                        I'm a Computer Engineer based in Oakland, CA specializing in 
-                        building and designing applications, Computer and Embedded Systems 
+                        I'm a Computer Engineer based in Oakland, CA specializing in
+                        building and designing applications, Computer and Embedded Systems
                         and everthing in between. I have experience multiple languages and frameworks including C, C++,
                         VHDL, React, HTML, CSS, Java, JavaScript, Flutter and more
                     </p>
@@ -71,9 +72,9 @@
                     <p>
                         Here are a few technologies I've been working with recently:
                     </p>
-                    
+
                 </div>
-            
+
             </div>
         </div>
     </div>
@@ -85,12 +86,25 @@
                     <h3>TECHNICAL SKILLS</h3>
                     <p>Summary of Proficiency in Technical Skills</p>
                 </div>
+
+                <div class="owl-carousel owl-theme">
+                   <div class="skill">
+                       <span class="chart" data-percent="69">
+                           <span class="percent">69</span>
+                           <canvas height="152" width="152"></canvas>
+                       </span>
+                       <h4>Java</h4>
+                       <p>Most used language</p>
+                   </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Inlude superslides JS script files -->
     <script src="js/jquery.superslides.min.js "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/jquery.easypiechart.min.js "></script>
 
     <!-- Include popper JS script -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
