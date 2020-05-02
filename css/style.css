@@ -104,3 +104,57 @@
 .chart .percent::after {
     content: '%';
 }
+
+.squareItem {
+    margin-top: 30px;
+    position: relative;
+}
+
+.projectsContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #444;
+    border-top: none;
+}
+
+.projectsContainer::before,
+.projectsContainer::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 30%;
+    border-bottom: 2px solid #444;
+}
+
+.projectsContainer::before {
+    right: 0px;
+}
+
+.projectsContainer::after {
+    left: 0px;
+}
+
+.squareContent h2 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #66DCD6;
+}
+.squareContent h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #303036;
+}
+
+.projectsIcon {
+    width: 40%;
+    left: 50%;
+    top: -30px;
+    font-size: 
+    45px;
+    position: 
+    absolute;
+    margin-left: -20%;
+}
