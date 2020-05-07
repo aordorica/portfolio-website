@@ -19,7 +19,7 @@
 			}
 			
 			.hex-brick{
-			  background: #ABF8FF;
+			  background: #84C1AF;
 			  width: 30px;
 			  height: 17px;
 			  position: absolute;
@@ -334,7 +334,7 @@
 			
 			@keyframes fade{
 				0%{
-					background: #ABF8FF;
+					background: #7AB8A4;
 				}
 				
 				50%{
@@ -342,7 +342,7 @@
 				}
 				
 				100%{
-					background: #ABF8FF;
+					background: #7AB8A4;
 				}
 			}
 			
@@ -365,7 +365,7 @@
 			
 			@-webkit-keyframes fade{
 				0%{
-					background: #ABF8FF;
+					background: #7AB8A4;
 				}
 				
 				50%{
@@ -373,7 +373,7 @@
 				}
 				
 				100%{
-					background: #ABF8FF;
+					background: #7AB8A4;
 				}
 			}
 
@@ -447,7 +447,7 @@
 }
 
 .skillsSection {
-    background-color: #66DCD6;
+    background-color: #272C35;
     color: #fff;
 }
 
@@ -475,7 +475,6 @@
 }
 
 .chart .percent {
-    color: #000000;
     line-height: 152px;
     display: inline-block;
     font-size: 35px;
@@ -519,7 +518,7 @@
     font-size: 56px;
     margin-bottom: 10px;
     font-weight: 400;
-    color: #66DCD6;
+    color: #84C1AF;
 }
 .squareContent h3 {
     font-size: 13px;
@@ -552,14 +551,14 @@
 div .contact-form button[type=submit] {
     /* background-image: url(../images/icons/send.png); */
     padding: 20px 50px;
-    background-color: #66DCD6;
+    background-color: #84C1AF;
     color: #fff;
     font-weight: bolder;
     font-size: medium;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 55px;
-    box-shadow: 0 3px 3px #5c5c5e;
+    box-shadow: 0 4px 4px #1D212B;
     border: none;
 }
 
@@ -568,6 +567,7 @@ input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
   background-color: #333841; 
+  box-shadow: 0 4px 4px #1D212B;
   border: none; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -578,10 +578,38 @@ input[type=text], select, textarea {
 
 /* When moving the mouse over the submit button, add a darker green color */
 div .contact-form button[type=submit]:hover {
-  background-color: #59C3BD;
+  background-color: #5C8E7B;
 }
 
 .contact-form {
     border-radius: 8px;
     padding: 45px;
+}
+
+.filter {
+	text-align: center;
+	width: 100%;
+}
+
+.filter a {
+	color: #84C1AF;
+	border: 1px solid #656A71;
+	padding: 10px 18px;
+	display: block;
+}
+
+.filter li {
+	display: inline-block;
+	padding: 5px;
+}
+.filter .current {
+	background-color: #84C1AF;
+	border-color: #84C1AF;
+	color: #fff;
+}
+
+.section .heading {
+	text-align: center;
+	padding-bottom: 40px;
+	width: 100%;
 }
