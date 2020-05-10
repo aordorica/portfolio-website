@@ -613,3 +613,18 @@ div .contact-form button[type=submit]:hover {
 	padding-bottom: 40px;
 	width: 100%;
 }
+
+.items li {
+	display: inline-block;
+	padding: 5px;
+}
+
+.itemsContainer {
+	width: 100%;
+}
+
+.items .item {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
