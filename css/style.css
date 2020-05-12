@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     background-color: #272C35;
-    z-index: 7;
+    z-index: 8;
 }
 .socket{
 				width: 200px;
@@ -718,4 +718,45 @@ div .contact-form button[type=submit]:hover {
 
 .items {
 	padding: 0;
+}
+
+.copyrightSection {
+	background-color: #272C35;
+	color: #fff;
+	padding: 30px 5px;
+}
+
+.copyrightSection p {
+	margin: 0;
+}
+
+#navigation {
+	background-color: #272C35;
+	padding: 20px 10px;
+	z-index: 7;
+	width: 100%;
+}
+
+#navbarNavAltMarkup .nav-item {
+padding: 0 10px;
+color: #fff;
+}
+
+.navbar-brand {
+	color: #fff;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-toggler-icon {
+	background: url(../images/icons/menu);
+	background-size: 100%;
+}
+
+.fixedNav #navigation {
+	position: fixed;
+	top: 0;
 }
