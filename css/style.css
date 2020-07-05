@@ -426,6 +426,13 @@
     margin-top: -80px;
 }
 
+.titleMessage .heading .welcome {
+	color: #5C8E7B;
+	font-family: "poppins-medium", sans-serif;
+	font-weight: bolder;
+	font-size: 38px;
+}
+
 .titleMessage .heading {
 	color: #fff;
 	text-shadow: 0px 2px 5px rdga(0, 0, 0, 0.4);
@@ -433,8 +440,8 @@
 }
 
 .titleMessage .heading .main {
-	font-size: 50px;
-	font-family: 'Heebo', sans-serif;
+	font-size: 75px;
+	font-family: "poppins-medium", sans-serif;
 }
 
 .titleMessage .heading .sub {
@@ -739,8 +746,14 @@ div .contact-form button[type=submit]:hover {
 }
 
 #navigation {
-	background-color: #272C35;
-	padding: 20px 10px;
+	position: fixed;
+	background-color: #d4d7d3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* padding: 20px 10px; */
 	z-index: 7;
 	width: 100%;
 }
@@ -754,9 +767,13 @@ color: #fff;
 	color: #fff;
 }
 
-.navbar-brand,
-.navbar-brand:hover {
+.navbar-brand {
 	color: #fff;
+	transition: all .2s ease-in-out;
+}
+.navbar-brand:hover {
+	color: #638777;
+	transform: scale(1.2);
 }
 
 .navbar-toggler-icon {
