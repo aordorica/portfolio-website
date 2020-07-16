@@ -375,13 +375,6 @@
     background: #7ab8a4;
   }
 }
-/* 
-.background {
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
 
 /* Overlay */
 .overlay {
@@ -421,10 +414,6 @@
 .fixedNav #navigation {
   position: fixed;
   top: 0;
-}
-
-.blur {
-	
 }
 
 .titleMessage {
