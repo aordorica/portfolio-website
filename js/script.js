@@ -1,6 +1,6 @@
 
   var options = {
-    strings: ["View", "my", "Resume"],
+    strings: ["View", "Resume"],
     typeSpeed: 70,
     showCursor: false,
     loop: true,
