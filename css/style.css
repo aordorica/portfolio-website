@@ -399,6 +399,8 @@
 
 .navbar-brand {
   color: #fff;
+  background: url(/images/Logo/Favicon.png);
+
 }
 
 .navbar-brand,
@@ -407,7 +409,7 @@
 }
 
 .navbar-toggler-icon {
-  background: url(../images/icons/menu);
+  background: url(../images/icons/menu) no-repeat center center;
   background-size: 100%;
 }
 
@@ -415,6 +417,71 @@
   position: fixed;
   top: 0;
 }
+
+#slides {
+	background: url(/images/portfolio/full-size-images/bg_full.jpg) no-repeat center center/cover;
+  -webkit-background-size: cover;
+	-moz-background-size: cover;
+  height: 100vh;
+	width: 100%;
+	display: table;
+	background-attachment: fixed;
+}
+
+.heading-overlay {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #111111;
+	opacity: .85;
+}
+
+.heading-content {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-transform: translateY(-2.1rem);
+	-ms-transform: translateY(-2.1rem);
+	transform: translateY(-2.1rem);
+}
+
+.heading-content h1 {
+  color: #FFFFFF;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 8.4rem;
+	line-height: 1.071;
+	max-width: 900px;
+	margin-top: 0;
+	margin-bottom: .6rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.heading-content h5 {
+  color: #cc005f;
+	font-family: "poppins-bold", sans-serif;
+	font-size: 2.3rem;
+	line-height: 1.565;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.heading-content .intro-position {
+  font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 2.4rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	color: #FFFFFF;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/* titleHeading stuff */
 
 .bg {
   background: url(/images/portfolio/full-size-images/bg_full.jpg);
@@ -458,7 +525,6 @@ hr.separator {
 }
 
 .titleMessage .heading .main {
-  /* color: #ffffff; */
   letter-spacing: 0.3rem;
   font-size: 5vmax;
   font-weight: bolder;
@@ -487,6 +553,7 @@ hr.separator {
   font-size: 23px;
   font-family: "Heebo", sans-serif;
 }
+/* TitleHeadin END */
 
 .section {
   padding: 100px 0;

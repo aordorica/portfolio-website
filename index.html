@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Alan's Portfolio Site</title>
+    <title>Alan Ordorica</title>
     <link rel="shortcut icon" type="image/png" href="images/Logo/Favicon.png" />
     <!-- *****************************************************************************************
                             CSS Library imports Section
@@ -22,6 +22,9 @@
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
 
+    <!-- CSS 
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Font Awesome Kit Code Link -->
@@ -248,7 +251,9 @@
 
     <div class="navigationSection">
       <nav id="navigation" class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Home</a>
+        <a href="" target="_blank" class="projectLink" title="Home">
+          <i class=""></i>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -278,18 +283,27 @@
                             Slides Section
          ***************************************************************************************** -->
 
-    <div id="slides">
-      <ul class="titleMessage">
-        <li class="overlay"></li>
-        <li class="bg"></li>
-        <div class="heading">
-          <!-- <h5 class="welcome">HELLO,</h5> -->
-          <h1 class="main">ALAN ORDORICA</h1>
-          <!-- <hr class="separator" />
-          <a class="res_button typed" href="/portfolio"></a> -->
+    <section id="slides">
+      <div class="heading-overlay"></div>
+
+      <div class="heading-content">
+        <div class="row">
+          <div class="col-twelve">
+            <h5>Hello, World.</h5>
+            <h1>I'm Juan Dela Cruz.</h1>
+
+            <p class="intro-position">
+              <span>Front-end Developer</span>
+              <span>UI/UX Designer</span>
+            </p>
+
+            <a class="button stroke smoothscroll" href="#about" title=""
+              >More About Me</a
+            >
+          </div>
         </div>
-      </ul>
-    </div>
+      </div>
+    </section>
     <!-- *****************************************************************************************
                         About Me Section
          ***************************************************************************************** -->
