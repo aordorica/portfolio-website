@@ -7,18 +7,18 @@ var options = {
 };
 
 // ***********************************************************************************************
-//                        Typed Effect using Typed.js file
+//                        Typed Effect using Typed.js
 // ***********************************************************************************************
 var typed = new Typed(".typed", {
   strings: ["Hello World, I'm"],
-  typeSpeed: 80,
+  typeSpeed: 70,
   loop: true,
   startDelay: 1000,
-  showCursor: false,
+  showCursor: true,
 });
 
 // ***********************************************************************************************
-//                        Navigation Bar Scrolling Effect
+//                        Fade In/Out Main Navigation Bar
 // ***********************************************************************************************
 $(document).ready(function () {
   $(window).scroll(function () {
@@ -28,13 +28,16 @@ $(document).ready(function () {
         "box-shadow": "none",
       });
     } else {
-      $("#navigation").css({ "background-color": "#16171a" });
+      $("#navigation").css({ "background-color": "#272c35" });
       $("#navigation").css({ "box-shadow": "rgba(2, 12, 27, 0.7) 0px 10px 30px -10px" });
     }
   });
 });
 
-// Stats Carousel
+// ***********************************************************************************************
+//                        Statistics Carousel
+// ***********************************************************************************************
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   items: 4,
@@ -104,26 +107,3 @@ $("#filters a").click(function () {
   return false;
 });
 
-$("#navigation a").click(function (e) {
-  e.preventDefault();
-  var targetElement = $(this).attr("href");
-  var targetPosition = $(targetElement).offset().top;
-  $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
-});
-
-const nav = $("#navigation");
-const navTop = nav.offset().top;
-
-$(window).on("scroll", stickyNavigation);
-
-function stickyNavigation() {
-  var body = $("body");
-
-  if ($(window).scrollTop() >= navTop) {
-    body.css("padding-top", nav.outerHeight() + "px");
-    body.addClass("fixedNav");
-  } else {
-    body.css("padding-top", 0);
-    body.removeClass("fixedNav");
-  }
-}
