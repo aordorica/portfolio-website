@@ -1,4 +1,3 @@
-
 /* Loading Screen */
 .loading-screen {
   width: 100%;
@@ -422,7 +421,7 @@
 .nav-item {
   padding: 0 10px;
   color: #fff;
-  font-family: "Fira Code", monospace;
+  font-family: "Open Sans", monospace;
   font-weight: bold;
   font-size: 18px;
 }
@@ -519,6 +518,11 @@
   margin-right: auto;
 }
 
+.heading-content h1::after {
+  content: ".";
+  color: #69ffd2;
+}
+
 .sub {
   padding: 10px;
   height: 50px;
@@ -533,7 +537,7 @@
 }
 
 .heading-content .intro-position {
-  font-family: "lora-regular", serif;
+  font-family: "Fira Code", monospace;
   font-size: 1.7rem;
   line-height: 2.4rem;
   text-transform: uppercase;
@@ -545,22 +549,61 @@
 /****************************************************************************************
                                     About Section
  ****************************************************************************************/
-.about {
- font-family: "Fira Code", monospace;
- font-size: 13px;
+#about {
+  background-color: #111111;
 }
- .container .aboutMeImage {
-  height: 22rem;
-  width: 22rem;
+
+.about_container {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  justify-content: center;
+  color: #fff;
+}
+
+.aboutImage {
+  width: 14rem;
   border: 1px solid #69ffd2;
   border-radius: 50%;
-  margin: 0.9rem 1rem 0 2rem;
+  justify-self: center;
+  align-self: center;
   float: left;
 }
 
-.about h1 {
-  font-size: 30px;
+.about_content {
+  display: grid;
+  margin-top: 4.2rem;
+  margin-right: -30px;
+  margin-left: -30px;
+  font-size: 2rem;
+  grid-template-columns: 0.3fr 1fr;
 }
+
+.about_content p {
+  width: 40vw;
+  line-height: 1.7em;
+  font-family: "Open Sans", sans-serif;
+  color: #bdbebe;
+}
+
+.about_container h5 {
+  text-align: center;
+  font-weight: bolder;
+  color: #69ffd2;
+  font-size: 1.8rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.4rem;
+}
+
+.about_container h1 {
+  justify-self: center;
+  font-weight: bolder;
+  color: #ffff;
+  font-size: 3.6rem;
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+}
+
 /****************************************************************************************
                                     Skills Section
  ****************************************************************************************/
@@ -592,6 +635,16 @@
 
 .chart .percent::after {
   content: "%";
+}
+
+/****************************************************************************************
+                                    Stats Section
+ ****************************************************************************************/
+
+#stats {
+  background-image: url(/images/black_bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .squareItem {
@@ -646,37 +699,67 @@
   margin-left: -20%;
 }
 
-.contactHeading {
-  font-weight: bolder;
-  font-size: 40px;
+/****************************************************************************************
+                                    Contact Section
+ ****************************************************************************************/
+
+#contact {
   color: #fff;
-  font-family: sans-serif;
+  /* background-image: url(/images/black_bg.jpg); */
+  background-color: #161616;
+  background-size: cover;
+  height: 60vh;
+  background-attachment: fixed;
+}
+
+.contactContainer {
+  margin: 0px 40px;
+}
+
+.contactContainer h5 {
+  text-align: center;
+  font-weight: bolder;
+  color: #69ffd2;
+  font-size: 1.4rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.4rem;
+}
+
+.contactContainer h1 {
+  justify-self: center;
+  font-weight: bolder;
+  color: #ffff;
+  font-size: 3.6rem;
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
 }
 
 div .contact-form button[type="submit"] {
-  padding: 20px 50px;
-  background-color: #84c1af;
-  color: #fff;
-  font-weight: bolder;
-  font-size: medium;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 55px;
-  box-shadow: 0 4px 4px #1d212b;
-  border: none;
+  background: none;
+  justify-self: end;
+  border-style: solid;
+  border-color: #69ffd2;
+  border-width: 1px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: "Fira Code", monospace;
+  padding: 1.5rem 2.5rem;
+  color: #69ffd2;
+  text-decoration: none !important;
+  margin-right: 3rem;
+  margin-top: 3em;
 }
 
 /* Style inputs with type="text", select elements and textareas */
 input[type="text"],
-select,
 textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  background-color: #333841;
-  box-shadow: 0 4px 4px #1d212b;
-  border: none; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  background: none;
+  border: none;
+  border-bottom: 1px solid #8081816e;
+  -webkit-appearance: none;
+  font-size: 1.8em;
+  padding: 10px; /* Some padding */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
@@ -684,13 +767,78 @@ textarea {
 
 /* When moving the mouse over the submit button, add a darker green color */
 div .contact-form button[type="submit"]:hover {
-  background-color: #5c8e7b;
+  background-color: #69ffd226;
+  transition: all 0.2s linear, 1s;
 }
 
-.contact-form {
-  border-radius: 8px;
-  padding: 45px;
+.field {
+  display: flex;
+  flex-flow: column-reverse;
 }
+
+.contactContainer a {
+  font-size: 3.5em;
+  position: absolute;
+  left: 37.5vw;
+  top: 1rem;
+  color: #69ffd2;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+input:focus,
+textarea.input:focus {
+  outline: none;
+  border-bottom: 2px solid #69ffd2;
+}
+
+.contactContainer label {
+  align-self: flex-start;
+}
+
+label, input, textarea {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input:placeholder-shown + label, textarea:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+
+::-webkit-input-placeholder, ::placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+/**
+* Show the placeholder when the input is focused.
+*/
+input:focus::-webkit-input-placeholder, input:focus::placeholder,
+textarea:focus::-webkit-input-placeholder, textarea:focus::placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label, 
+textarea:not(:placeholder-shown) + label, 
+textarea:focus + label{
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+
+/****************************************************************************************
+                                    Filter Projects Section
+ ****************************************************************************************/
 
 .filter {
   text-align: center;
@@ -702,7 +850,7 @@ div .contact-form button[type="submit"]:hover {
   border: 1px solid #656a71;
   padding: 10px 18px;
   display: block;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .filter li {
@@ -713,7 +861,6 @@ div .contact-form button[type="submit"]:hover {
   background-color: #84c1af;
   border-color: #84c1af;
   color: #fff;
-  border-radius: 10px;
 }
 
 .section .heading {
@@ -745,7 +892,7 @@ div .contact-form button[type="submit"]:hover {
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .items .icons {
@@ -837,8 +984,9 @@ div .contact-form button[type="submit"]:hover {
 }
 
 .copyrightSection {
-  background-color: #272c35;
-  color: #fff;
+  font-size: 1.4em;
+  background-color: #17181a;
+  color: rgb(168, 168, 168);
   padding: 30px 5px;
 }
 
