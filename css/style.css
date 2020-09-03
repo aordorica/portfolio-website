@@ -1,3 +1,6 @@
+body {
+  background-color: #111111;
+}
 /* Loading Screen */
 .loading-screen {
   width: 100%;
@@ -376,6 +379,24 @@
   }
 }
 
+h1 {
+  justify-self: center;
+  font-weight: bolder;
+  font-size: 3.6rem;
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bolder;
+  color: #69ffd2;
+  font-size: 1.8rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.4rem;
+}
+
 .social_links {
   position: absolute;
   top: 63vh;
@@ -561,12 +582,14 @@
 }
 
 .aboutImage {
+  max-width: fit-content;
   width: 14rem;
   border: 1px solid #69ffd2;
   border-radius: 50%;
   justify-self: center;
   align-self: center;
   float: left;
+  margin-right: 50px;
 }
 
 .about_content {
@@ -607,34 +630,8 @@
 /****************************************************************************************
                                     Skills Section
  ****************************************************************************************/
-
-.skill {
-  text-align: center;
-  margin-left: 10px;
-}
-
-.chart {
-  position: relative;
-  width: 152px;
-  height: 152px;
-  display: inline-block;
-  text-align: center;
-}
-
-.chart canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.chart .percent {
-  line-height: 152px;
-  display: inline-block;
-  font-size: 35px;
-}
-
-.chart .percent::after {
-  content: "%";
+#skills {
+  background-color: #fff;
 }
 
 /****************************************************************************************
@@ -647,56 +644,11 @@
   background-size: cover;
 }
 
-.squareItem {
-  margin-top: 30px;
-  position: relative;
-}
-
-.projectsContainer {
-  position: relative;
-  padding: 50px 15px 35px;
-  text-align: center;
-  border: 2px solid #444;
-  border-top: none;
-}
-
-.projectsContainer::before,
-.projectsContainer::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  width: 30%;
-  border-bottom: 2px solid #444;
-}
-
-.projectsContainer::before {
-  right: 0px;
-}
-
-.projectsContainer::after {
-  left: 0px;
-}
-
-.squareContent h2 {
-  font-size: 56px;
-  margin-bottom: 10px;
-  font-weight: 400;
-  color: #84c1af;
-}
-.squareContent h3 {
-  font-size: 13px;
-  margin-bottom: 10px;
-  font-weight: 400;
-  color: #303036;
-}
-
-.projectsIcon {
-  width: 40%;
-  left: 50%;
-  top: -30px;
-  font-size: 45px;
-  position: absolute;
-  margin-left: -20%;
+/****************************************************************************************
+                                    Portfolio Projects Section
+ ****************************************************************************************/
+#portfolio {
+  background-color: #fff;
 }
 
 /****************************************************************************************
@@ -727,12 +679,7 @@
 }
 
 .contactContainer h1 {
-  justify-self: center;
-  font-weight: bolder;
   color: #ffff;
-  font-size: 3.6rem;
-  line-height: 1.25;
-  margin-bottom: 1.2rem;
 }
 
 div .contact-form button[type="submit"] {
@@ -797,12 +744,15 @@ textarea.input:focus {
   align-self: flex-start;
 }
 
-label, input, textarea {
+label,
+input,
+textarea {
   transition: all 0.2s;
   touch-action: manipulation;
 }
 
-input:placeholder-shown + label, textarea:placeholder-shown + label {
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
   cursor: text;
   max-width: 66.66%;
   white-space: nowrap;
@@ -812,15 +762,18 @@ input:placeholder-shown + label, textarea:placeholder-shown + label {
   transform: translate(0, 2.125rem) scale(1.5);
 }
 
-::-webkit-input-placeholder, ::placeholder {
+::-webkit-input-placeholder,
+::placeholder {
   opacity: 0;
   transition: inherit;
 }
 /**
 * Show the placeholder when the input is focused.
 */
-input:focus::-webkit-input-placeholder, input:focus::placeholder,
-textarea:focus::-webkit-input-placeholder, textarea:focus::placeholder {
+input:focus::-webkit-input-placeholder,
+input:focus::placeholder,
+textarea:focus::-webkit-input-placeholder,
+textarea:focus::placeholder {
   opacity: 1;
 }
 /**
@@ -829,9 +782,9 @@ textarea:focus::-webkit-input-placeholder, textarea:focus::placeholder {
 * there's something in the input at all.
 */
 input:not(:placeholder-shown) + label,
-input:focus + label, 
-textarea:not(:placeholder-shown) + label, 
-textarea:focus + label{
+input:focus + label,
+textarea:not(:placeholder-shown) + label,
+textarea:focus + label {
   transform: translate(0, 0) scale(1);
   cursor: pointer;
 }
@@ -839,6 +792,14 @@ textarea:focus + label{
 /****************************************************************************************
                                     Filter Projects Section
  ****************************************************************************************/
+
+#portfolio h1 {
+  color: #000;
+}
+
+#portfolio h5 {
+  color: #4cc8a3;
+}
 
 .filter {
   text-align: center;

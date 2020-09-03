@@ -3,7 +3,6 @@
 if (isset($_POST['submit'])) {
     
     $name = $_POST['name'];
-    $subject = $_POST['subject'];
     $mailFrom = $_POST['mail'];
     $message = $_POST['message'];
     $mailTo = "alaniordorica@gmail.com";
@@ -19,9 +18,11 @@ if (isset($_POST['submit'])) {
     $headers .= "X-Mailer: PHP". phpversion() ."\r\n" ;
 
 
-    mail($mailTo, $subject, $txt, $headers);
+    mail($mailTo, $subject, $txt, $headers) or die ("Error!");
+    echo "Thank You!";
     header("Location: ../index.html?mailsend");
 }
+
 else 
 {
     header("Location:index.html");
