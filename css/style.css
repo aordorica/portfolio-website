@@ -1,4 +1,4 @@
-body {
+html {
   background-color: #111111;
 }
 /* Loading Screen */
@@ -645,13 +645,6 @@ h5 {
 }
 
 /****************************************************************************************
-                                    Portfolio Projects Section
- ****************************************************************************************/
-#portfolio {
-  background-color: #fff;
-}
-
-/****************************************************************************************
                                     Contact Section
  ****************************************************************************************/
 
@@ -789,9 +782,25 @@ textarea:focus + label {
   cursor: pointer;
 }
 
+
 /****************************************************************************************
-                                    Filter Projects Section
+                                    Portfolio Projects Section
  ****************************************************************************************/
+
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio a {
+  margin: 0px 50px;
+}
+
+
+
+ /* #portfolio {
+  background-color: #fff;
+}
 
 #portfolio h1 {
   color: #000;
@@ -799,6 +808,11 @@ textarea:focus + label {
 
 #portfolio h5 {
   color: #4cc8a3;
+}
+
+#portfolio.container {
+  display: grid;
+  
 }
 
 .filter {
@@ -839,16 +853,6 @@ textarea:focus + label {
   width: 100%;
 }
 
-.items li img {
-  width: 100%;
-  transition: all 0.2s linear, 1s;
-  -webkit-transition: all 0.2s linear, 1s;
-  -moz-transition: all 0.2s linear, 1s;
-  -o-transition: all 0.2s linear, 1s;
-  -ms-transition: all 0.2s linear, 1s;
-  -transition: all 0.2s linear, 1s;
-}
-
 .items .item {
   position: relative;
   display: block;
@@ -868,15 +872,16 @@ textarea:focus + label {
 }
 
 .items .icons i {
-  color: #ffff;
-  font-size: 20px;
+  color: #69ffd2;
+  font-size: 4rem;
   margin-top: 9px;
+  border-width: 1px;
+  border-color: #000;
 }
 
 .items a {
   width: 40px;
   height: 40px;
-  background-color: #84c1af;
   position: relative;
   display: inline-block;
   border-radius: 55px;
@@ -909,9 +914,6 @@ textarea:focus + label {
   -transition: all 0.2s linear, 1s;
 }
 
-.items .item:hover .imageOverlay {
-  opacity: 1;
-}
 
 .items .openButton {
   float: left;
@@ -928,25 +930,30 @@ textarea:focus + label {
 }
 
 .items .item:hover .projectLink {
-  right: 0px;
+  right: -20px;
 }
 
 .items .item:hover img {
-  transform: scale(1.05, 1.05);
-  -webkit-transform: scale(1.05, 1.05);
-  -moz-transform: scale(1.05, 1.05);
-  -o-transform: scale(1.05, 1.05);
-  -ms-transform: scale(1.05, 1.05);
-  -o-transform: scale(1.05, 1.05);
+  transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
 }
 
 .items {
   padding: 0;
-}
+} */
+
+/****************************************************************************************
+                                    Copyright Section
+ ****************************************************************************************/
+
 
 .copyrightSection {
   font-size: 1.4em;
-  background-color: #17181a;
+  background-color: #161616;
   color: rgb(168, 168, 168);
   padding: 30px 5px;
 }
