@@ -24,6 +24,11 @@
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
     <link href="css/hover-min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="/css/style.css" />
@@ -63,6 +68,40 @@
     <!-- Debug -->
     <div class="debug">
       <label><input type="checkbox" /> Debug</label>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header row justify-content-center">
+            <h1 class="modal-title justify-content-center">Send Me a Message</h1>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <form class="contact-form col" action="php/contactform.php" method="POST">
+                <div class="field name">
+                  <input class="input" placeholder="Johnny Appleseed" type="text" id="name" type="text" name="name"/>
+                  <label for="name">Name*</label>
+                </div>
+                <div class="field mail">
+                  <input class="input" id="mail" placeholder="johnny.appleseed@example.com" type="text" name="mail"/>
+                  <label for="mail">Email*</label>
+                </div>
+                <div class="field message">
+                  <textarea class="input" id="message" placeholder="Hello! Welcome to my website, I would love to connect with you." name="message"
+                  ></textarea>
+                  <label for="message">Message*</label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer col justify-content-around border-none">
+            <button type="button" class="btn btn-secondary closeBtm" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary sendButton">Send</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- *****************************************************************************************
@@ -113,8 +152,8 @@
             <div class="row justify-content-center sub">
               <span id="typed"></span>
             </div>
-            <div class="row name">
-              <h1>Alan Ordorica</h1>
+            <div class="row">
+              <h1 class="heading-name">Alan Ordorica</h1>
             </div>
             <div class="social_links">
               <div class="row justify-content-center">
@@ -186,19 +225,20 @@
       <!-- -------------------- Contact Section ----------------- -->
       <div id="group7" class="parallax__group contact">
         <div class="parallax__layer parallax__layer--base">
-          <div class="title container">
-            <div class="col contact-section">
-              <h5 class="row justify-content-center">Contact Me</h5>
-              <h1 class="row justify-content-center">
-                I'd Love to Connect With You
-              </h1>
-              <div class="row justify-content-center">
-
-                <!-- Button trigger modal -->
-                <button id="submit" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                  Say Hello
-                </button>
-
+          <div class="title container my-container">
+            <div class="row contact-section align-items-center">
+              <div class="col my-col">
+                <h5 class="row justify-content-center my-row">Contact Me</h5>
+                <h1 class="row justify-content-center my-row">I'd Love to Connect With You</h1>
+                <div class="row contact-message justify-content-center my-row">
+                  <p>Come say hi. Whether you just have a question or want to reach out, I am always open to new opporitnuites to connect</p>
+                </div>
+                <div class="row justify-content-center my-row">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#exampleModalCenter">
+                    Say Hello
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -244,65 +284,6 @@
       ga("create", "UA-10812217-1", "auto");
       ga("send", "pageview");
     </script>
-
-
-          <!-- Contact Form Modal -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row justify-content-center">
-                <form
-                  class="contact-form col"
-                  action="php/contactform.php"
-                  method="POST"
-                >
-                  <div class="field name">
-                    <input
-                      class="input"
-                      placeholder="Johnny Appleseed"
-                      type="text"
-                      id="name"
-                      type="text"
-                      name="name"
-                    />
-                    <label for="name">Name*</label>
-                  </div>
-                  <div class="field mail">
-                    <input
-                      class="input"
-                      id="mail"
-                      placeholder="johnny.appleseed@example.com"
-                      type="text"
-                      name="mail"
-                    />
-                    <label for="mail">Email*</label>
-                  </div>
-                  <div class="field message">
-                    <textarea
-                      class="input"
-                      id="message"
-                      placeholder="Hello! Welcome to my website, I would love to connect with you."
-                      name="message"
-                    ></textarea>
-                    <label for="message">Message*</label>
-                  </div>
-                </form>
-              </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
   </body>
 </html>
