@@ -6,8 +6,4 @@ var options = {
   startDelay: 1000,
 };
 
-var typed = new Typed("#typed", options);
-
-let submitEvent = new function() {
-  document.getElementById(submitButton).style.background = "#fffff";
-}
+var typed = new Typed("#typed", options); 
