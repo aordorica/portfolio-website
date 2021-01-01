@@ -1,5 +1,5 @@
 var options = {
-  strings: ["Welcome, I'm"],
+  strings: ["Welcome, my name is"],
   typeSpeed: 70,
   showCursor: false,
   loop: true,

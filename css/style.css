@@ -113,6 +113,20 @@ p {
   height: 100vh;
 }
 
+.section-title h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.section-title h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-weight: 4rem;
+  color: #69ffd2;
+}
+
 /****************************************************************************************
                                     Navigation Section
  ****************************************************************************************/
@@ -156,7 +170,6 @@ p {
   width: 600px;
   justify-content: space-evenly;
 }
-
 
 .resumeButton {
   justify-self: end;
@@ -268,15 +281,9 @@ p {
   background: rgb(18, 18, 19);
 }
 
-.about h1 {
-  font-family: 600 "Poppins", sans-serif;
-  font-weight: bolder;
-  font-size: 5rem;
-  color: #ffffff;
+.about img {
+  height: 25em;
 }
-
-
-
 
 /****************************************************************************************
                                     Work Experience Section
@@ -469,15 +476,26 @@ textarea:focus + label {
   transition: all 0.5s linear;
 }
 
-.contact h5 {
+.brackets {
+  font-size: 8rem;
+  font-weight: 200;
+  
+}
+/* .contact-sub p::before {
+  content: "{";
   color: #69ffd2;
-  font-size: 1.8rem;
+  font-size: 5rem;
+  position: fixed;
+  align-self: center;
+  height: 100em;
 }
 
-.contact h1 {
+.contact-sub p::after {
+  content: "}";
+  color: #69ffd2;
   font-size: 4rem;
-}
-
+  position: absolute;
+} */
 .contact .contact-message {
   font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
@@ -494,7 +512,7 @@ textarea:focus + label {
   height: max-content;
 }
 
-.my-col {
+/* .my-col {
   border: 3px dotted blue;
 }
 
@@ -504,4 +522,4 @@ textarea:focus + label {
 
 .my-container {
   border: 1px solid green;
-}
+} */
