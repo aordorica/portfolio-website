@@ -157,11 +157,6 @@ p {
   transition: all();
 }
 
-.navbar-toggler-icon {
-  background: url(../images/icons/menu) no-repeat center center;
-  background-size: 100%;
-}
-
 .navbar a img {
   width: 3.5rem;
 }
@@ -477,25 +472,11 @@ textarea:focus + label {
 }
 
 .brackets {
-  font-size: 8rem;
-  font-weight: 200;
+  font-size: 9rem;
+  font-weight: 160;
   
 }
-/* .contact-sub p::before {
-  content: "{";
-  color: #69ffd2;
-  font-size: 5rem;
-  position: fixed;
-  align-self: center;
-  height: 100em;
-}
 
-.contact-sub p::after {
-  content: "}";
-  color: #69ffd2;
-  font-size: 4rem;
-  position: absolute;
-} */
 .contact .contact-message {
   font-family: "Calibre", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
