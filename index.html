@@ -1,601 +1,370 @@
 <!DOCTYPE html>
-
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Alan Ordorica</title>
+    <link rel="shortcut icon" type="image/png" href="images/Favicon-orange.png"/>
+    <meta name="description" content="This site is a posrtfolio demonstration of my work thus far" />
 
-<head>
-    <title>Alan's Portfolio Site</title>
-    <link rel="shortcut icon" type="image/png" href="images/Logo/Favicon.png">
-<!-- *****************************************************************************************
-                            CSS Library imports Section
-      ***************************************************************************************** -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">     <!-- Boostrap mobile first tag to enable proper rendering on mobile devices -->
-    <link rel="stylesheet" type="text/css" href="css/superslides.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- --------------------------------- CSS Imports --------------------------------- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/hover.css"/>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- --------------------------------- Font Imports --------------------------------- -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Font Awesome Kit Code Link -->
-    <script src="https://kit.fontawesome.com/e9c8022875.js" crossorigin="anonymous"></script>
-
+    <!-- --------------------------------- Font Awesome Kit Code Link --------------------------------- -->
+    <script src="https://kit.fontawesome.com/e9c8022875.js" crossorigin="anonymous" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap" rel="stylesheet">
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  </head>
 
-</head>
-
-<body>
-
-    <!-- *****************************************************************************************
-                            Loading Screen Section
-         ***************************************************************************************** -->
-    <div class="loading-screen">
-        <div class="socket">
-            <div class="gel center-gel">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c1 r1">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c2 r1">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c3 r1">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c4 r1">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c5 r1">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c6 r1">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-
-            <div class="gel c7 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-
-            <div class="gel c8 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c9 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c10 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c11 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c12 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c13 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c14 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c15 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c16 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c17 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c18 r2">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c19 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c20 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c21 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c22 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c23 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c24 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c25 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c26 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c28 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c29 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c30 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c31 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c32 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c33 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c34 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c35 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c36 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-            <div class="gel c37 r3">
-                <div class="hex-brick h1"></div>
-                <div class="hex-brick h2"></div>
-                <div class="hex-brick h3"></div>
-            </div>
-
-        </div>
-
-        <script>
-            $(window).on("load", function () {
-                $(".loading-screen").fadeOut("slow");
-            });
-        </script>
+  <body>
+    <!-- --------------------------------- Debug --------------------------------- -->
+    <div class="debug">
+      <label><input type="checkbox" /> Debug</label>
     </div>
 
-    <!-- *****************************************************************************************
-                            Slides Section
-         ***************************************************************************************** -->
-    <div id="slides">
-
-        <div class="overlay"></div>
-
-        <!-- Slides images -->
-        <div class="slides-container">
-            <img src="images/Tank_Wars.jpg" alt="">
-            <img src="images/InfinityBoard_1440.jpg" alt="">
-            <img src="images/lake.jpg" alt="">
-        </div>
-
-        <!-- Navigation Arrows -->
-        <nav class="slides-navigation">
-            <a href="#" class="next"></a>
-            <a href="#" class="prev"></a>
-        </nav>
-        <div class="titleMessage">
-            <div class="heading">
-                <p class="welcome">WELCOME</p>
-                <p class="main">ALAN ORDORICA</p>
-                <P class="sub typed"></P>
+    <!-- --------------------------------- Contact Form Modal --------------------------------- -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content m-5">
+          <div class="modal-header my-row row align-items-center contact-head">
+            <i class="my-col col-2 send-plane justify-content-center fas fa-paper-plane"></i>
+            <h1 class="my-col col-10 modal-title justify-content-center">Contact Me</h1>
+          </div>
+          <div class="modal-body">
+            <div class="row w-85 mx-auto justify-content-center">
+              <form class="contact-form col" action="php/contactform.php" method="POST">
+                <div class="field name">
+                  <input
+                    class="input"
+                    placeholder="Johnny Appleseed"
+                    type="text"
+                    id="name"
+                    type="text"
+                    name="name"
+                  />
+                  <label for="name">Name*</label>
+                </div>
+                <div class="field mail">
+                  <input
+                    class="input"
+                    id="mail"
+                    placeholder="johnny.appleseed@example.com"
+                    type="text"
+                    name="mail"
+                  />
+                  <label for="mail">Email*</label>
+                </div>
+                <div class="field message">
+                  <textarea
+                    class="input"
+                    id="message"
+                    placeholder="Hello! Welcome to my website, I would love to connect with you."
+                    name="message"
+                  ></textarea>
+                  <label for="message">Message*</label>
+                </div>
+              </form>
             </div>
-        </div>
-    </div>
-
-    <!-- *****************************************************************************************
-                            Navigation Menu
-         ***************************************************************************************** -->
-    
-    <div class="navigationSection">
-        <nav id="navigation" class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+          </div>
+          <div class="modal-footer row justify-content-around border-none">
+            <button
+              type="button"
+              class="btn btn-secondary closeBtn"
+              data-dismiss="modal"
+            >
+              Close
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#skills">Skills <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#about">About</a>
-                    <a class="nav-item nav-link" href="#stats">Statistics</a>
-                    <a class="nav-item nav-link" href="#portfolio">Projects</a>
-                    <a class="nav-item nav-link" href="#contact">Contact</a>
-                </div>
-            </div>
-        </nav>
+            <button type="button" class="btn btn-primary sendBtn">Send</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- *****************************************************************************************
-                        About Me Section
-         ***************************************************************************************** -->
+    <!-- --------------------------------- Navigation Menu --------------------------------- -->
 
-    <div id="about" class="section">
+    <div class="navigationSection">
+      <nav id="navigation" class="navbar navbar-expand-lg">
+        <a href="" target="_blank" class="projectLink" title="Home">
+          <img src="/images/Favicon-orange.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <img class="aboutMeImage" src="images/profile_pic.JPG" alt="">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div id="mainNav" class="navbar-nav">
+            <a class="nav-item nav-link" href="#skills">Skills</a>
+            <a class="nav-item nav-link" href="#about">About</a>
+            <a class="nav-item nav-link" href="#stats">Statistics</a>
+            <a class="nav-item nav-link" href="#portfolio">Projects</a>
+            <a class="nav-item nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+        <a
+          class="resume-link resumeButton"
+          target="_blank"
+          title="View my Resume"
+          href="/Resume.pdf"
+          >Resume</a
+        >
+      </nav>
+    </div>
+
+    <div class="parallax">
+      <!-- --------------------------------- Heading Section --------------------------------- -->
+
+      <div id="group2" class="parallax__group head">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="title container section heading">
+            <div class="row justify-content-center align-items-center h-100">
+              <div class="col align-self-center text-center">
+                <div class="head-text">
+                  Hello, I'm
+                  <span class="highlight" style="color: #ffd76d; font-family: Raleway; font-weight: 600;">Alan Ordorica</span>.
+                  <br>
+                  <span id="typed"></span>
                 </div>
+                <div class="col">
+                  <div class="btn btn-outline-info mt-5" style="border-color: whitesmoke !important; color: whitesmoke;">Check out my Work</div>
+                </div>
+              </div>
+            </div>
 
-                <div class="col-md-7">
-                    <h4>Hi! My name is Alan</h4>
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+        </div>
+      </div>
 
+      <!-- --------------------------------- About Section --------------------------------- -->
+
+      <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container-fluid section title about">
+            <div class="row h-100 align-items-center section-title">
+              <div class="col">
+                <div class="row justify-content-center">
+                  <h1>About</h1>
+                </div>
+                <div class="row justify-content-center">
+                  <h5>Le me Introduce Myself</h5>
+                </div>
+                <div class="row align-items-center justify-content-center">
+                  <div class="col text-center">
                     <p>
-                        I'm a Computer Engineer based in Oakland, CA specializing in
-                        building and designing applications, Computer and Embedded Systems
-                        and everthing in between. I have experience multiple languages and frameworks including C, C++,
-                        VHDL, React, HTML, CSS, Java, JavaScript, Flutter and more
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Asperiores odio vero omnis voluptate aliquid laboriosam,
+                      possimus in quo exercitationem, eveniet consequuntur ullam
+                      fuga eaque repellat voluptatum tempora cumque praesentium
+                      obcaecati.
                     </p>
                     <p>
-                        I received my Bachelors of Science in computer engineering from San Francisco State Univeristy
-                        in San Francisco, CA. I enjoy creating new things and have worked on a variety of projects
-                        such as Smart Infinity Skateboard with accompanied app, 8-bit top view shooter game and more.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Asperiores odio vero omnis voluptate aliquid laboriosam,
+                      possimus in quo exercitationem, eveniet consequuntur ullam
+                      fuga eaque repellat voluptatum tempora cumque praesentium
+                      obcaecati.
                     </p>
                     <p>
-                        Here are a few technologies I've been working with recently:
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Asperiores odio vero omnis voluptate aliquid laboriosam,
+                      possimus in quo exercitationem, eveniet consequuntur ullam
+                      fuga eaque repellat voluptatum tempora cumque praesentium
+                      obcaecati.
                     </p>
-
+                  </div>
+                  <div class="col text-center">
+                    <img src="/images/self.jpg" class="" alt="" />
+                  </div>
                 </div>
-
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- *****************************************************************************************
-                        Skills Section
-         ***************************************************************************************** -->
+      <!-- --------------------------------- Work Experience --------------------------------- -->
 
-    <div id="skills" class="skillsSection section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3>TECHNICAL SKILLS</h3>
-                    <p>Summary of Proficiency in Technical Skills</p>
+      <div id="group4" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container-fluid section title experience">
+            <div class="row h-100 align-items-center section-title">
+              <div class="col">
+                <div class="row justify-content-center">
+                  <h1>Work Experience</h1>
                 </div>
-
-                <div class="owl-carousel owl-theme">
-                    <div class="skill">
-                        <span class="chart" data-percent="69">
-                            <span class="percent">69</span>
-                            <canvas height="152" width="152"></canvas>
-                        </span>
-                        <h4>Java</h4>
-                        <p>Most used language</p>
-                    </div>
-
-                    <div class="skill">
-                        <span class="chart" data-percent="80">
-                            <span class="percent">80</span>
-                            <canvas height="152" width="152"></canvas>
-                        </span>
-                        <h4>Dart</h4>
-                        <p>Used mostly for iOS and Android app for InfinityBoard project </p>
-                    </div>
-
+                <div class="row justify-content-center">
+                  <h5>Some Places I've worked</h5>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+        <div class="parallax__layer parallax__layer--back"></div>
+      </div>
 
-    <!-- *****************************************************************************************
-                        Statistics Section
-         ***************************************************************************************** -->
+      <!-- --------------------------------- Project Demo Section --------------------------------- -->
 
-    <div id="stats" class="statsSection section">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="squareItem">
-                        <div class="projectsContainer">
-                            <div class="projectsIcon">
-                                <i class="fas fa-code"></i>
-                            </div>
-
-                            <div class="squareContent">
-                                <h2>125</h2>
-                                <h3>Projects Worked On</h3>
-                            </div>
-                        </div>
-                    </div>
+      <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container-fluid section text-center title project-demo">
+            <div class="row h-100 align-items-center section-title">
+              <div class="col">
+                <div class="row justify-content-center">
+                  <h1>Projects</h1>
                 </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="squareItem">
-                        <div class="projectsContainer">
-                            <div class="projectsIcon">
-                                <i class="fas fa-history"></i>
-                            </div>
-
-                            <div class="squareContent">
-                                <h2>4</h2>
-                                <h3>Years of Experience</h3>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row justify-content-center">
+                  <h5>Some Things I've Worked on</h5>
                 </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="squareItem">
-                        <div class="projectsContainer">
-                            <div class="projectsIcon">
-                                <i class="fas fa-code"></i>
-                            </div>
-
-                            <div class="squareContent">
-                                <h2>125</h2>
-                                <h3>Projects Worked On</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="squareItem">
-                        <div class="projectsContainer">
-                            <div class="projectsIcon">
-                                <i class="fas fa-code"></i>
-                            </div>
-
-                            <div class="squareContent">
-                                <h2>125</h2>
-                                <h3>Projects Worked On</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- *****************************************************************************************
-                        Contact Me Section
-         ***************************************************************************************** -->
-    <div id="contact" class="contactSection section">
-        <div class="col-md-12 text-center">
+      <!-- --------------------------------- Project Library --------------------------------- -->
 
-            <div class="contactContainer">
-                <main>
-                    <p class="contactHeading">GET IN TOUCH</p>
-                    <form class="contact-form" action="php/contactform.php" method="POST">
-                        <input type="text" name="name" placeholder="Full Name">
-                        <input type="text" name="mail" placeholder="E-mail">
-                        <input type="text" name="Subject" placeholder="subject">
-                        <textarea name="message" placeholder="Message"></textarea>
-                        <button type="submit" name="submit">SUBMIT</button>
-                    </form>
-                </main>
+      <div id="group6" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div
+            class="container-fluid section text-center title project-library"
+          >
+            <div class="row h-100 align-items-center section-title">
+              <div class="col">
+                <div class="row justify-content-center">
+                  <h1>Project Library</h1>
+                </div>
+                <div class="row justify-content-center">
+                  <h5>More Things I've built</h5>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+        <div class="parallax__layer parallax__layer--back"></div>
+      </div>
 
-    <!-- *****************************************************************************************
-                        Project Portfolio Section
-         ***************************************************************************************** -->
-    <div id="portfolio" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="heading">
-                    <h2>PROJECTS</h2>
+      <!-- --------------------------------- Contact Section --------------------------------- -->
+
+      <div id="group7" class="parallax__group contact">
+        <div class="parallax__layer parallax__layer--base">
+          <div class="container-fluid section text-center title">
+            <div class="row h-100 align-items-center section-title">
+              <div class="col">
+                <div class="row justify-content-center">
+                  <h5>Contact Me</h5>
                 </div>
-
-                <div class="filter">
-                    <ul id="filters">
-                        <li><a href="#" data-filter="*" class="current">ALL</a></li>
-                        <li><a href="#" data-filter=".apps">Apps</a></li>
-                        <li><a href="#" data-filter=".games">Games</a></li>
-                        <li><a href="#" data-filter=".websites">Website</a></li>
-                        <li><a href="#" data-filter=".webApps">Web Apps</a></li>
-                    </ul>
+                <div
+                  class="row contact-title justify-content-center align-items-center"
+                >
+                  <h1>I'd Love to Connect With You</h1>
                 </div>
-
-                <div class="itemsContainer">
-                    <ul class="items">
-                        <!-- *********************************************************
-                                        Project Section
-                        ************************************************************** -->
-
-                        <!-- First Project -->
-                        <li class="games col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                            <div class="item">
-                                <img src="images/portfolio/thubmnails/TankWarsThumbnail.jpg">
-
-                                <div class="icons">
-                                    <a href="https://github.com/aordorica/TankGame" target="_blank" title="View on Github"
-                                        class="openButton"
-                                        data-caption="Top-View space shooter game">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-
-                                    <a href="" target="_blank" class="projectLink" title="Learn More">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-
-                                <div class="imageOverlay"></div>
-                            </div>
-                        </li>
-
-                        <!-- Second Project -->
-                        <li class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                            <div class="item">
-                                <img src="images/portfolio/thubmnails/InfinityBoard_thumbnail.jpg">
-
-                                <div class="icons">
-                                    <a href="https://github.com/aordorica/InfinityBoardController"
-                                        title="View on Github" class="openButton"
-                                        data-caption="Infinity SkateboardSenior Design Project">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-
-                                    <a href="https://sites.google.com/view/infinityboard" title="Visit Website" target="_blank" class="projectLink">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-
-                                <div class="imageOverlay"></div>
-                            </div>
-                        </li>
-
-                        <!-- Third Project -->
-                        <li class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                            <div class="item">
-                                <img src="images/portfolio/full-size-images/tipster_full_res.png">
-
-                                <div class="icons">
-                                    <a href="https://github.com/aordorica/tipCalculator" title="View on Github"
-                                        class="openButton"
-                                        data-caption="Tip Calculator App for IOS">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-
-                                    <a href="" target="_blank" class="projectLink">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-
-                                <div class="imageOverlay"></div>
-                            </div>
-                        </li>
-
-                        <!-- Fourth Project -->
-                        <li class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                            <div class="item">
-                                <img src="images/Logo/Logo_Full_thumbnail.png">
-
-                                <div class="icons">
-                                    <a href="https://github.com/aordorica/portfolio-website" title="View on Github"
-                                        class="openButton"
-                                        data-caption="Portfolio Website">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-
-                                    <a href="https://alanordorica.com" target="_blank" title="This Website" class="projectLink">
-                                        <i class="fa fa-link"></i>
-                                    </a>
-                                </div>
-
-                                <div class="imageOverlay"></div>
-                            </div>
-                        </li>
-                       
-
-                    </ul>
+                <div
+                  class="row contact-sub justify-content-between contact-message"
+                >
                 </div>
+                <div class="row justify-content-center">
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-primary button"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                  >
+                    Say Hello
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- --------------------------------- Footer Section --------------------------------- -->
+
+      <footer class="text-white pt-5 pb-4" style="background-color: #0f192d;">
+        <div class="container text-center text-md-center footer">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="col-md-4">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="col">
+              <p>
+                Alan Ordorica
+                <a href="#" style="text-decoration: none"></a>
+                <a href="#" class="copyright" >©2021</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     </div>
 
-    <!-- *****************************************************************************************
-                        Copyright Section
-         ***************************************************************************************** -->
-    <div class="copyrightSection">
-        <div class="col-md-12 text-center">
-            <p>&copy; Copyright Alan Ordorica 2020</p>
-        </div>
-    </div>
+    <!-- --------------------------------- JS Imports --------------------------------- -->
+    <script src="/Javascript/script.js"></script>
+    <script src="Javascript/typed.js"></script>
+    <script src="Javascript/animate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous" ></script>
 
-    <!-- JS script files -->
-    <script src="js/jquery.superslides.min.js "></script>
-    <script src="js/owl.carousel.min.js "></script>
-    <script src="js/jquery.easypiechart.min.js "></script>
-    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+      var debugInput = document.querySelector("input");
+      function updateDebugState() {
+        document.body.classList.toggle("debug-on", debugInput.checked);
+      }
+      debugInput.addEventListener("click", updateDebugState);
+      updateDebugState();
+    </script>
 
-    <!-- Include popper JS script -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-
-    <!-- /* JS script to import Bootstrap JS file*/ -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-    <!-- /* Include script.js file*/ -->
-    <script src="js/script.js"></script>
-
-    <!-- FancyBox CDN JS imports -->
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-</body>
-
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-10812217-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
 </html>
