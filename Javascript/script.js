@@ -1,7 +1,7 @@
 var options = {
-  strings: ["Welcome, my name is"],
-  typeSpeed: 70,
-  showCursor: false,
+  strings: ["I'm a Software Engineer."],
+  typeSpeed: 90,
+  showCursor: true,
   loop: true,
   startDelay: 1000,
 };
