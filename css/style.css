@@ -1,4 +1,8 @@
 
+:root {
+  --primary-color: #ffd76d;
+  --color-dim: #ffd76d26;
+}
 
 .parallax {
   height: 500px; /* fallback for older browsers */
@@ -126,7 +130,7 @@ p {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-weight: 4rem;
-  color: #FFD76D;
+  color: var(--primary-color);
 }
 
 /****************************************************************************************
@@ -171,21 +175,21 @@ p {
 .resumeButton {
   justify-self: end;
   border-style: solid;
-  border-color: #FFD76D;
+  border-color: var(--primary-color);
   border-width: 1px;
   border-radius: 4px;
   font-size: 13px;
   font-family: "Fira Code", monospace;
   font-weight: lighter;
   padding: 0.8rem 1.5rem;
-  color: #FFD76D;
+  color: var(--primary-color);
   text-decoration: none !important;
   margin-right: 3rem;
 }
 
 .resumeButton:hover {
-  color: #FFD76D;
-  background-color: #FFD76D26;
+  color: var(--primary-color);
+  background-color: var(--color-dim);
   transition: all 0.2s linear, 1s;
 }
 
@@ -230,8 +234,10 @@ p {
 
 #group2 .parallax__layer--back {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://media.giphy.com/media/z2POQZ2t8s5Gzp4C7r/giphy.gif);
+    url(https://media.giphy.com/media/3oEjI2GUZ3RffMInja/giphy.gif);
+  background-repeat:no-repeat;
   background-size: cover;
+  background-position:center;
 }
 
 /****************************************************************************************
@@ -298,20 +304,20 @@ button[type="button"].button {
   background: none;
   justify-self: end;
   border-style: solid;
-  border-color: #FFD76D;
+  border-color: var(--primary-color);
   border-width: 1px;
   border-radius: 4px;
   font-size: 16px;
   font-family: "Fira Code", monospace;
   padding: 1rem 2.5rem;
-  color: #FFD76D;
+  color: var(--primary-color);
   text-decoration: none !important;
   margin-top: 2rem;
   outline-width: 0;
 }
 
 button.button:hover {
-  background-color: #FFD76D26;
+  background-color: var(--color-dim);
   transition: all 0.2s linear, 0.5s;
 }
 
@@ -337,7 +343,7 @@ textarea {
 input:focus,
 textarea.input:focus {
   outline: none;
-  border-bottom: 2px solid #FFD76D;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 label,
@@ -408,8 +414,8 @@ textarea:focus + label {
 
 .closeBtn {
   background: none;
-  color: #FFD76D;
-  border: 1px solid #FFD76D;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   -webkit-box-shadow: 0 8px 6px -6px black; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 0 8px 6px -6px black; /* Firefox 3.5 - 3.6 */
   box-shadow: 0 8px 6px -6px black;
@@ -422,7 +428,7 @@ textarea:focus + label {
 }
 
 .sendBtn {
-  background: #FFD76D;
+  background: var(--primary-color);
   color: #000000;
   border: none;
   -webkit-box-shadow: 0 8px 6px -6px black; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -458,7 +464,7 @@ textarea:focus + label {
 }
 
 .send-plane {
-  color: #FFD76D;
+  color: var(--primary-color);
   font-size: 33px;
   height: max-content;
 }
@@ -468,12 +474,20 @@ textarea:focus + label {
                                     Footer Section
  ****************************************************************************************/
 
-/* .footer {
-  background-color: #FFD76D;
-  height: 10vh;
+.footer {
+  color: whitesmoke;
+  font-family: "Raleway";
+  font-weight: 100;
 }
 
-.col{
+.copyright {
+  color: var(--primary-color);
+}
+
+.col-md-4 {
+  border: dotted 1px red;
+}
+/* .col{
   border: 1px dotted blue;
 }
 
@@ -485,4 +499,4 @@ textarea:focus + label {
 .container,
 .container-fluid {
   border: 3px solid green;
-} */
+}  */
