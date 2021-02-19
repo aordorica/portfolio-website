@@ -1,7 +1,9 @@
 
 :root {
-  --primary-color: #ffd76d;
-  --color-dim: #ffd76d26;
+  --main-color: #ffd76d;
+  --bg-footer: #3f3f3f;
+  --bg-base: #202020;
+  --off-white: #707070;
 }
 
 .parallax {
@@ -91,13 +93,12 @@
 body,
 html {
   overflow: hidden;
-  /* background-color: #000; */
 }
 
 body {
   font: 100% / 1.5 Arial;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.071;
 }
 
@@ -119,18 +120,16 @@ p {
   height: 100vh;
 }
 
-.section-title h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  color: #fff;
+.section-title {
+  font-size: 30pt;
+  font-weight: 700;
+  color: var(--off-white);
 }
 
-.section-title h5 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-weight: 4rem;
-  color: var(--primary-color);
+.title-bar {
+  background: var(--main-color);
+  height: 4px;
+  width: 100px;
 }
 
 /****************************************************************************************
@@ -175,20 +174,20 @@ p {
 .resumeButton {
   justify-self: end;
   border-style: solid;
-  border-color: var(--primary-color);
+  border-color: var(--main-color);
   border-width: 1px;
   border-radius: 4px;
   font-size: 13px;
   font-family: "Fira Code", monospace;
   font-weight: lighter;
   padding: 0.8rem 1.5rem;
-  color: var(--primary-color);
+  color: var(--main-color);
   text-decoration: none !important;
   margin-right: 3rem;
 }
 
 .resumeButton:hover {
-  color: var(--primary-color);
+  color: var(--main-color);
   background-color: var(--color-dim);
   transition: all 0.2s linear, 1s;
 }
@@ -215,10 +214,6 @@ p {
     font-size: 3em;
     line-height: 36pt;
   }
-}
-
-.title.heading {
-  top: 38vh;
 }
 
 #group1 {
@@ -248,11 +243,19 @@ p {
   z-index: 4; /* slide over group 2 and 4 */
 }
 #group3 .parallax__layer--base {
-  background: rgb(18, 18, 19);
+  background: var(--bg-base);
 }
 
-.about img {
-  height: 25em;
+.about {
+  font-size: 30pt;
+  font-weight: 700;
+  color: var(--off-white);
+}
+
+.about-bar {
+  background: var(--off-white);
+  height: 4px;
+  width: 70px;
 }
 
 /****************************************************************************************
@@ -268,11 +271,16 @@ p {
   background-size: cover;
 }
 
+/****************************************************************************************
+                                    Project Demo Section
+ ****************************************************************************************/
+
+
 #group5 {
   z-index: 3; /* slide over group 4 and 6 */
 }
 #group5 .parallax__layer--base {
-  background: rgb(18, 18, 19);
+  background: var(--bg-base);
 }
 
 #group6 {
@@ -293,7 +301,7 @@ p {
   z-index: 3; /* slide over group 7 */
 }
 #group7 .parallax__layer--base {
-  background: rgb(18, 18, 19);
+  background: var(--bg-base);
 }
 
 .contact-head {
@@ -304,13 +312,13 @@ button[type="button"].button {
   background: none;
   justify-self: end;
   border-style: solid;
-  border-color: var(--primary-color);
+  border-color: var(--main-color);
   border-width: 1px;
   border-radius: 4px;
   font-size: 16px;
   font-family: "Fira Code", monospace;
   padding: 1rem 2.5rem;
-  color: var(--primary-color);
+  color: var(--main-color);
   text-decoration: none !important;
   margin-top: 2rem;
   outline-width: 0;
@@ -343,7 +351,7 @@ textarea {
 input:focus,
 textarea.input:focus {
   outline: none;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--main-color);
 }
 
 label,
@@ -414,8 +422,8 @@ textarea:focus + label {
 
 .closeBtn {
   background: none;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
   -webkit-box-shadow: 0 8px 6px -6px black; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 0 8px 6px -6px black; /* Firefox 3.5 - 3.6 */
   box-shadow: 0 8px 6px -6px black;
@@ -428,7 +436,7 @@ textarea:focus + label {
 }
 
 .sendBtn {
-  background: var(--primary-color);
+  background: var(--main-color);
   color: #000000;
   border: none;
   -webkit-box-shadow: 0 8px 6px -6px black; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -464,7 +472,7 @@ textarea:focus + label {
 }
 
 .send-plane {
-  color: var(--primary-color);
+  color: var(--main-color);
   font-size: 33px;
   height: max-content;
 }
@@ -475,18 +483,18 @@ textarea:focus + label {
  ****************************************************************************************/
 
 .footer {
-  color: whitesmoke;
+  color: #8f9aa7;
   font-family: "Raleway";
   font-weight: 100;
 }
 
 .copyright {
-  color: var(--primary-color);
+  color: var(--main-color);
 }
 
-.col-md-4 {
+/* .col-4 {
   border: dotted 1px red;
-}
+} */
 /* .col{
   border: 1px dotted blue;
 }
