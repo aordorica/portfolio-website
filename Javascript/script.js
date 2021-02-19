@@ -32,3 +32,4 @@ var typed = new Typed("#typed", options);
     }
   });
 })(jQuery, undefined);
+
