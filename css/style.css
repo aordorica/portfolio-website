@@ -3,7 +3,7 @@
   --main-color: #ffd76d;
   --bg-footer: #3f3f3f;
   --bg-base: #202020;
-  --off-white: #707070;
+  --off-white: #c2c0c0;
 }
 
 .parallax {
@@ -256,6 +256,25 @@ p {
   background: var(--off-white);
   height: 4px;
   width: 70px;
+}
+.portrait img {
+  transition: all 1000ms ease-in-out;
+  border-radius: .3rem;
+  
+}
+
+.portrait:hover {
+  box-shadow: -10px 10px 5px var(--main-color);
+	transition: all 450ms ease-in-out;
+  border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 576px) {
+  .portrait:hover {
+    box-shadow: 0px 10px 5px var(--main-color);
+	  transition: all 450ms ease-in-out;
+    border-radius: 0.3rem;
+  }
 }
 
 /****************************************************************************************
