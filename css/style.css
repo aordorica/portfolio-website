@@ -1,9 +1,13 @@
-
 :root {
   --main-color: #ffd76d;
   --bg-footer: #3f3f3f;
   --bg-base: #202020;
   --off-white: #c2c0c0;
+  --transition-text: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --font-header: 30pt;
+  --font-body-sm: 13px;
+  --font-body-md: 20px;
+  --font-family: "Raleway", sans-serif;
 }
 
 .parallax {
@@ -98,7 +102,7 @@ html {
 body {
   font: 100% / 1.5 Arial;
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-family);
   line-height: 1.071;
 }
 
@@ -107,12 +111,34 @@ body {
   padding: 0;
 }
 
-p {
+p > a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  transition: var(--transition-text);
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+p > a::after {
+  content: "";
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  background-color: var(--main-color);
+  transition: var(--transition-text);
+  opacity: 0.5;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+p > a:hover::after {
+  width: 100%;
 }
 
 .section {
@@ -144,8 +170,7 @@ p {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
 }
-≠
-#navbarNavAltMarkup {
+≠ #navbarNavAltMarkup {
   justify-content: flex-end;
 }
 
@@ -198,7 +223,7 @@ p {
 
 .heading {
   font-size: 1.5em;
-  font-family: "Raleway";
+  font-family: var(--font-family); 
   line-height: 20pt;
 }
 
@@ -230,9 +255,9 @@ p {
 #group2 .parallax__layer--back {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(https://media.giphy.com/media/3oEjI2GUZ3RffMInja/giphy.gif);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position: center;
 }
 
 /****************************************************************************************
@@ -247,7 +272,7 @@ p {
 }
 
 .about {
-  font-size: 30pt;
+  /* font-size: 30pt; */
   font-weight: 700;
   color: var(--off-white);
 }
@@ -257,24 +282,55 @@ p {
   height: 4px;
   width: 70px;
 }
+
+.about-info {
+  line-height: 18pt;
+}
+
 .portrait img {
   transition: all 1000ms ease-in-out;
-  border-radius: .3rem;
-  
+  border-radius: 0.3rem;
 }
 
 .portrait:hover {
   box-shadow: -10px 10px 5px var(--main-color);
-	transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
   border-radius: 0.3rem;
+}
+
+.tech-skills li::before {
+  content: "❯";
+  position: absolute;
+  left: 0px;
+  color: var(--main-color);
+  font-size: var(--font-body-sm);
+  line-height: 12px;
 }
 
 @media screen and (max-width: 576px) {
   .portrait:hover {
     box-shadow: 0px 10px 5px var(--main-color);
-	  transition: all 450ms ease-in-out;
+    transition: all 450ms ease-in-out;
     border-radius: 0.3rem;
   }
+}
+
+ul.tech-skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: outside none none;
+}
+
+ul.tech-skills li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: var(--font-family);
+  font-size: var(--font-body-sm);
+  font-weight: 400;
 }
 
 /****************************************************************************************
@@ -293,7 +349,6 @@ p {
 /****************************************************************************************
                                     Project Demo Section
  ****************************************************************************************/
-
 
 #group5 {
   z-index: 3; /* slide over group 4 and 6 */
@@ -450,7 +505,7 @@ textarea:focus + label {
 
 .closeBtn:hover,
 .sendBtn:hover {
-  background-color: #0F192E;
+  background-color: #0f192e;
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
@@ -477,7 +532,6 @@ textarea:focus + label {
 .brackets {
   font-size: 9rem;
   font-weight: 160;
-  
 }
 
 .contact .contact-message {
@@ -496,14 +550,13 @@ textarea:focus + label {
   height: max-content;
 }
 
-
 /****************************************************************************************
                                     Footer Section
  ****************************************************************************************/
 
 .footer {
   color: #8f9aa7;
-  font-family: "Raleway";
+  font-family: var(--font-family);
   font-weight: 100;
 }
 
