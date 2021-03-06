@@ -6,9 +6,12 @@
   --transition-text: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition-hover: 
   --transition-hover: all 450ms ease-in-out;
-  --font-body-sm: 16px;
-  --font-body-md: 20px;
-  --font-body-lg: 30px;
+  --font-headBtn-sm: 13pt;
+  --font-headText-sm: 16pt;
+  --font-body-sm: 8pt;
+  --font-body-md: 12pt;
+  --font-body-lg: 25pt;
+  --font-body-xl: 32pt;
   --font-family: "Raleway", sans-serif;
 }
 
@@ -149,7 +152,7 @@ p > a:hover::after {
 }
 
 .section-title {
-  font-size: 30pt;
+  font-size: var(--font-body-lg);
   font-weight: 700;
   color: var(--off-white);
 }
@@ -157,17 +160,50 @@ p > a:hover::after {
 .title-bar {
   background: var(--main-color);
   height: 4px;
-  width: 100px;
+  width: 5rem;
 }
 
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 375px) {
+  .head-text,
+  ul.tech-skills li,
+  .tech-skills::before     {
+    font-size: var(--font-xs) !important;
+  }
+}
 
-  .about-summary {
-    font-size: var(--font-body-sm) !important;
-    margin-top: 1.25rem !important;
+@media screen and (max-width: 600px) {
+  .head-text {  
+    font-size: var(--font-md) !important;
   }
 
+  .about-summary, 
+  .tech-skills li {
+    font-size: var(--font-sm) !important;
+  }
+
+  .about-summary {
+    margin-top: 1.25rem !important;
+  }
 }
+
+@media screen and (max-height: 600px) {
+  
+} 
+
+@media screen and (min-width: 570px) {
+  .heading {
+    font-size: 2em;
+    line-height: 28pt;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heading {
+    font-size: 3em;
+    line-height: 36pt;
+  }
+}
+*/
 
 /****************************************************************************************
                                     Navigation Section
@@ -233,23 +269,14 @@ p > a:hover::after {
 ******************************************************************************************* */
 
 .heading {
-  font-size: 1.5em;
+  font-size: var(--font-sm);
   font-family: var(--font-family);
-  line-height: 20pt;
+  line-height: 18pt;
+  font-size: var(--font-headText-sm);
 }
 
-@media screen and (min-width: 570px) {
-  .heading {
-    font-size: 2em;
-    line-height: 28pt;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .heading {
-    font-size: 3em;
-    line-height: 36pt;
-  }
+.head-btn {
+  font-size: var(--font-headBtn-sm);
 }
 
 #group1 {
@@ -283,7 +310,6 @@ p > a:hover::after {
 }
 
 .about {
-  /* font-size: 30pt; */
   font-weight: 700;
   color: var(--off-white);
 }
@@ -295,7 +321,7 @@ p > a:hover::after {
 }
 
 .about-summary {
-  font-size: var(--font-body-md);
+  font-size: var(--font-body-sm);
   font-weight: 400;
 }
 
@@ -310,10 +336,14 @@ p > a:hover::after {
   border-radius: 0.3rem;
 }
 
+.tech-skills {
+  justify-content: center;
+}
+
 .tech-skills li::before {
   content: "❯";
   position: absolute;
-  left: 0px;
+  left: 11px;
   color: var(--main-color);
   font-size: var(--font-body-sm);
 }
@@ -328,7 +358,7 @@ ul.tech-skills {
   grid-template-columns: repeat(2, minmax(140px, 200px));
   padding: 0px;
   margin: 20px 0px 0px;
-  overflow: hidden;
+  padding-left: 25%;
   list-style: outside none none;
 }
 
@@ -339,6 +369,13 @@ ul.tech-skills li {
   font-family: var(--font-family);
   font-size: var(--font-body-sm);
   font-weight: 400;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin-bottom: 20%;
 }
 
 /****************************************************************************************
@@ -572,19 +609,15 @@ textarea:focus + label {
   color: var(--main-color);
 }
 
-/* .col-4 {
+/* .col* {
   border: dotted 1px red;
-} */
-/* .col{
-  border: 1px dotted blue;
-}
+}  */
 
-.row {
+/* .row {
   border: 1px solid red;
-  color: black;
-}
+} */
 
-.container,
+/* .container,
 .container-fluid {
   border: 3px solid green;
 }  */
