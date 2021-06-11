@@ -209,7 +209,7 @@ p > a:hover::after {
                                     Navigation Section
  ****************************************************************************************/
 
-#navigation {
+/* #navigation {
   position: fixed;
   padding: 20px 50px;
   z-index: 7;
@@ -262,7 +262,7 @@ p > a:hover::after {
   color: var(--main-color);
   background-color: var(--color-dim);
   transition: all 0.2s linear, 1s;
-}
+} */
 
 /* *****************************************************************************************
                               Heading Styling Section
