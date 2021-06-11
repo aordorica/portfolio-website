@@ -7,3 +7,7 @@ var options = {
 };
 
 var typed = new Typed("#typed", options); 
+
+window.addEventListener("scroll", function () {
+  console.log("scrolling....")
+});
