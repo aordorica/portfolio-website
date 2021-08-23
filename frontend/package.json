@@ -1,9 +1,7 @@
 {
-  "name": "indecision",
+  "name": "dev-portfolio",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:aordorica/indecision.git",
-  "author": "Alan Ordorica <alaniordorica@gmail.com>",
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
@@ -23,6 +21,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-modal": "2.2.2",
+    "react-redux": "^7.2.4",
     "react-router-dom": "4.2.2",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
