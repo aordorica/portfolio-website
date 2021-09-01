@@ -23,10 +23,11 @@ module.exports = {
             },
         ],
     },
-    // devtool: "eval-cheap-module-source-map",
+    devtool: "eval-cheap-module-source-map",
     devServer: {
         static: {
             directory: path.resolve(__dirname, "public"),
         },
+        port: 8000,
     },
 };

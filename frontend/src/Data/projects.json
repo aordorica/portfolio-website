@@ -1,0 +1,101 @@
+{
+    "TankGame": {
+        "name": "Tank Wars",
+        "language": "Java",
+        "category": "Games",
+        "dateCreated": "2019",
+        "description": {
+            "summary": "Space-themed tank shooter game",
+            "tools": "",
+            "points": [
+                "Built using Java and Java AWS kit",
+                "Implemented Split-Screen and mini-map controls",
+                "Implemented collision detection"
+            ]
+        }
+    },
+    "Dev-folio": {
+        "name": "Portfolio Website",
+        "language": "Javascript",
+        "category": "Web App",
+        "dateCreated": "2021",
+        "description": {
+            "summary": "Dynamic portfolio website built using React.js and React-Router to showcase my projects and experience",
+            "tools": [
+                "React.js",
+                "React-Router",
+                "Webpack",
+                "Jest",
+                "Babel",
+                "Redux",
+                "Node.js",
+                "express"
+            ],
+            "points": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "Expensify": {
+        "name": "Expensify Expense Tracker",
+        "language": "Javascript",
+        "category": "Web App",
+        "dateCreated": "2021",
+        "description": {
+            "summary": "Scalable web app to create, edit, track and remove expenses utilizing user authentication via Firebase.",
+            "tools": [
+                "React.js",
+                "Webpack",
+                "Jest",
+                "Babel",
+                "Redux",
+                "Firebase"
+            ],
+            "points": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "Indecision": {
+        "name": "Indecision option selector",
+        "language": "Javascript",
+        "category": "Web App",
+        "dateCreated": "2020",
+        "description": {
+            "summary": "Fun decisions selecting web app for those times when you can't make up your mind, with a simple UI and state mamnagement via React Redux.",
+            "tools": [
+                "React.js",
+                "Redux",
+                "Webpack",
+                "Jest",
+                "Babel"
+            ],
+            "points": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "Tipster": {
+        "name": "Tip Calculator",
+        "language": "Swift",
+        "category": "iOS App",
+        "dateCreated": "2019",
+        "description": {
+            "summary": "Tip calculator application built using Swift and Xcode storyboard and swiftUI",
+            "tools": [
+                "Xcode"
+            ],
+            "points": [
+                "",
+                "",
+                ""
+            ]
+        }
+    }
+}
