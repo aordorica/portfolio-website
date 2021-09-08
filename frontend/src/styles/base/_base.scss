@@ -1,10 +1,8 @@
-html {
-  font-size: 62.5%;
-}
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
+  font-family: Roboto, sans-serif;
+  background-color: $bg-main;
+  color: $bg-text;
 }
 
 button {
@@ -16,5 +14,18 @@ button:disabled {
 }
 
 .is-active {
-  font-weight: bold;
+  // font-weight: bold;
+  color: $is-active;
 }
+
+// .col-md-6 {
+//   border: solid 2p green;
+// }
+
+// .row {
+//   border: 2px solid red;
+// }
+
+// .col {
+//   border: solid 2px green;
+// }

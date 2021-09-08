@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import NotFoundPage from '../Components/NotFoundPage';
-import Header from '../Components/Header';
 import HomePage from '../Components/HomePage';
 import ContactPage from '../Components/ContactPage';
 import PortfolioItemPage from '../Components/PortfolioItemPage';
@@ -10,7 +9,6 @@ import PortfolioPage from '../Components/PortfolioPage';
 const AppRouter = () => (
   <BrowserRouter>
     <div>
-      <Header />
       <Switch>
         <Route path="/" component={HomePage} exact={true} />
         <Route path="/portfolio" component={PortfolioPage} exact={true} />

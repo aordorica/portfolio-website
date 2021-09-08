@@ -1,0 +1,37 @@
+.profile {
+    // border-radius: 2rem;
+    height: 50%;
+    width: 50%;
+}
+
+.head {
+    height: 89vh;
+}
+
+.header_tag {
+    font-size: 1.4rem;
+    color: white;
+}
+.header_name::after {
+    content: ".";
+    color: $secondary;
+}
+.header_name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.header_sub {
+    font-size: 2.5rem;
+    color: $bg-text;
+    font-weight: bold;
+}
+
+.profile {
+    box-shadow: 15px -15px 0 0px $bg-main, 15px -15px 0 1px $secondary;
+    transition: box-shadow 0.2s;
+}
+.profile:hover {
+    box-shadow: 10px -10px 0 0px $bg-main, 10px -10px 0 1px $secondary;
+}

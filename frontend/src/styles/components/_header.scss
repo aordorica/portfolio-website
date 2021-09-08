@@ -1,0 +1,39 @@
+
+.navbar-nav a:hover {
+    color: $secondary-hover;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $bg-text;
+}
+
+a.is-active {
+    border-bottom: solid .187rem $is-active;
+    color: $secondary;
+}
+
+.navbar-toggler {
+    background-color: #3c4249;
+    opacity: 50%;
+    border-radius: 1rem;
+}
+
+.menuIcon {
+    color: white;
+    font-size: 3rem;
+    transform: scale(-1, 1);
+}
+
+.header {
+    font-size: $s-size;
+    background: transparent;
+}
+
+.header.active {
+    font-size: $s-size;
+    background-color: $bg-main;
+    box-shadow: 5px;
+}
