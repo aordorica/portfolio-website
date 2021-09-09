@@ -5,7 +5,7 @@ import { Container, Navbar, Nav, Row, Col } from "react-bootstrap";
 import favicon from "../../assets/images/logo_yellow.png";
 import SortSharpIcon from "@material-ui/icons/SortSharp";
 import Backdrop from "@material-ui/core/Backdrop";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -52,9 +52,15 @@ const Header = () => {
     const handleOpen = () => {
         setOpen(!open)
     }
+
+    const navRef = useRef(0)
+    useEffect(() => {
+        console.log(navRef.current.offsetHeight);
+    })
+
     return (
-        <Navbar sticky='top' expand='md' id='header' className='pt-0'>
-            <Container fluid className='header active py-2 shadow-lg'>
+        <Navbar ref={navRef} sticky='top' expand='md' id='header' className='pt-0'>
+            <Container fluid className='header active pt-2 shadow-lg'>
                 <LinkContainer to='/'>
                     <Navbar.Brand className='px-5'>
                         <img src={favicon} alt='Logo' width='50' height='50' />

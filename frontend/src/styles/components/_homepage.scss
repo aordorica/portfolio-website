@@ -1,29 +1,34 @@
+@import '../../../node_modules/rfs/scss.scss';
+
 .profile {
-    // border-radius: 2rem;
     height: 50%;
     width: 50%;
 }
 
-.head {
-    height: 89vh;
+.icon_btn {
+    box-shadow: 0 0px 10px white;
+}
+.home {
+    height: 92vh;
 }
 
 .header_tag {
-    font-size: 1.4rem;
+    @include font-size(1.4rem);
     color: white;
 }
+
 .header_name::after {
     content: ".";
     color: $secondary;
 }
 .header_name {
-    font-size: 2.5rem;
+    @include font-size(2.5rem);
     font-weight: bold;
     color: white;
 }
 
 .header_sub {
-    font-size: 2.5rem;
+    @include font-size(2.5rem);
     color: $bg-text;
     font-weight: bold;
 }
@@ -35,3 +40,39 @@
 .profile:hover {
     box-shadow: 10px -10px 0 0px $bg-main, 10px -10px 0 1px $secondary;
 }
+
+.btn-group {
+    & a {
+        font-size: $icon-small;
+        transition: transform 0.2s;
+        padding: 20px;
+        &:hover {
+            transform: scale(1.3);
+            color: $secondary;
+        }
+    }
+    & .emailBtn {
+        font-size: $icon-small;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.3);
+            color: $secondary;
+        }
+    }
+}
+
+svg.expandBtn {
+    font-size: $icon-large;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+// .col-md-6:nth-child(1) {
+//     background-color: red;
+// }
+
+// .row:nth-child(1) {
+//     background-color: green;
+// }

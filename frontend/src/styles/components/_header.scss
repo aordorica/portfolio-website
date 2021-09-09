@@ -27,11 +27,6 @@ a.is-active {
     transform: scale(-1, 1);
 }
 
-.header {
-    font-size: $s-size;
-    background: transparent;
-}
-
 .header.active {
     font-size: $s-size;
     background-color: $bg-main;
