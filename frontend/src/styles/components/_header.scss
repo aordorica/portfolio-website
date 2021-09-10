@@ -10,14 +10,18 @@
     color: $bg-text;
 }
 
+.navbar-nav a {
+    transition: all 0.2s;
+}
+
 a.is-active {
     border-bottom: solid .187rem $is-active;
     color: $secondary;
 }
 
 .navbar-toggler {
-    background-color: #3c4249;
-    opacity: 50%;
+    background-color: #313233bb;
+    // opacity: 50%;
     border-radius: 1rem;
 }
 
@@ -27,8 +31,12 @@ a.is-active {
     transform: scale(-1, 1);
 }
 
+.header {
+    padding-left: 3rem;
+}
+
 .header.active {
     font-size: $s-size;
-    background-color: $bg-main;
+    background-color: $bg-dim;
     box-shadow: 5px;
 }

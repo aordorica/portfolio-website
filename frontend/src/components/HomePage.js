@@ -1,14 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Header from "./Header";
+import { Row, Col, Container } from "react-bootstrap";
+import {
+    ThemeProvider,
+    createTheme,
+    makeStyles,
+} from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 import ShowMore from "./ShowMore";
-import { Row, Col, Image, Container, ButtonGroup, Card } from "react-bootstrap";
-import { LinkedIn, GitHub, Email } from "@material-ui/icons";
-import IconButton from "@material-ui/core/IconButton";
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import profile from "../../assets/images/profile.jpg";
-import {useHistory} from "react-router-dom";
+import Header from "./Header";
+import Experience from "./Experience";
+import ProfileCard from './ProfileCard';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
 
 const theme = createTheme({
     palette: {
@@ -19,99 +23,125 @@ const theme = createTheme({
             main: "#f5cb5c",
         },
     },
+    overrides: {
+        // Style sheet name ⚛️
+        MuiButton: {
+            // Name of the rule
+            outlined: {
+                transition: "transform 0.2s",
+                "&:hover": {
+                    background: "#f5cb5c",
+                    borderRadius: 3,
+                    border: 0,
+                    color: "white",
+                    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
+                },
+            },
+        },
+    },
 });
 
+const useStyles = makeStyles({});
+
 const HomePage = (props) => {
-    const history = useHistory()
-    const [showMore, setShowMore] = useState(false)
+    const [showMore, setShowMore] = useState(false);
 
     useEffect(() => {
-        handleShowMore()
-    })
+        handleShowMore();
+    });
     const handleShowMore = () => {
-        if(window.innerWidth > 700) {
-            setShowMore(true)
+        if (window.innerWidth > 700) {
+            setShowMore(true);
         } else {
-            setShowMore(false)
+            setShowMore(false);
         }
-    }
+    };
 
-    window.addEventListener('resize', handleShowMore)
-
+    window.addEventListener("resize", handleShowMore);
+    const classes = useStyles();
     return (
         <ThemeProvider theme={theme}>
             <Header />
             <Container>
                 <Row className='align-content-center mx-1 my-0 home'>
-                    <Col className='align-self-center px-md-5 px-0' md={6}>
+                    <Col className='align-self-center px-md-5 px-0'>
                         <h1 className='header_tag'>Hi, my name is</h1>
                         <h1 className='header_name mb-0'>Alan Ordorica</h1>
                         <p className='header_sub'>
-                            I build solutions for the web
+                            I build solutions for the web.
                         </p>
                         <p className='header_sum mb-0'>
-                            A San Francisco bay area native, I am always seeking
-                            challenges and opportunities to pursue my passion in
-                            technology. I build solutions to problems and use my
-                            unique perspective to develop new ideas. Join me on
-                            my roadtrip!
+                            I'm a Software Engineer from Oakland, California
+                            with a passion for creating technology to elevate
+                            people.
                         </p>
-                        <Row>
-                            <Col className='text-center'>
-                                <ButtonGroup>
-                                    <IconButton
-                                        href='http://linkedin.com/in/alanodev/'
-                                        color='primary'
-                                    >
-                                        <LinkedIn fontSize='inherit' />
-                                    </IconButton>
-                                    <IconButton
-                                        href='https://github.com/aordorica'
-                                        color='primary'
-                                    >
-                                        <GitHub fontSize='inherit' />
-                                    </IconButton>
-                                    <IconButton
-                                        onClick={() => {
-                                            history.push("/contact");
-                                        }}
-                                        color='primary'
-                                    >
-                                        <Email
-                                            className='emailBtn'
-                                            fontSize='inherit'
-                                        />
-                                    </IconButton>
-                                </ButtonGroup>
-                            </Col>
-                        </Row>
                     </Col>
-                    <Col className='my-md-auto py-0 p-5' md={6}>
-                        <Row>
-                            <Image
-                                className='profile mx-auto px-0'
-                                rounded
-                                src={profile}
-                                fluid
-                            />
-                        </Row>
-                        {!showMore && <ShowMore />}
-                    </Col>
-                    {showMore && <ShowMore />}
+                    {showMore && <ProfileCard />}
+                    <Row className='p-5'>
+                        <Col className='text-md-start text-center'>
+                            <Button
+                                className='px-4 py-2 info_btn'
+                                color='secondary'
+                                variant='outlined'
+                            >
+                                get in touch
+                            </Button>
+                        </Col>
+                    </Row>
+                    <ShowMore />
                 </Row>
-                <Row>
-                    <Card>
-                        <Card.Title>Some title</Card.Title>
-                        <Card.Body>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Ratione sapiente dolorem quia assumenda
-                            aperiam est minus dolorum sint corrupti hic laborum
-                            recusandae, possimus autem, libero qui aspernatur ex
-                            magni iure.
-                        </Card.Body>
-                        <Card.Img src={profile} />
-                    </Card>
-                </Row>
+            </Container>
+            <Container fluid className='section' id='experience'>
+                <Experience showMore={showMore}>
+                    <h1>Experience</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eos voluptatum nulla minima, minus similique
+                        dolor! Sit et consequuntur deleniti, quod corporis hic
+                        possimus excepturi, iusto obcaecati at libero architecto
+                        esse?
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eos voluptatum nulla minima, minus similique
+                        dolor! Sit et consequuntur deleniti, quod corporis hic
+                        possimus excepturi, iusto obcaecati at libero architecto
+                        esse?
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eos voluptatum nulla minima, minus similique
+                        dolor! Sit et consequuntur deleniti, quod corporis hic
+                        possimus excepturi, iusto obcaecati at libero architecto
+                        esse?
+                    </p>
+                </Experience>
+            </Container>
+            <Container fluid className='section'>
+                <Experience showMore={showMore}>
+                    <h1>About</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eos voluptatum nulla minima, minus similique
+                        dolor! Sit et consequuntur deleniti, quod corporis hic
+                        possimus excepturi, iusto obcaecati at libero architecto
+                        esse?
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eos voluptatum nulla minima, minus similique
+                        dolor! Sit et consequuntur deleniti, quod corporis hic
+                        possimus excepturi, iusto obcaecati at libero architecto
+                        esse?
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eos voluptatum nulla minima, minus similique
+                        dolor! Sit et consequuntur deleniti, quod corporis hic
+                        possimus excepturi, iusto obcaecati at libero architecto
+                        esse?
+                    </p>
+                </Experience>
             </Container>
         </ThemeProvider>
     );

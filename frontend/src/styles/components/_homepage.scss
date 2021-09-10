@@ -1,15 +1,11 @@
-@import '../../../node_modules/rfs/scss.scss';
+@import "../../../node_modules/rfs/scss.scss";
 
 .profile {
     height: 50%;
     width: 50%;
 }
-
-.icon_btn {
-    box-shadow: 0 0px 10px white;
-}
-.home {
-    height: 92vh;
+.home, .section {
+    height: calc(100vh - 76px);
 }
 
 .header_tag {
@@ -22,15 +18,20 @@
     color: $secondary;
 }
 .header_name {
-    @include font-size(2.5rem);
+    @include font-size(4rem);
     font-weight: bold;
     color: white;
 }
 
 .header_sub {
-    @include font-size(2.5rem);
+    @include font-size(2.6rem);
     color: $bg-text;
     font-weight: bold;
+}
+
+.header_sum {
+    @include font-size(1.1rem);
+    line-height: 1.7em;
 }
 
 .profile {
@@ -61,18 +62,6 @@
     }
 }
 
-svg.expandBtn {
-    font-size: $icon-large;
-    transition: transform 0.2s;
-    &:hover {
-        transform: scale(1.5);
-    }
+.info_btn:hover {
+    transform: scale(1.1);
 }
-
-// .col-md-6:nth-child(1) {
-//     background-color: red;
-// }
-
-// .row:nth-child(1) {
-//     background-color: green;
-// }
