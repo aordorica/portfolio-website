@@ -9,8 +9,9 @@
 }
 
 .header_tag {
-    @include font-size(1.4rem);
-    color: white;
+    @include font-size(1.2rem);
+    color: $secondary;
+    font-weight: 300;
 }
 
 .header_name::after {
@@ -31,11 +32,12 @@
 
 .header_sum {
     @include font-size(1.1rem);
-    line-height: 1.7em;
+    line-height: 1.4em;
+    font-weight: 300;
 }
 
 .profile {
-    box-shadow: 15px -15px 0 0px $bg-main, 15px -15px 0 1px $secondary;
+    box-shadow: 15px -15px 0 0px $bg-dark, 15px -15px 0 1px $secondary;
     transition: box-shadow 0.2s;
 }
 .profile:hover {

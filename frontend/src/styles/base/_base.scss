@@ -1,7 +1,7 @@
 
 body {
   font-family: Roboto, sans-serif;
-  background-color: $bg-dark;
+  background-color: $bg-main;
   color: $bg-text;
 }
 
@@ -14,18 +14,5 @@ button:disabled {
 }
 
 .is-active {
-  // font-weight: bold;
   color: $is-active;
 }
-
-// .col-md-6 {
-//   border: solid 2p green;
-// }
-
-// .row {
-//   border: 2px solid red;
-// }
-
-// .col {
-//   border: solid 2px green;
-// }

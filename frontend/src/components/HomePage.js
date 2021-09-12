@@ -10,9 +10,8 @@ import Button from "@material-ui/core/Button";
 import ShowMore from "./ShowMore";
 import Header from "./Header";
 import Experience from "./Experience";
-import ProfileCard from './ProfileCard';
+import ProfileCard from "./ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css";
 
 const theme = createTheme({
     palette: {
@@ -22,6 +21,7 @@ const theme = createTheme({
         secondary: {
             main: "#f5cb5c",
         },
+        divider: "rgba(255, 255, 255, 0.12)",
     },
     overrides: {
         // Style sheet name ⚛️
@@ -38,26 +38,32 @@ const theme = createTheme({
                 },
             },
         },
+        MuiTab: {
+            root: {
+                textTransform: 'none',
+            },
+        },
+        
     },
 });
 
 const useStyles = makeStyles({});
 
 const HomePage = (props) => {
-    const [showMore, setShowMore] = useState(false);
+    const [smallScreen, setsmallScreen] = useState(false);
 
     useEffect(() => {
-        handleShowMore();
+        handlesmallScreen();
     });
-    const handleShowMore = () => {
-        if (window.innerWidth > 700) {
-            setShowMore(true);
+    const handlesmallScreen = () => {
+        if (window.innerWidth < 700) {
+            setsmallScreen(false);
         } else {
-            setShowMore(false);
+            setsmallScreen(true);
         }
     };
 
-    window.addEventListener("resize", handleShowMore);
+    window.addEventListener("resize", handlesmallScreen);
     const classes = useStyles();
     return (
         <ThemeProvider theme={theme}>
@@ -65,7 +71,7 @@ const HomePage = (props) => {
             <Container>
                 <Row className='align-content-center mx-1 my-0 home'>
                     <Col className='align-self-center px-md-5 px-0'>
-                        <h1 className='header_tag'>Hi, my name is</h1>
+                        <h3 className='header_tag'>Hi, my name is</h3>
                         <h1 className='header_name mb-0'>Alan Ordorica</h1>
                         <p className='header_sub'>
                             I build solutions for the web.
@@ -76,7 +82,7 @@ const HomePage = (props) => {
                             people.
                         </p>
                     </Col>
-                    {showMore && <ProfileCard />}
+                    {smallScreen && <ProfileCard />}
                     <Row className='p-5'>
                         <Col className='text-md-start text-center'>
                             <Button
@@ -92,57 +98,9 @@ const HomePage = (props) => {
                 </Row>
             </Container>
             <Container fluid className='section' id='experience'>
-                <Experience showMore={showMore}>
-                    <h1>Experience</h1>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos voluptatum nulla minima, minus similique
-                        dolor! Sit et consequuntur deleniti, quod corporis hic
-                        possimus excepturi, iusto obcaecati at libero architecto
-                        esse?
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos voluptatum nulla minima, minus similique
-                        dolor! Sit et consequuntur deleniti, quod corporis hic
-                        possimus excepturi, iusto obcaecati at libero architecto
-                        esse?
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos voluptatum nulla minima, minus similique
-                        dolor! Sit et consequuntur deleniti, quod corporis hic
-                        possimus excepturi, iusto obcaecati at libero architecto
-                        esse?
-                    </p>
-                </Experience>
+                <Experience smallScreen={smallScreen} />
             </Container>
-            <Container fluid className='section'>
-                <Experience showMore={showMore}>
-                    <h1>About</h1>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos voluptatum nulla minima, minus similique
-                        dolor! Sit et consequuntur deleniti, quod corporis hic
-                        possimus excepturi, iusto obcaecati at libero architecto
-                        esse?
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos voluptatum nulla minima, minus similique
-                        dolor! Sit et consequuntur deleniti, quod corporis hic
-                        possimus excepturi, iusto obcaecati at libero architecto
-                        esse?
-                    </p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Eos voluptatum nulla minima, minus similique
-                        dolor! Sit et consequuntur deleniti, quod corporis hic
-                        possimus excepturi, iusto obcaecati at libero architecto
-                        esse?
-                    </p>
-                </Experience>
-            </Container>
+            
         </ThemeProvider>
     );
 };

@@ -5,18 +5,9 @@ import { Container, Navbar } from "react-bootstrap";
 import favicon from "../../assets/images/logo_yellow.png";
 import SortSharpIcon from "@material-ui/icons/SortSharp";
 import { useState, useRef, useEffect } from "react";
-import { makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-    backdrop: {
-        zIndex: theme.zIndex.drawer + 1,
-        color: "#fff",
-    },
-}));
 
 const Header = () => {
     const [open, setOpen] = useState(false)
-    const classes = useStyles()
     const handleClose = () => {
         setOpen(false)
     }
@@ -43,7 +34,6 @@ const Header = () => {
                 >
                     <SortSharpIcon
                         className='menuIcon'
-                        style={{ fontSize: "2rem" }}
                     />
                 </Navbar.Toggle>
                     <Navbar.Collapse id='basic-navbar-nav'>

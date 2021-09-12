@@ -4,9 +4,8 @@
 }
 
 .navbar-nav a {
+    font-size: 1rem;
     text-decoration: none;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     color: $bg-text;
 }
 
@@ -21,22 +20,15 @@ a.is-active {
 
 .navbar-toggler {
     background-color: #313233bb;
-    // opacity: 50%;
     border-radius: 1rem;
 }
 
 .menuIcon {
-    color: white;
-    font-size: 3rem;
+    color: $secondary;
     transform: scale(-1, 1);
 }
 
 .header {
     padding-left: 3rem;
-}
-
-.header.active {
-    font-size: $s-size;
-    background-color: $bg-dim;
-    box-shadow: 5px;
+    background-color: $bg-main;
 }
