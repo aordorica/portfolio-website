@@ -10,13 +10,11 @@ import ExperienceItem from "./ExperienceItem";
 import { SwipeableDrawer, Paper } from "@material-ui/core";
 
 export default ({ smallScreen, children }) => {
-    // const list = JSON.parse(data)
     const display = smallScreen ? "flex" : "";
-    const tabBorder = smallScreen ? `1px solid` : 'none'
-    const [index, setIndex] = useState(0);
+    const [value, setValue] = useState(0);
 
-    const onTabClick = (event, newIndex) => {
-        setIndex(newIndex);
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
     };
 
     // Custom styling for Tabs Selector
@@ -47,29 +45,38 @@ export default ({ smallScreen, children }) => {
         >
             <Col className='m-auto'>
                 <Row className='justify-content-center pb-5'>
-                    <Col className='my-auto' md={1}><WorkIcon color='secondary' fontSize='large' /></Col>
-                    <Col className='my-auto' md={3}><h2>Work Experience</h2></Col>
+                    <Col className='my-auto' md={1}>
+                        <WorkIcon color='secondary' fontSize='large' />
+                    </Col>
+                    <Col className='my-auto' md={3}>
+                        <h2>Work Experience</h2>
+                    </Col>
                 </Row>
                 <div className={classes.root}>
                     <Tabs
                         className={classes.tabs}
-                        onChange={onTabClick}
-                        // variant='scrollable'
-                        scrollButtons='on'
+                        onChange={handleChange}
+                        variant='scrollable'
+                        scrollButtons='off'
                         orientation={smallScreen ? "vertical" : "horizontal"}
-                        value={index}
-                        centered
+                        value={value}
                     >
                         {data.roles.map((role, index) => (
-                            <Tab label={role.company} key={index} />
+                            <Tab className='py-0' label={role.company} key={index} />
                         ))}
                     </Tabs>
-
-                    <ExperienceItem
-                        title='Genius'
-                        company='Apple'
-                        description='Apple Certified Mac and iOS Technician (ACMT) with over 4+ years technical IT support experience.'
-                    />
+                    
+                    <Col>
+                        <ExperienceItem
+                            value={value}
+                            title={data.roles[value].title}
+                            company={data.roles[value].company}
+                            dates={data.roles[value].dates}
+                            description={data.roles[value].desc}
+                            responsibilities={data.roles[value].responsibilities}
+                            accomplishments={data.roles[value].accomplishments}
+                        />
+                    </Col>
                 </div>
                 {children}
             </Col>

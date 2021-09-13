@@ -15,7 +15,42 @@
     // }
 }
 
-// #experience .col-md-2, .col, .col-md-6 {
-//     border: 1px solid green;
-// }
+.exp-contain {
+    // height: 70vh;
+}
+
+.expItem .headline {
+    @include font-size(1.3rem);
+    padding-left: 5px;
+    color: white;
+    & .company {
+        color: $secondary;
+    }
+}
+
+.expItem ul {
+    list-style-type: none;
+    text-align: start
+}
+
+.expItem .dates {
+    @include font-size(0.9rem)
+}
+
+#experience .expItem li {
+    @include font-size(1rem);
+    font-weight: 400;
+    line-height: 1.7rem; 
+    padding-bottom: 1rem;
+    padding-left: 27px;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+    &::before {
+        content: '▹';
+        color: $secondary;
+        position: absolute;
+        left: 0px;
+    }
+}
 

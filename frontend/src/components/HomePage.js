@@ -13,13 +13,17 @@ import Experience from "./Experience";
 import ProfileCard from "./ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const secondary = "#f5cb5c";
+const secondary_light = "#f5cc5c15";
+const primary = "#ffff";
+
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#ffff",
+            main: primary,
         },
         secondary: {
-            main: "#f5cb5c",
+            main: secondary,
         },
         divider: "rgba(255, 255, 255, 0.12)",
     },
@@ -40,10 +44,20 @@ const theme = createTheme({
         },
         MuiTab: {
             root: {
-                textTransform: 'none',
+                textTransform: "none",
+                fontWeight: 400,
+                "&$selected": {
+                    color: secondary,
+                    backgroundColor: secondary_light,
+                },
+                "&:hover": {
+                    backgroundColor: secondary_light,
+                },
+            },
+            wrapper: {
+                alignItems: "flex-end",
             },
         },
-        
     },
 });
 

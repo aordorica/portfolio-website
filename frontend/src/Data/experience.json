@@ -1,34 +1,65 @@
 {
     "roles": [
         {
-            "title": "Tools and Automation Engineer Intern",
-            "pseudo": "epq ops",
-            "company": "Apple",
+            "title": "Software Engineer",
+            "pseudo": "freelance",
+            "company": "Freelance",
             "desc": "",
+            "dates": "Jun 2020 - Present",
+            "accomplishments": [
+                "",
+                ""
+            ],
+            "responsibilities": [
+                "Collaborated with a small team of student designers to spearhead a new brand and design system for Scout’s inaugural student-led design conference at Northeastern",
+                "Developed, unit tested and deployed web, mobile, and native applications using various languages and frameworks including Java, JavaScript, Node.js, React, Express, Flutter and other frameworks and tools"
+            ]
+        },
+        {
+            "title": "Engineering Intern",
+            "pseudo": "Tools and Automation Engineer",
+            "company": "Apple",
+            "desc": "Automation engineer for the CI/CD SWE team tasked with maintaining Apple's testing systems",
+            "dates": "Jun 2020 - Mar 2021",
+            "accomplishments": [
+                "Minimized queue times to achieve over 90% availability and overall site reliability by 30% by implementing automation systems and workflows to proactively detect potential failures in hosts.",
+                "Utilized Ansible to configure 100,000+ devices under test for deployment on testing clusters"
+            ],
+            "responsibilities": [
+                "Built-out and maintained multiple CI/CD testing labs across 5 locations",
+                "Developed and maintained scripts used for core infrastructure monitoring and task automation as well as to monitor and maintain 10,000+ iOS/macOS device clusters."
+            ]
+        },
+        {
+            "title": "Data Intern",
+            "pseudo": "Data Analytics Intern",
+            "company": "CARECEN",
+            "desc": "",
+            "dates": "Jun 2019 - Aug 2019",
             "accomplishments": [],
-            "responsibilities": []
+            "responsibilities": [
+                "Designed and built statistical analysis models to create a predictive analysis of resources and impactful visual models",
+                "Collected and cleansed and analyzed large sets of structured and unstructured data using R data cleaning techniques."
+            ]
         },
         {
             "title": "Genius",
-            "pseudo": "genius",
+            "pseudo": "Mac and iOS Genius",
             "company": "Apple",
-            "desc": "",
+            "desc": "Apple Certified Mac and iOS Technician (ACMT) with over 4+ years technical IT support experience",
+            "dates": "Oct 2017 - Jun 2021",
             "accomplishments": [],
-            "responsibilities": []
-        },
-        {
-            "title": "Data Analytics Intern",
-            "pseudo": "analyst",
-            "company": "CARECEN",
-            "desc": "",
-            "accomplishments": [],
-            "responsibilities": []
+            "responsibilities": [
+                "Trained and mentored over 30+ technicians in diagnosing, troubleshooting and repairing all Mac and iOS devices.",
+                "Boosted store customer satisfaction ratings by 20% by increasing team technical skill proficiency and mentorship"
+            ]
         },
         {
             "title": "Manager",
             "pseudo": "encinal manager",
             "company": "Encinal Market",
             "desc": "",
+            "dates": "Aug 2011 - Oct 2017",
             "accomplishments": [],
             "responsibilities": []
         }

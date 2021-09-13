@@ -1,6 +1,5 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import { Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
 
 export default function ExperienceItem({
     title,
@@ -9,12 +8,22 @@ export default function ExperienceItem({
     pseudo,
     accomplishments,
     responsibilities,
+    dates,
+    value,
+    index,
 }) {
     return (
-        <div>
-            <Row className='text-start p-4'>
-                <h3>{title} @ {company}</h3>
-                <p>{description}</p>
+        <div className='exp-contain'>
+            <Row className='text-start py-4 expItem'>
+                <h3 className='headline px-4 mx-3'>
+                    <span className='title'>{title}</span><span className='company'> @ {company}</span>
+                </h3>
+                <p className='dates mx-4'>{dates}</p>
+                <ul>
+                    {responsibilities.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ul>
             </Row>
         </div>
     );
