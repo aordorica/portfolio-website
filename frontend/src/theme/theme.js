@@ -45,5 +45,10 @@ export default createTheme({
                 alignItems: "flex-end",
             },
         },
+        MuiTabs: {
+            root: {
+                paddingLeft: '3rem'
+            }
+        }
     },
 });
