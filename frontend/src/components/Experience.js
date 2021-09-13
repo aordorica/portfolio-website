@@ -39,7 +39,7 @@ export default ({ smallScreen, children }) => {
 
     return (
         <Row
-            className={"text-center h-100 ".concat(
+            className={"text-center ".concat(
                 smallScreen ? "w-75 mx-auto" : ""
             )}
         >
@@ -48,7 +48,7 @@ export default ({ smallScreen, children }) => {
                     <Col className='my-auto' md={1}>
                         <WorkIcon color='secondary' fontSize='large' />
                     </Col>
-                    <Col className='my-auto' md={3}>
+                    <Col className='my-auto pt-3' md={3}>
                         <h2>Work Experience</h2>
                     </Col>
                 </Row>

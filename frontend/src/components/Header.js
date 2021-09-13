@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <Navbar ref={navRef} sticky='top' expand='md' id='header' className='pt-0'>
-            <Container fluid className='header active pt-2 shadow-lg'>
+            <Container fluid className='header active shadow-lg'>
                 <LinkContainer to='/'>
                     <Navbar.Brand className='px-md-0 px-2'>
                         <img src={favicon} alt='Logo' width='50' height='50' />
