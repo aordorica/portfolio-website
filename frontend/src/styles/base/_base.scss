@@ -3,6 +3,7 @@ body {
   font-family: Roboto, sans-serif;
   background-color: $bg-main;
   color: $bg-text;
+  overflow-x: hidden;
 }
 
 button {

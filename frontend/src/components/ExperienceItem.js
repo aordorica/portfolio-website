@@ -14,9 +14,10 @@ export default function ExperienceItem({
 }) {
     return (
         <div className='exp-contain'>
-            <Row className='text-start py-4 expItem'>
+            <Row className='text-start expItem pt-4 pt-md-0'>
                 <h3 className='headline px-4 mx-3'>
-                    <span className='title'>{title}</span><span className='company'> @ {company}</span>
+                    <span className='title'>{title}</span>
+                    <span className='company'> @ {company}</span>
                 </h3>
                 <p className='dates mx-4'>{dates}</p>
                 <ul>

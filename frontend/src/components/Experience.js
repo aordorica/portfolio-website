@@ -39,34 +39,36 @@ export default ({ smallScreen, children }) => {
 
     return (
         <Row
-            className={"text-center ".concat(
-                smallScreen ? "w-75 mx-auto" : ""
+            className={"text-center tabs-container ".concat(
+                smallScreen ? "mx-auto" : ""
             )}
         >
-            <Col className='m-auto'>
-                <Row className='justify-content-center pb-5'>
-                    <Col className='my-auto' md={1}>
+            <Col className='exp-content'>
+                <Row className='justify-content-center pb-2 pb-md-4'>
+                    <Col className='my-auto' md={1} xl={1}>
                         <WorkIcon color='secondary' fontSize='large' />
                     </Col>
-                    <Col className='my-auto pt-3' md={3}>
+                    <Col md={6} xl={5}>
                         <h2>Work Experience</h2>
                     </Col>
                 </Row>
-                <div className={classes.root}>
-                    <Tabs
-                        className={classes.tabs}
-                        onChange={handleChange}
-                        variant='scrollable'
-                        scrollButtons='off'
-                        orientation={smallScreen ? "vertical" : "horizontal"}
-                        value={value}
-                    >
-                        {data.roles.map((role, index) => (
-                            <Tab className='py-0' label={role.company} key={index} />
-                        ))}
-                    </Tabs>
+                <Row className={classes.root.concat(' justify-content-center tabs-content')}>
+                    <Col md={4} xl={2}>
+                        <Tabs
+                            className={classes.tabs}
+                            onChange={handleChange}
+                            variant='scrollable'
+                            scrollButtons='off'
+                            orientation={smallScreen ? "vertical" : "horizontal"}
+                            value={value}
+                        >
+                            {data.roles.map((role, index) => (
+                                <Tab className='py-0' label={role.company} key={index} />
+                            ))}
+                        </Tabs>
+                    </Col>
                     
-                    <Col>
+                    <Col md={8} xl={6}>
                         <ExperienceItem
                             value={value}
                             title={data.roles[value].title}
@@ -77,7 +79,7 @@ export default ({ smallScreen, children }) => {
                             accomplishments={data.roles[value].accomplishments}
                         />
                     </Col>
-                </div>
+                </Row>
                 {children}
             </Col>
         </Row>

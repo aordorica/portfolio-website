@@ -15,8 +15,14 @@
     // }
 }
 
-.exp-contain {
-    // height: 70vh;
+.exp-content {
+    height: 25vh;
+    align-content: center;
+}
+
+.tabs-container {
+    height: 80vh;
+    align-content: center;
 }
 
 .expItem .headline {
@@ -39,7 +45,7 @@
 
 #experience .expItem li {
     @include font-size(1rem);
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.7rem; 
     padding-bottom: 1rem;
     padding-left: 27px;

@@ -1,67 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import {
-    ThemeProvider,
-    createTheme,
-    makeStyles,
-} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import ThemeProvider from "@material-ui/styles/ThemeProvider";
 import ShowMore from "./ShowMore";
 import Header from "./Header";
 import Experience from "./Experience";
 import ProfileCard from "./ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const secondary = "#f5cb5c";
-const secondary_light = "#f5cc5c15";
-const primary = "#ffff";
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: primary,
-        },
-        secondary: {
-            main: secondary,
-        },
-        divider: "rgba(255, 255, 255, 0.12)",
-    },
-    overrides: {
-        // Style sheet name ⚛️
-        MuiButton: {
-            // Name of the rule
-            outlined: {
-                transition: "transform 0.2s",
-                "&:hover": {
-                    background: "#f5cb5c",
-                    borderRadius: 3,
-                    border: 0,
-                    color: "white",
-                    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)",
-                },
-            },
-        },
-        MuiTab: {
-            root: {
-                textTransform: "none",
-                fontWeight: 400,
-                "&$selected": {
-                    color: secondary,
-                    backgroundColor: secondary_light,
-                },
-                "&:hover": {
-                    backgroundColor: secondary_light,
-                },
-            },
-            wrapper: {
-                alignItems: "flex-end",
-            },
-        },
-    },
-});
-
-const useStyles = makeStyles({});
+import theme from '../theme/theme';
 
 const HomePage = (props) => {
     const [smallScreen, setsmallScreen] = useState(false);
@@ -78,7 +25,6 @@ const HomePage = (props) => {
     };
 
     window.addEventListener("resize", handlesmallScreen);
-    const classes = useStyles();
     return (
         <ThemeProvider theme={theme}>
             <Header />
