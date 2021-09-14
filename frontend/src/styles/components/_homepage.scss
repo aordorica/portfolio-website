@@ -1,11 +1,16 @@
 @import "../../../node_modules/rfs/scss.scss";
 
-.profile {
-    height: 50%;
-    width: 50%;
-}
 .home, .section {
     height: calc(100vh - 76px);
+}
+
+.particle {
+    position: absolute;
+    height: 283%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .header_tag {

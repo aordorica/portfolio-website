@@ -7,7 +7,7 @@ const ProfileCard = () => (
     <Col className='my-md-auto py-0 p-5' md={6}>
         <Row>
             <Image
-                className='profile mx-auto px-0'
+                className='profile mx-auto px-0 h-75 w-75'
                 rounded
                 src={profile}
                 fluid

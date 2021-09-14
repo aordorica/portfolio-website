@@ -3,14 +3,14 @@ import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
-import WorkIcon from "@material-ui/icons/BusinessCenter";
+import WorkIcon from "@material-ui/icons/BusinessCenterOutlined";
 import { makeStyles } from "@material-ui/core/styles";
 import data from "../Data/experience.json";
 import ExperienceItem from "./ExperienceItem";
 import { SwipeableDrawer, Paper } from "@material-ui/core";
 
-export default ({ smallScreen, children }) => {
-    const display = smallScreen ? "flex" : "";
+export default ({ screenSize, children }) => {
+    const display = screenSize ? "flex" : "";
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -25,10 +25,10 @@ export default ({ smallScreen, children }) => {
             // height: 224
         },
         tabs: {
-            borderRight: smallScreen
+            borderRight: screenSize
                 ? `1px solid ${theme.palette.divider}`
                 : "",
-            borderBottom: smallScreen
+            borderBottom: screenSize
                 ? ""
                 : `1px solid ${theme.palette.divider}`,
         },
@@ -40,7 +40,7 @@ export default ({ smallScreen, children }) => {
     return (
         <Row
             className={"text-center tabs-container ".concat(
-                smallScreen ? "mx-auto align-content-center" : ""
+                screenSize ? "mx-auto align-content-center" : ""
             )}
         >
             <Col className='exp-content'>
@@ -68,7 +68,7 @@ export default ({ smallScreen, children }) => {
                             variant='scrollable'
                             scrollButtons='off'
                             orientation={
-                                smallScreen ? "vertical" : "horizontal"
+                                screenSize ? "vertical" : "horizontal"
                             }
                             value={value}
                         >

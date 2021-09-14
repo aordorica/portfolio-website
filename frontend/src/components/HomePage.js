@@ -9,6 +9,8 @@ import Experience from "./Experience";
 import ProfileCard from "./ProfileCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import theme from '../theme/theme';
+import About from "./About";
+import Particle from './Particle';
 
 const HomePage = (props) => {
     const [smallScreen, setsmallScreen] = useState(false);
@@ -27,14 +29,15 @@ const HomePage = (props) => {
     window.addEventListener("resize", handlesmallScreen);
     return (
         <ThemeProvider theme={theme}>
+            <Particle />
             <Header />
             <Container>
                 <Row className='align-content-center mx-1 my-0 home'>
-                    <Col className='align-self-center px-md-5 px-0'>
+                    <Col style={{zIndex: 101}} className='align-self-center px-md-5 px-0'>
                         <h3 className='header_tag'>Hi, my name is</h3>
                         <h1 className='header_name mb-0'>Alan Ordorica</h1>
                         <p className='header_sub'>
-                            I build solutions for the web.
+                            Software Engineer. Web Developer. Person
                         </p>
                         <p className='header_sum mb-0'>
                             I'm a Software Engineer from Oakland, California
@@ -42,7 +45,7 @@ const HomePage = (props) => {
                             people.
                         </p>
                     </Col>
-                    {smallScreen && <ProfileCard />}
+                    {/* {smallScreen && <ProfileCard />} */}
                     <Row className='p-5'>
                         <Col className='text-md-start text-center'>
                             <Button
@@ -50,7 +53,7 @@ const HomePage = (props) => {
                                 color='secondary'
                                 variant='outlined'
                             >
-                                get in touch
+                                see my work
                             </Button>
                         </Col>
                     </Row>
@@ -58,9 +61,11 @@ const HomePage = (props) => {
                 </Row>
             </Container>
             <Container fluid className='section' id='experience'>
-                <Experience smallScreen={smallScreen} />
+                <Experience screenSize={smallScreen} />
             </Container>
-            
+            <Container fluid className='section' id='about'>
+                <About screenSize={smallScreen} />
+            </Container>
         </ThemeProvider>
     );
 };
