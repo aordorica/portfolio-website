@@ -43,61 +43,63 @@ export default ({ screenSize, children }) => {
                 screenSize ? "mx-auto align-content-center" : ""
             )}
         >
-            <Col className='exp-content'>
-                <Row className='justify-content-center pb-2 pb-md-4'>
-                    <Col
-                        className='my-auto px-1 mx-0 text-md-end'
-                        md={1}
-                        xl={1}
-                    >
-                        <WorkIcon color='secondary' fontSize='large' />
-                    </Col>
-                    <Col className='text-md-start' md={4} xl={5}>
-                        <h2 className='m-0'>Work Experience</h2>
-                    </Col>
-                </Row>
-                <Row
-                    className={classes.root.concat(
-                        " justify-content-center tabs-content"
-                    )}
-                >
-                    <Col md={3} xl={3}>
-                        <Tabs
-                            className={classes.tabs}
-                            onChange={handleChange}
-                            variant='scrollable'
-                            scrollButtons='off'
-                            orientation={
-                                screenSize ? "vertical" : "horizontal"
-                            }
-                            value={value}
+            <Paper className='py-5' style={{zIndex: 101}}>
+                <Col className='exp-content'>
+                    <Row className='justify-content-center pb-2 pb-md-4'>
+                        <Col
+                            className='my-auto px-1 mx-0 text-md-end'
+                            md={1}
+                            xl={1}
                         >
-                            {data.roles.map((role, index) => (
-                                <Tab
-                                    className='py-0'
-                                    label={role.company}
-                                    key={index}
-                                />
-                            ))}
-                        </Tabs>
-                    </Col>
-
-                    <Col md={8} xl={6}>
-                        <ExperienceItem
-                            value={value}
-                            title={data.roles[value].title}
-                            company={data.roles[value].company}
-                            dates={data.roles[value].dates}
-                            description={data.roles[value].desc}
-                            responsibilities={
-                                data.roles[value].responsibilities
-                            }
-                            accomplishments={data.roles[value].accomplishments}
-                        />
-                    </Col>
-                </Row>
-                {children}
-            </Col>
+                            <WorkIcon color='secondary' fontSize='large' />
+                        </Col>
+                        <Col className='text-md-start' md={4} xl={5}>
+                            <h2 className='m-0'>Work Experience</h2>
+                        </Col>
+                    </Row>
+                    <Row
+                        className={classes.root.concat(
+                            " justify-content-center tabs-content"
+                        )}
+                    >
+                        <Col md={3} xl={3}>
+                            <Tabs
+                                className={classes.tabs}
+                                onChange={handleChange}
+                                variant='scrollable'
+                                scrollButtons='off'
+                                orientation={
+                                    screenSize ? "vertical" : "horizontal"
+                                }
+                                value={value}
+                            >
+                                {data.roles.map((role, index) => (
+                                    <Tab
+                                        className='py-0'
+                                        label={role.company}
+                                        key={index}
+                                    />
+                                ))}
+                            </Tabs>
+                        </Col>
+    
+                        <Col md={8} xl={6}>
+                            <ExperienceItem
+                                value={value}
+                                title={data.roles[value].title}
+                                company={data.roles[value].company}
+                                dates={data.roles[value].dates}
+                                description={data.roles[value].desc}
+                                responsibilities={
+                                    data.roles[value].responsibilities
+                                }
+                                accomplishments={data.roles[value].accomplishments}
+                            />
+                        </Col>
+                    </Row>
+                    {children}
+                </Col>
+            </Paper>
         </Row>
     );
 };
