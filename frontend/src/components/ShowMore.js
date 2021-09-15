@@ -1,6 +1,6 @@
 import React from "react";
-import IconButton from "@material-ui/core/IconButton";
-import SvgIcon from "@material-ui/core/SvgIcon";
+import IconButton from "@mui/material/IconButton";
+import SvgIcon from "@mui/material/SvgIcon";
 import Row from "react-bootstrap/Row";
 import { ReactComponent as DownArrowIcon } from "../../assets/images/scroll.svg";
 
@@ -15,7 +15,7 @@ export default function ShowMore() {
         });
     };
     return (
-        <IconButton onClick={handleNextSection} aria-label='Show More'>
+        <IconButton onClick={handleNextSection} aria-label='Show More' size="large">
             <SvgIcon
                 className='expandBtn bounce-top'
                 color='secondary'

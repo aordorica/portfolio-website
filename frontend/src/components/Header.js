@@ -3,7 +3,7 @@ import NavBarMenu from "./NavBarMenu";
 import { LinkContainer } from "react-router-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
 import favicon from "../../assets/images/logo_yellow.png";
-import SortSharpIcon from "@material-ui/icons/SortSharp";
+import SortSharpIcon from "@mui/icons-material/SortSharp";
 import { useState, useRef, useEffect } from "react";
 
 const Header = () => {

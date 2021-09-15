@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import AboutIcon from '@material-ui/icons/PersonOutlined';
+import AboutIcon from '@mui/icons-material/PersonOutlined';
 import data from '../Data/personInfo.json'
 import ProfileCard from './ProfileCard';
 
