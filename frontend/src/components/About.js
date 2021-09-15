@@ -2,12 +2,13 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import AboutIcon from '@material-ui/icons/PersonOutlined';
 import data from '../Data/personInfo.json'
+import ProfileCard from './ProfileCard';
+
 export default () => {
     const listEntries = Object.entries(data)
-    // console.log(listEntries);
     return (
         <div>
-            <Row style={{ border: "1px solid green" }}>
+            <Row>
                 <Col>
                     <AboutIcon color='secondary' fontSize='large' />
                 </Col>

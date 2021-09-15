@@ -8,9 +8,9 @@ import ShowMore from "./ShowMore";
 import Header from "./Header";
 import Experience from "./Experience";
 import "bootstrap/dist/css/bootstrap.min.css";
-import theme from '../theme/theme';
+import theme from "../theme/theme";
 import About from "./About";
-import Particle from './Particle';
+import Particle from "./Particle";
 
 const HomePage = (props) => {
     const [smallScreen, setsmallScreen] = useState(false);
@@ -31,11 +31,11 @@ const HomePage = (props) => {
         <ThemeProvider theme={theme}>
             <Particle />
             <Header />
-            <Container>
-                <Row className='align-content-center mx-1 my-0 home'>
+            <Container fluid className='d-flex flex-column'>
+                <Row className='align-content-center mx-auto my-0 home'>
                     <Col
-                        style={{ zIndex: 101 }}
                         className='align-self-center px-md-5 px-0'
+                        style={{ zIndex: 101 }}
                     >
                         <h3 className='header_tag'>Hi, my name is</h3>
                         <h1 className='header_name mb-0'>Alan Ordorica</h1>
@@ -48,7 +48,6 @@ const HomePage = (props) => {
                             people.
                         </p>
                     </Col>
-                    {/* {smallScreen && <ProfileCard />} */}
                     <Row className='p-5'>
                         <Col className='text-md-start text-center'>
                             <Button
@@ -60,7 +59,11 @@ const HomePage = (props) => {
                             </Button>
                         </Col>
                     </Row>
-                    <ShowMore />
+                    <Row className='flex-fill'>
+                        <Col className='d-flex flex-column h-100'>
+                            <ShowMore />
+                        </Col>
+                    </Row>
                 </Row>
                 <Container fluid className='section' id='about'>
                     <About screenSize={smallScreen} />

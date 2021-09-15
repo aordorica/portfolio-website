@@ -1,16 +1,23 @@
 @import "../../../node_modules/rfs/scss.scss";
 
 .home, .section {
-    height: calc(100vh - 76px);
+    height: calc(100vh - #{$nav-height});
+    // border: 1px solid aliceblue;
 }
 
 .particle {
     position: absolute;
-    height: 283%;
+    margin-top: $nav-height;
+    height: calc((100vh - #{$nav-height}) * 3);
     width: 100%;
     top: 0;
     left: 0;
     z-index: 0;
+    // border: 1px solid green
+}
+
+.overlay {
+    background: rgba($color: #ffff, $alpha: 0.05)
 }
 
 .header_tag {

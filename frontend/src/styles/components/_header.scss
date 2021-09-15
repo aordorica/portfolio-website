@@ -29,6 +29,9 @@ a.is-active {
 }
 
 .header {
+    height: $nav-height;
     padding-left: 3rem;
     background-color: $bg-main;
+    padding-bottom: 0;
+    // border: 1px solid red;
 }

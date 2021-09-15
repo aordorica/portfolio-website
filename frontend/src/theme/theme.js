@@ -2,13 +2,14 @@ import createTheme from "@material-ui/core/styles/createTheme";
 
 const primary = "#121212";
 const secondary = "#f5cb5c";
-const text_primary = '#fffff';
-const text_secondary = 'rgba(255, 255, 255, 0.7)';
+const text_primary = "#fffff";
+const text_secondary = "rgba(255, 255, 255, 0.7)";
 const overlay = "rgba(255,255,255, 0.05)";
 const secondary_light = "#f5cc5c15";
 
 export default createTheme({
     palette: {
+        type: "dark",
         primary: {
             main: primary,
         },
@@ -35,20 +36,19 @@ export default createTheme({
         MuiIconButton: {
             root: {
                 backfaceVisibility: false,
-                background: 'none',
-                transition: 'transform 0.5s',
-                '&:hover': {
-                    backgroundColor: 'none',
-                    transform: 'scale(1.3)',
-                    animation: 'none !important'
-                }
-            }
+                background: "none",
+                transition: "transform 0.5s",
+                "&:hover": {
+                    backgroundColor: "none",
+                    transform: "scale(1.3)",
+                    animation: "none !important",
+                },
+            },
         },
         MuiPaper: {
             root: {
-                color: text_secondary,
-                backgroundColor: overlay
-            }
+                backgroundColor: primary,
+            },
         },
         MuiTab: {
             root: {
@@ -68,8 +68,8 @@ export default createTheme({
         },
         MuiTabs: {
             root: {
-                paddingLeft: '3rem'
-            }
-        }
+                paddingLeft: "3rem",
+            },
+        },
     },
 });
