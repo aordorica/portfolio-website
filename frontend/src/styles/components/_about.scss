@@ -1,0 +1,17 @@
+.about-sum {
+    font-size: 1.8vh;
+}
+
+.about-profile {
+    text-align: center;
+    text-align: -moz-center;
+}
+
+.profile {
+    box-shadow: 15px -15px 0 0px $bg-main, 15px -15px 0 1px $secondary;
+    transition: box-shadow 0.2s;
+    border-radius: 1rem;
+}
+.profile:hover {
+    box-shadow: 10px -10px 0 0px $bg-main, 10px -10px 0 1px $secondary;
+}
