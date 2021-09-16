@@ -5,12 +5,14 @@ import Button from '@mui/material/Button';
 
 export const Intro = () => {
     return (
-        <div>
-            <Row className='align-content-center mx-auto my-0 home'>
-                <Col
-                    className='align-self-center px-md-5 px-0'
-                    style={{ zIndex: 101 }}
-                >
+        <Row className='mx-auto my-0 home'>
+            <Col
+                xl={6}
+                md={12}
+                className='align-self-center px-md-5 px-0 offset-xl-3'
+                style={{ zIndex: 101 }}
+            >
+                <Row>
                     <h3 className='header_tag'>Hi, my name is</h3>
                     <h1 className='header_name mb-0'>Alan Ordorica</h1>
                     <p className='header_sub'>
@@ -20,7 +22,7 @@ export const Intro = () => {
                         I'm a Software Engineer from Oakland, California with a
                         passion for creating technology to elevate people.
                     </p>
-                </Col>
+                </Row>
                 <Row className='p-5'>
                     <Col className='text-md-start text-center'>
                         <Button
@@ -37,7 +39,7 @@ export const Intro = () => {
                         <ShowMore />
                     </Col>
                 </Row>
-            </Row>
-        </div>
+            </Col>
+        </Row>
     );
 }

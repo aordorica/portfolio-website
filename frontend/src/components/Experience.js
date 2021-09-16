@@ -4,105 +4,70 @@ import { Row, Col } from "react-bootstrap";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import WorkIcon from "@mui/icons-material/BusinessCenterOutlined";
-import makeStyles from '@mui/styles/makeStyles';
 import data from "../Data/experience.json";
 import ExperienceItem from "./ExperienceItem";
-import { SwipeableDrawer, Paper } from "@mui/material";
 
 export default ({ screenSize, children }) => {
     const display = screenSize ? "flex" : "";
     const [value, setValue] = useState(0);
+    const tabBorder = screenSize ? "borderRight" : "borderBottom";
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
-    // Custom styling for Tabs Selector
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            flexGrow: 1,
-            display: display,
-            // height: 224
-        },
-        tabs: {
-            borderRight: screenSize
-                ? `1px solid ${theme.palette.divider}`
-                : "",
-            borderBottom: screenSize
-                ? ""
-                : `1px solid ${theme.palette.divider}`,
-        },
-    }));
-
-    // create class-based styling with useStyles method
-    const classes = useStyles();
-
     return (
-        <Row
-            className={"text-center tabs-container ".concat(
-                screenSize ? "mx-auto align-content-center" : ""
-            )}
-        >
-            <div className='py-5' style={{ zIndex: 101 }}>
-                <Col className='exp-content'>
-                    <Row className='justify-content-center pb-2 pb-md-4'>
-                        <Col
-                            className='my-auto px-1 mx-0 text-md-end'
-                            md={1}
-                            xl={1}
+        <Row className='h-75 w-100 align-content-center align-self-md-center justify-content-center'>
+            <Col className='h-75 my-auto py-auto' sx={{border: '2px solid red'}} md={12} xl={6}>
+                <Row className='justify-content-center text-center'>
+                    <Col className='text-md-end' md={2}>
+                        <WorkIcon color='secondary' sx={{fontSize: '4rem'}} />
+                    </Col>
+                    <Col className='text-md-start align-self-center' md={6}>
+                        <h2 className='title m-0'>Work Experience</h2>
+                    </Col>
+                </Row>
+                <Row className='justify-content-center pt-5'>
+                    <Col md={3}>
+                        <Tabs
+                            className='px-0'
+                            onChange={handleChange}
+                            variant='scrollable'
+                            scrollButtons={false}
+                            indicatorColor='secondary'
+                            orientation={screenSize ? "vertical" : "horizontal"}
+                            value={value}
+                            sx={{
+                                borderRight: 1,
+                                borderColor: "divider",
+                            }}
                         >
-                            <WorkIcon color='secondary' fontSize='large' />
-                        </Col>
-                        <Col className='text-md-start' md={4} xl={5}>
-                            <h2 className='m-0'>Work Experience</h2>
-                        </Col>
-                    </Row>
-                    <Row
-                        className={classes.root.concat(
-                            " justify-content-center tabs-content"
-                        )}
-                    >
-                        <Col md={3} xl={3}>
-                            <Tabs
-                                className={classes.tabs.concat(" px-0")}
-                                onChange={handleChange}
-                                variant='scrollable'
-                                scrollButtons={false}
-                                indicatorColor='secondary'
-                                orientation={
-                                    screenSize ? "vertical" : "horizontal"
-                                }
-                                value={value}
-                            >
-                                {data.roles.map((role, index) => (
-                                    <Tab
-                                        className='py-0'
-                                        label={role.company}
-                                        key={index}
-                                    />
-                                ))}
-                            </Tabs>
-                        </Col>
+                            {data.roles.map((role, index) => (
+                                <Tab
+                                    className='py-0'
+                                    label={role.company}
+                                    key={index}
+                                />
+                            ))}
+                        </Tabs>
+                    </Col>
 
-                        <Col md={8} xl={6}>
-                            <ExperienceItem
-                                value={value}
-                                title={data.roles[value].title}
-                                company={data.roles[value].company}
-                                dates={data.roles[value].dates}
-                                description={data.roles[value].desc}
-                                responsibilities={
-                                    data.roles[value].responsibilities
-                                }
-                                accomplishments={
-                                    data.roles[value].accomplishments
-                                }
-                            />
-                        </Col>
-                    </Row>
-                    {children}
-                </Col>
-            </div>
+                    <Col md={9} style={{border: '1px solid red'}}>
+                        <ExperienceItem
+                            value={value}
+                            title={data.roles[value].title}
+                            company={data.roles[value].company}
+                            dates={data.roles[value].dates}
+                            description={data.roles[value].desc}
+                            responsibilities={
+                                data.roles[value].responsibilities
+                            }
+                            accomplishments={data.roles[value].accomplishments}
+                        />
+                    </Col>
+                </Row>
+                {children}
+            </Col>
         </Row>
     );
 };

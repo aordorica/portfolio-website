@@ -21,10 +21,10 @@ const Header = () => {
     })
 
     return (
-        <Navbar ref={navRef} sticky='top' expand='md' id='header' className='pt-0'>
+        <Navbar ref={navRef} fixed='top' expand='md' id='header' className='pt-0'>
             <Container fluid className='header active shadow-lg'>
                 <LinkContainer to='/'>
-                    <Navbar.Brand className='px-md-0 px-2'>
+                    <Navbar.Brand className='px-md-0'>
                         <img src={favicon} alt='Logo' width='50' height='50' />
                     </Navbar.Brand>
                 </LinkContainer>

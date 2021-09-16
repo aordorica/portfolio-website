@@ -4,6 +4,6 @@ import Particles from 'react-particles-js';
 
 export default () => {
     return (
-        <Particles className='particle' params={config}></Particles>
+        <Particles className='particle' params={config} />
     )
 }

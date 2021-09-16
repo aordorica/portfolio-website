@@ -50,6 +50,7 @@ export default createTheme({
                 root: {
                     textTransform: "none",
                     fontWeight: 400,
+                    alignSelf: 'end',
                     "&.Mui-selected": {
                         color: secondary,
                         backgroundColor: secondary_light,

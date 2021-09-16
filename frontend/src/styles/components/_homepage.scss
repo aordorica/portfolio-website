@@ -1,23 +1,27 @@
 @import "../../../node_modules/rfs/scss.scss";
 
-.home, .section {
+#intro {
+    margin-top: $nav-height;
+} 
+.section {
     height: calc(100vh - #{$nav-height});
-    // border: 1px solid aliceblue;
+    // height: 100vh;
 }
 
 .particle {
     position: absolute;
     margin-top: $nav-height;
     height: calc((100vh - #{$nav-height}) * 3);
+    // height: 300vh;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 0;
-    // border: 1px solid green
+    border: 1px solid green
 }
 
-.overlay {
-    background: rgba($color: #ffff, $alpha: 0.05)
+.section .title {
+    font-size: 2.4rem
 }
 
 .header_tag {
@@ -38,7 +42,7 @@
 
 .header_sub {
     @include font-size(2.6rem);
-    color: $bg-text;
+    color: $text-dim;
     font-weight: bold;
 }
 
@@ -46,14 +50,6 @@
     @include font-size(1.1rem);
     line-height: 1.4em;
     font-weight: 300;
-}
-
-.profile {
-    box-shadow: 15px -15px 0 0px $bg-dark, 15px -15px 0 1px $secondary;
-    transition: box-shadow 0.2s;
-}
-.profile:hover {
-    box-shadow: 10px -10px 0 0px $bg-main, 10px -10px 0 1px $secondary;
 }
 
 .btn-group {
