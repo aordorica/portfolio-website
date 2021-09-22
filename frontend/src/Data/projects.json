@@ -1,9 +1,14 @@
-{
-    "TankGame": {
+[
+    {
         "name": "Tank Wars",
         "language": "Java",
         "category": "Games",
         "dateCreated": "2019",
+        "github": "https://github.com/aordorica/TankGame",
+        "tags": [
+            "game"
+        ],
+        "thumbnail": "/images/TankWars.jpg",
         "description": {
             "summary": "Space-themed tank shooter game",
             "tools": "",
@@ -14,11 +19,16 @@
             ]
         }
     },
-    "Dev-folio": {
+    {
         "name": "Portfolio Website",
         "language": "Javascript",
         "category": "Web App",
         "dateCreated": "2021",
+        "github": "https://github.com/aordorica/portfolio-website",
+        "tags": [
+            "web app, website"
+        ],
+        "thumbnail": "/images/dev-portfolio.png",
         "description": {
             "summary": "Dynamic portfolio website built using React.js and React-Router to showcase my projects and experience",
             "tools": [
@@ -38,11 +48,16 @@
             ]
         }
     },
-    "Expensify": {
-        "name": "Expensify Expense Tracker",
+    {
+        "name": "Expensify",
         "language": "Javascript",
         "category": "Web App",
         "dateCreated": "2021",
+        "github": "https://github.com/aordorica/expensify",
+        "tags": [
+            "web app"
+        ],
+        "thumbnail": "/images/expensify.png",
         "description": {
             "summary": "Scalable web app to create, edit, track and remove expenses utilizing user authentication via Firebase.",
             "tools": [
@@ -60,11 +75,37 @@
             ]
         }
     },
-    "Indecision": {
-        "name": "Indecision option selector",
+    {
+        "name": "Infinity Board",
+        "language": "Dart",
+        "category": "App",
+        "dateCreated": "2019",
+        "github": "https://github.com/aordorica/InfinityBoardController",
+        "tags": [
+            "App"
+        ],
+        "thumbnail": "/images/infinityBoard.jpg",
+        "description": {
+            "summary": "iOS and Android App built in Dart using Google's Flutter framework. Implements simple UI to Asynchronously control the Arduino powered Infinity Board via Bluetooth BLE communication.",
+            "tools": [
+                "Dart",
+                "Flutter",
+                "BLE",
+                "Arduino"
+            ],
+            "points": []
+        }
+    },
+    {
+        "name": "Indecision",
         "language": "Javascript",
         "category": "Web App",
         "dateCreated": "2020",
+        "github": "https://github.com/aordorica/indecision",
+        "tags": [
+            "web app"
+        ],
+        "thumbnail": "/images/indecision.png",
         "description": {
             "summary": "Fun decisions selecting web app for those times when you can't make up your mind, with a simple UI and state mamnagement via React Redux.",
             "tools": [
@@ -74,28 +115,71 @@
                 "Jest",
                 "Babel"
             ],
-            "points": [
-                "",
-                "",
-                ""
-            ]
+            "points": []
         }
     },
-    "Tipster": {
-        "name": "Tip Calculator",
+    {
+        "name": "WeatherBug",
+        "language": "Javascript",
+        "category": "Web App",
+        "dateCreated": "2020",
+        "github": "https://github.com/aordorica/weatherBug",
+        "tags": [
+            "web app"
+        ],
+        "thumbnail": "/images/weatherbug.png",
+        "description": {
+            "summary": "Weather API that uses the MapBox and weathersky API's to get real-time asynchronous weather data from searchable locations. Hosted on Node Express server",
+            "tools": [
+                "Babel",
+                "Express",
+                "Node.js",
+                "Webpack",
+                "Jest",
+                "Weathersky API",
+                "API",
+                "MapBox API"
+            ],
+            "points": []
+        }
+    },
+    {
+        "name": "Tasky",
+        "language": "Javascript",
+        "dateCreated": "2021",
+        "github": "https://github.com/aordorica/tasky",
+        "tags": [
+            "web app"
+        ],
+        "thumbnail":"https://via.placeholder.com/650",
+        "description": {
+            "summary": "Node.js REST API task manager application implemented using a MongoDB database and offering user authentication via JSON webtokens running on an Express server.",
+            "tools": [
+                "Babel",
+                "Express",
+                "Node.js",
+                "Webpack",
+                "Jest"
+            ],
+            "points": []
+        }
+    },
+    {
+        "name": "Tipster",
         "language": "Swift",
         "category": "iOS App",
         "dateCreated": "2019",
+        "github": "https://github.com/aordorica/tipCalculator",
+        "tags": [
+            "app"
+        ],
+        "thumbnail": "/images/tipster.png",
         "description": {
             "summary": "Tip calculator application built using Swift and Xcode storyboard and swiftUI",
             "tools": [
                 "Xcode"
             ],
-            "points": [
-                "",
-                "",
-                ""
-            ]
+            "points": []
         }
     }
-}
+]

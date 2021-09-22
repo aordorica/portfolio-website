@@ -8,12 +8,13 @@ import data from "../Data/experience.json";
 import ExperienceItem from "./ExperienceItem";
 
 export default ({ screenSize, children }) => {
-    const display = screenSize ? "flex" : "";
     const [value, setValue] = useState(0);
-    const tabBorder = screenSize ? "borderRight" : "borderBottom";
-
+    const borderRight = screenSize ? 1 : 0;
+    const borderBottom = screenSize ? 0 : 1;
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        console.log(borderRight);
+        console.log(!borderRight);
     };
 
     return (
@@ -38,7 +39,8 @@ export default ({ screenSize, children }) => {
                             orientation={screenSize ? "vertical" : "horizontal"}
                             value={value}
                             sx={{
-                                borderRight: 1,
+                                borderRight: borderRight,
+                                borderBottom: borderBottom,
                                 borderColor: "divider",
                             }}
                         >
@@ -52,7 +54,7 @@ export default ({ screenSize, children }) => {
                         </Tabs>
                     </Col>
 
-                    <Col md={9} style={{border: '1px solid red'}}>
+                    <Col md={9}>
                         <ExperienceItem
                             value={value}
                             title={data.roles[value].title}

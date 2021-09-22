@@ -29,7 +29,6 @@ const HomePage = (props) => {
             <Particle />
             <Header />
             <Container
-                // style={{border: '2px solid white'}}
                 fluid
                 className='section justify-content-center d-flex px-4 px-md-5'
                 id='intro'
@@ -40,15 +39,13 @@ const HomePage = (props) => {
                 fluid
                 className='section justify-content-center d-flex px-4 px-md-5'
                 id='about'
-                // style={{border: '1px solid white'}}
             >
-                <About screenSize={smallScreen}/>
+                <About screenSize={smallScreen} />
             </Container>
             <Container
                 fluid
                 className='section justify-content-center d-flex px-0 px-md-5'
                 id='experience'
-                style={{border: '2px solid white'}}
             >
                 <Experience screenSize={smallScreen} />
             </Container>

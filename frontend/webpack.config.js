@@ -22,12 +22,8 @@ module.exports = {
                 use: ["style-loader", "css-loader", "sass-loader"],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: "file-loader",
-                    },
-                ],
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
             },
             {
                 test: /\.svg$/,
@@ -40,6 +36,7 @@ module.exports = {
         static: {
             directory: path.resolve(__dirname, "public"),
         },
+        historyApiFallback: true,
         port: 8000,
     },
 };

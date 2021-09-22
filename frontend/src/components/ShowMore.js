@@ -2,7 +2,7 @@ import React from "react";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
 import Row from "react-bootstrap/Row";
-import { ReactComponent as DownArrowIcon } from "../../assets/images/down-arrow.svg";
+import { ReactComponent as DownArrowIcon } from "../../public/images/down-arrow.svg";
 
 export default function ShowMore() {
     const handleNextSection = () => {

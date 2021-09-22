@@ -2,7 +2,7 @@ import React from "react";
 import NavBarMenu from "./NavBarMenu";
 import { LinkContainer } from "react-router-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
-import favicon from "../../assets/images/logo_yellow.png";
+import favicon from "../../public/images/logo_yellow.png";
 import SortSharpIcon from "@mui/icons-material/SortSharp";
 import { useState, useRef, useEffect } from "react";
 
@@ -17,11 +17,11 @@ const Header = () => {
 
     const navRef = useRef(0)
     useEffect(() => {
-        console.log(navRef.current.offsetHeight);
+        // console.log(navRef.current.offsetHeight);
     })
 
     return (
-        <Navbar ref={navRef} fixed='top' expand='md' id='header' className='pt-0'>
+        <Navbar ref={navRef} fixed='top' expand='lg' id='header' className='pt-0'>
             <Container fluid className='header active shadow-lg'>
                 <LinkContainer to='/'>
                     <Navbar.Brand className='px-md-0'>
