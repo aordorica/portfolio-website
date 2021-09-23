@@ -11,7 +11,11 @@
         "thumbnail": "/images/TankWars.jpg",
         "description": {
             "summary": "Space-themed tank shooter game",
-            "tools": "",
+            "tools": [
+                "Java",
+                "Java AWT",
+                "IntelliJ"
+            ],
             "points": [
                 "Built using Java and Java AWS kit",
                 "Implemented Split-Screen and mini-map controls",
@@ -25,6 +29,7 @@
         "category": "Web App",
         "dateCreated": "2021",
         "github": "https://github.com/aordorica/portfolio-website",
+        "preview":"http://alanordorica.com",
         "tags": [
             "web app, website"
         ],
@@ -102,6 +107,7 @@
         "category": "Web App",
         "dateCreated": "2020",
         "github": "https://github.com/aordorica/indecision",
+        "preview": "http://indecision.alanordorica.com",
         "tags": [
             "web app"
         ],
@@ -124,6 +130,7 @@
         "category": "Web App",
         "dateCreated": "2020",
         "github": "https://github.com/aordorica/weatherBug",
+        "preview": "http://weatherbug.alanordorica.com",
         "tags": [
             "web app"
         ],
@@ -137,7 +144,6 @@
                 "Webpack",
                 "Jest",
                 "Weathersky API",
-                "API",
                 "MapBox API"
             ],
             "points": []
@@ -148,6 +154,7 @@
         "language": "Javascript",
         "dateCreated": "2021",
         "github": "https://github.com/aordorica/tasky",
+        "preview":"http://tasky.alanordorica.com",
         "tags": [
             "web app"
         ],

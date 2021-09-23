@@ -38,8 +38,8 @@ export default createTheme({
                     transition: "transform 0.5s",
                     "&:hover": {
                         backgroundColor: "none",
-                        transform: "scale(1.3)",
-                        animation: "none !important",
+                        // transform: "scale(1.3)",
+                        // animation: "none !important",
                         background: "none",
                     },
                 },
@@ -50,7 +50,7 @@ export default createTheme({
                 root: {
                     textTransform: "none",
                     fontWeight: 400,
-                    alignSelf: 'end',
+                    alignSelf: "end",
                     "&.Mui-selected": {
                         color: secondary,
                         backgroundColor: secondary_light,
@@ -66,7 +66,14 @@ export default createTheme({
                 root: {
                     paddingLeft: "3rem",
                 },
-            }
+            },
         },
+        MuiSvgIcon: {
+            styleOverrides: {
+                root: {
+                    color: secondary
+                }
+            }
+        }
     },
 });

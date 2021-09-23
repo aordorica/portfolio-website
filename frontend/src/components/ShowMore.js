@@ -15,7 +15,19 @@ export default function ShowMore() {
         });
     };
     return (
-        <IconButton onClick={handleNextSection} aria-label='Show More' size='small'>
+        <IconButton
+            onClick={handleNextSection}
+            aria-label='Show More'
+            size='small'
+            sx={{
+                ":hover": {
+                    "&:hover": {
+                        transform: "scale(1.3)",
+                        animation: "none !important",
+                    },
+                },
+            }}
+        >
             <SvgIcon
                 className='expandBtn bounce-top'
                 color='secondary'

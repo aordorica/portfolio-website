@@ -1,17 +1,19 @@
-import React from 'react';
+import React from "react";
+import projects from '../Data/projects.json'
 
-const PortfolioItem = ({
-    name,
-    language,
-    category,
-    dateCreated,
-    description,
-}) => (
-    <div>
-        <h1>{name}</h1>
-        <span>{language}</span>
-        {/* <p>This page is for the item with the id of {props.match.params.id}</p> */}
-    </div>
-);
+const PortfolioItem = (props) => {
+    const project = projects.find((entry) => {
+        if(entry.name === props.match.params.id) {
+            return entry
+        }
+    })
+    return (
+        <div>
+            <h1>{project.name}</h1>
+            <h3>{project.language}</h3>
+            <p>{project.github}</p>
+        </div>
+    );
+};
 
 export default PortfolioItem;

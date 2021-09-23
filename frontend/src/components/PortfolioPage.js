@@ -1,13 +1,16 @@
 import React from "react";
-import {useState} from 'react'
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 import projects from "../Data/projects.json";
-import { Paper, Card, useMediaQuery, CardMedia } from "@mui/material";
+import { Card, useMediaQuery } from "@mui/material";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "./Header";
-import ProjectItem from "./ProjectItem";
 import { ImageList, ImageListItem } from "@mui/material";
 import { useTheme } from "@mui/styles";
+import IconButton from "@mui/material/IconButton";
+import SvgIcon from "@mui/material/SvgIcon";
+import {ReactComponent as Github } from '../../public/images/github.svg'
+import {ReactComponent as ExternalLink } from '../../public/images/external.svg'
 
 function useWidth() {
     const theme = useTheme();
@@ -21,16 +24,47 @@ function useWidth() {
     );
 }
 
-const ProjectThumbnail = ({ name, github, description, language }) => {
+const ProjectThumbnail = ({ name, github, description, language, preview }) => {
+    const style = {
+        icon: {
+            transition: 'all 0.3s ease-in-out',
+            "&:hover": {
+                transform: "scale(1.3)",
+                animation: "none !important",
+            },
+        },
+    };
+    const history = useHistory();
+    const handleOnClick = () => history.push(`/portfolio/${name}`);
+    const tools = description.tools.join(', ')
     return (
-        <div>
-            <h3>{name}</h3>    
-            <p>{language}</p>
-            <Link to={`/portfolio/${name}`}>View Project</Link>
+        <div className='w-75'>
+            <Row className='my-4 text-center'>
+                <h3>{name}</h3>
+            </Row>
+            <Row className='my-4 proj__summary w-75 mx-auto'>
+                <p className='sum__language'>{language}</p>
+                <p className='sum__tools text-wrap'>{tools}</p>
+            </Row>
+            <Row className='text-center social__icons mx-auto'>
+                <Col>
+                    <IconButton sx={style.icon} target='_blank' href={preview} color='secondary' title='Live Preview'>
+                        <SvgIcon>
+                            <ExternalLink />
+                        </SvgIcon>
+                    </IconButton>
+                </Col>
+                <Col>
+                    <IconButton sx={style.icon} target='_blank' href={github} color='secondary' title='Github'>
+                        <SvgIcon>
+                            <Github />
+                        </SvgIcon>
+                    </IconButton>
+                </Col>
+            </Row>
         </div>
-    )   
-}
-
+    );
+};
 
 const PortfolioPage = () => {
     const cols = {
@@ -60,14 +94,14 @@ const PortfolioPage = () => {
                                 >
                                     <ImageListItem
                                         sx={{
-                                            transition: 'all 0.5s ease-in-out',
+                                            transition: "all 0.5s ease-in-out",
                                             ":hover": {
-                                                transform: 'scale(1.1)'
-                                            }
+                                                transform: "scale(1.1)",
+                                            },
                                         }}
                                     >
                                         <img
-                                            className="image__item"
+                                            className='image__item'
                                             src={project.thumbnail}
                                         />
                                         <div className='description__overlay'>
