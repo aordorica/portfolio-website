@@ -2,7 +2,6 @@ import React from 'react'
 import { Row, Col } from 'react-bootstrap';
 import ShowMore from './ShowMore';
 import Button from '@mui/material/Button';
-import logo from '../../public/Favicon.png'
 
 export const Intro = () => {
     return (
