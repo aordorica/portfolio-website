@@ -4,24 +4,12 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Container, Navbar } from "react-bootstrap";
 import favicon from "../../public/images/logo_yellow.png";
 import SortSharpIcon from "@mui/icons-material/SortSharp";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 const Header = () => {
-    const [open, setOpen] = useState(false)
-    const handleClose = () => {
-        setOpen(false)
-    }
-    const handleOpen = () => {
-        setOpen(!open)
-    }
-
-    const navRef = useRef(0)
-    useEffect(() => {
-        // console.log(navRef.current.offsetHeight);
-    })
-
+    
     return (
-        <Navbar ref={navRef} fixed='top' expand='lg' id='header' className='pt-0'>
+        <Navbar fixed='top' expand='lg' id='header' className='pt-0'>
             <Container fluid className='header active shadow-lg'>
                 <LinkContainer to='/'>
                     <Navbar.Brand className='px-md-0'>

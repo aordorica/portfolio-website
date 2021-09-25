@@ -4,7 +4,7 @@
   "description": "Node.js backend for dev-portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js --trace-warnings",
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

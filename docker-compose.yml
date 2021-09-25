@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  frontend:
+    build: frontend/
+    container_name: website_frontend
+    image: 
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: always
+  backend:
+    build: website_backend/
+    container_name: portfolio_backend
+    image: alexcaley/backend_website:1.1
+    ports:
+      - "127.0.0.1:4000:4000"
+    restart: always

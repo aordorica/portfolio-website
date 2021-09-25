@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-    mode: "development",
     entry: "./src/app.js",
     output: {
         path: path.resolve(__dirname, "public"),
@@ -30,13 +29,5 @@ module.exports = {
                 use: ["@svgr/webpack", "file-loader"],
             },
         ],
-    },
-    devtool: "eval-cheap-module-source-map",
-    devServer: {
-        static: {
-            directory: path.resolve(__dirname, "public"),
-        },
-        historyApiFallback: true,
-        port: 8000,
-    },
+    }
 };

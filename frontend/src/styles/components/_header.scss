@@ -10,7 +10,7 @@
 }
 
 .navbar-nav a {
-    transition: all 0.2s;
+    transition: transform 0.2s;
 }
 
 a.is-active {
@@ -33,5 +33,4 @@ a.is-active {
     padding-left: 3rem;
     background-color: $bg-main;
     padding-bottom: 0;
-    // border: 1px solid red;
 }
