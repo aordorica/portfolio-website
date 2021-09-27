@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use(
     cors({
-        origin: "https://www.alanordorica.com:8000",
+        origin: process.env.CORS_URL,
         methods: ["POST"],
     })
 );
