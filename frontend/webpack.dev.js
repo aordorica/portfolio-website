@@ -11,5 +11,6 @@ module.exports = merge(common, {
         },
         historyApiFallback: true,
         port: 8000,
+        allowedHosts: 'all'
     },
 });
