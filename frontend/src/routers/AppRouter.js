@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NotFoundPage from '../Components/NotFoundPage';
 import HomePage from '../Components/HomePage';
 import ContactPage from '../Components/ContactPage';
