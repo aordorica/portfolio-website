@@ -30,7 +30,7 @@ app.use(express.json())
 
 app.get("/", (req, res) => {
     res.send({
-        title: "About Me",
+        title: "GET email",
         name: "Alan Ordorica",
     });
 });
