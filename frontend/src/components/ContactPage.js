@@ -10,7 +10,7 @@ import validator from 'validator'
 import { ReactComponent as ContactIcon} from '../../public/images/contact.svg'
 import axios from 'axios'
 
-const servURL = "https://www.alanordorica.com/contact";
+const servURL = "http://localhost:3000/contact";
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -29,10 +29,9 @@ const ContactPage = () => {
 
     const sendPostRequest = async () => {
       try {
-        const res = await axios.post(servURL, formData)
+        await axios.post(servURL, formData)
         setmailSent(true)
         setFormData({ name: "", email: "", message: "" });
-        console.log(res.data);
       } catch (error) {
         console.error(error);
       }
