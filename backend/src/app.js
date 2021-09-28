@@ -9,7 +9,7 @@ app.use(express.json())
 // var whitelist = ["http://localhost:8000", "http://www.alanordorica.com", "https://www.alanordorica.com"];
 var whitelist = ["*"];
 var corsOptions = {
-    origin: "http://www.alanordorica.com/contact",
+    origin: "https://45.79.102.240:8000",
 };
 
 
