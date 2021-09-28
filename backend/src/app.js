@@ -18,16 +18,18 @@ app.use((req, res, next) => {
 
 const corsCheck = (req, res, next) => {
     if(req.header.origin === pubURL) {
-        log('Origin secured!')
+        console.log('Origin secured!')
         return next()
     } else {
-        log('Invalid origin!')
-        res.status(401)
+        console.log('Invalid origin!')
+        res.status(401).send({
+            error: 'Invalid origin!'
+        })
     }
 }
 
 
-app.post('/contact', corsCheck, (req, res) => {
+app.post('/contact', (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
