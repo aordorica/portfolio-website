@@ -102,7 +102,7 @@ const ContactPage = () => {
                                     <TextField
                                         color='secondary'
                                         label='Name'
-                                        variant='standard'
+                                        variant='filled'
                                         placeholder='Johnny Appleseed'
                                         fullWidth
                                         sx={{ marginBottom: "3vh", height: '8vh' }}
@@ -116,7 +116,7 @@ const ContactPage = () => {
                                     <TextField
                                         color='secondary'
                                         label='Email'
-                                        variant='standard'
+                                        variant='filled'
                                         placeholder='johnny@Appleseed.com'
                                         margin='normal'
                                         fullWidth
@@ -131,7 +131,7 @@ const ContactPage = () => {
                                     <TextField
                                         color='secondary'
                                         label='Message'
-                                        variant='standard'
+                                        variant='filled'
                                         placeholder='Hi Alan, Lets talk about something amazing shall we!'
                                         fullWidth
                                         multiline

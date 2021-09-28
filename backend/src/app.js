@@ -5,15 +5,28 @@ const cors = require('cors')
 const port = process.env.PORT || 3000
 
 app.use(express.json())
+app.use(allowCrossDomain)
+app.use(cors())
 
-// var whitelist = ["http://localhost:8000", "http://www.alanordorica.com", "https://www.alanordorica.com"];
-var whitelist = ["*"];
-var corsOptions = {
-    origin: "https://45.79.102.240:8000",
+const pubURL = "https://www.alanordorica.com";
+
+const allowCrossDomain = function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", pubURL);
+    res.header("Access-Control-Allow-Methods", "POST");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    next();
 };
 
+const corsCheck = (req, res, next) => {
+    if(req.header.origin === pubURL) {
+        next()
+    } else {
+        res.status(401)
+    }
+}
 
-app.post('/contact', cors(), (req, res) => {
+
+app.post('/contact', corsCheck(), (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
