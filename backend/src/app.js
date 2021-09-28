@@ -5,37 +5,38 @@ const cors = require('cors')
 const port = process.env.PORT || 3000
 
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 
-const pubURL = "https://www.alanordorica.com";
+// const pubURL = "https://www.alanordorica.com";
 
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", pubURL);
-    res.setHeader("Access-Control-Allow-Methods", 'POST');
-    res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
-    return next();
-})
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow-Origin", pubURL);
+//     res.setHeader("Access-Control-Allow-Methods", 'POST');
+//     res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
+//     return next();
+// })
 
-const corsCheck = (req, res, next) => {
-    if(req.header.origin === pubURL) {
-        console.log('Origin secured!')
-        return next()
-    } else {
-        console.log('Invalid origin!')
-        res.status(401).send({
-            error: 'Invalid origin!'
-        })
-    }
-}
+// const corsCheck = (req, res, next) => {
+//     if(req.header.origin === pubURL) {
+//         console.log('Origin secured!')
+//         return next()
+//     } else {
+//         console.log('Invalid origin!')
+//         res.status(401).send({
+//             error: 'Invalid origin!'
+//         })
+//     }
+// }
 
-app.get('/email', (req, res) => {
-    res.status(200).send({
-        status: 'Success! Heres your reward'
-    })
-})
+app.get("/", (req, res) => {
+    res.send({
+        title: "About Me",
+        name: "Alan Ordorica",
+    });
+});
 
 
-app.post('/email', (req, res) => {
+app.post('/', (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
