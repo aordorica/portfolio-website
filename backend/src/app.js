@@ -29,7 +29,7 @@ const corsCheck = (req, res, next) => {
 }
 
 
-app.post('/contact', (req, res) => {
+app.post('/email', (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
