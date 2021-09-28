@@ -3,28 +3,14 @@ const sendContactEmail = require('./emails/send')
 const app = express();
 const cors = require('cors')
 const port = process.env.PORT || 3000
-const path = require('path')
 
-
-// const root = path.join(__dirname, '../../frontend/public')
-// app.use(express.static(root))
 app.use(express.json())
 
-var whitelist = ["http://localhost:8000", "http://www.alanordorica.com", "https://www.alanordorica.com"];
+// var whitelist = ["http://localhost:8000", "http://www.alanordorica.com", "https://www.alanordorica.com"];
+var whitelist = ["*"];
 var corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    },
-    methods: ["POST"]
+    origin: "http://www.alanordorica.com",
 };
-
-// app.use('/*', (req, res) => {
-//     res.sendFile(path.join(root, 'index.html'))
-// })
 
 app.use(cors(corsOptions))
 
