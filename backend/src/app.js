@@ -5,17 +5,16 @@ const cors = require('cors')
 const port = process.env.PORT || 3000
 
 app.use(express.json())
-app.use(allowCrossDomain)
 app.use(cors())
 
 const pubURL = "https://www.alanordorica.com";
 
-const allowCrossDomain = function (req, res, next) {
+app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", pubURL);
     res.header("Access-Control-Allow-Methods", "POST");
     res.header("Access-Control-Allow-Headers", "Content-Type");
     next();
-};
+});
 
 const corsCheck = (req, res, next) => {
     if(req.header.origin === pubURL) {
