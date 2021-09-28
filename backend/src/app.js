@@ -9,17 +9,19 @@ app.use(cors())
 
 const pubURL = "https://www.alanordorica.com";
 
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", pubURL);
-    res.header("Access-Control-Allow-Methods", "POST");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
-    next();
-});
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", pubURL);
+    res.setHeader("Access-Control-Allow-Methods", 'POST');
+    res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
+    return next();
+})
 
 const corsCheck = (req, res, next) => {
     if(req.header.origin === pubURL) {
+        log('Origin secured!')
         return next()
     } else {
+        log('Invalid origin!')
         res.status(401)
     }
 }
