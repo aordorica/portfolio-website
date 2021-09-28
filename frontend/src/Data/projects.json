@@ -89,7 +89,7 @@
         "tags": [
             "App"
         ],
-        "thumbnail": "/images/infinityBoard.jpg",
+        "thumbnail": "/images/InfinityBoard.jpg",
         "description": {
             "summary": "iOS and Android App built in Dart using Google's Flutter framework. Implements simple UI to Asynchronously control the Arduino powered Infinity Board via Bluetooth BLE communication.",
             "tools": [
