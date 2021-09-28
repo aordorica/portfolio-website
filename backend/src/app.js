@@ -18,14 +18,14 @@ app.use(function (req, res, next) {
 
 const corsCheck = (req, res, next) => {
     if(req.header.origin === pubURL) {
-        next()
+        return next()
     } else {
         res.status(401)
     }
 }
 
 
-app.post('/contact', corsCheck(), (req, res) => {
+app.post('/contact', corsCheck, (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
