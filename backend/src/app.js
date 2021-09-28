@@ -12,9 +12,8 @@ var corsOptions = {
     origin: "http://www.alanordorica.com/contact",
 };
 
-app.use(cors())
 
-app.post('/contact', (req, res) => {
+app.post('/contact', cors(), (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
