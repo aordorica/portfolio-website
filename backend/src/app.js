@@ -28,6 +28,12 @@ const corsCheck = (req, res, next) => {
     }
 }
 
+app.get('/email', (req, res) => {
+    res.status(200).send({
+        status: 'Success! Heres your reward'
+    })
+})
+
 
 app.post('/email', (req, res) => {
     console.log('Gotten into the POST section');
