@@ -10,7 +10,7 @@ const path = require('path')
 // app.use(express.static(root))
 app.use(express.json())
 
-var whitelist = ["http://localhost:8000", "http://www.alanordorica.com:8000", "https://www.alanordorica.com:8000"];
+var whitelist = ["http://localhost:8000", "http://www.alanordorica.com", "https://www.alanordorica.com"];
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1 || !origin) {
