@@ -12,7 +12,7 @@ var corsOptions = {
     origin: "http://www.alanordorica.com/contact",
 };
 
-app.use(cors(corsOptions))
+app.use(cors())
 
 app.post('/contact', (req, res) => {
     console.log('Gotten into the POST section');
