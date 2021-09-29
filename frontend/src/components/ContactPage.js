@@ -10,7 +10,7 @@ import validator from 'validator'
 import { ReactComponent as ContactIcon} from '../../public/images/contact.svg'
 import axios from 'axios'
 
-const servURL = "https://www.alanordorica.com/email";
+const servURL = "https://www.alanordorica.com/api";
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({

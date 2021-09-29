@@ -28,15 +28,14 @@ app.use(express.json())
 //     }
 // }
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.send({
-        title: "GET email",
+        title: "GET /api",
         name: "Alan Ordorica",
     });
 });
 
-
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
     console.log('Gotten into the POST section');
     const emailData = { ...req.body }
     try {
