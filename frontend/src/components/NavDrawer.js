@@ -7,45 +7,65 @@ import {
     ListItemText,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { Link } from "react-router-dom";
+import NavLink from "react-router-dom/NavLink";
 import SortSharpIcon from "@mui/icons-material/SortSharp";
-
-const useStyles = makeStyles(() => ({
-    link: {
-        textDecoration: "none",
-        color: "blue",
-        fontSize: "20px",
-    },
-    icon: {
-        color: "white",
-    },
-}));
 
 function NavDrawer() {
     const [openDrawer, setOpenDrawer] = useState(false);
     return (
         <>
-            <Drawer anchor='right' open={openDrawer} onClose={() => setOpenDrawer(false)}>
-                <List>
-                    <ListItem onClick={() => setOpenDrawer(false)}>
+            <Drawer
+                anchor='right'
+                open={openDrawer}
+                onClose={() => setOpenDrawer(false)}
+            >
+                <List
+                    className='align-content-center nav-drawer'
+                    sx={{ top: "25%" }}
+                >
+                    <ListItem className='my-5' onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to='/' className='nav-item'>Home</Link>
+                            <NavLink
+                                to='/'
+                                activeClassName='is-active'
+                                exact={true}
+                                className='nav-item'
+                            >
+                                Home
+                            </NavLink>
                         </ListItemText>
                     </ListItem>
-                    <ListItem onClick={() => setOpenDrawer(false)}>
+                    <ListItem className='my-5' onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to='/Portfolio' className='nav-item'>Portfolio</Link>
+                            <NavLink
+                                to='/Portfolio'
+                                activeClassName='is-active'
+                                exact={true}
+                                className='nav-item'
+                            >
+                                Portfolio
+                            </NavLink>
                         </ListItemText>
                     </ListItem>
-                    <ListItem onClick={() => setOpenDrawer(false)}>
+                    <ListItem className='my-5' onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to='/contact' className='nav-item'>Contact</Link>
+                            <NavLink
+                                to='/contact'
+                                activeClassName='is-active'
+                                exact={true}
+                                className='nav-item'
+                            >
+                                Contact
+                            </NavLink>
                         </ListItemText>
                     </ListItem>
                 </List>
             </Drawer>
-            <IconButton className='menuIcon' onClick={() => setOpenDrawer(!openDrawer)}>
-                <SortSharpIcon />
+            <IconButton
+                className='menuIcon'
+                onClick={() => setOpenDrawer(!openDrawer)}
+            >
+                <SortSharpIcon sx={{ fontSize: "3rem" }} />
             </IconButton>
         </>
     );

@@ -22,8 +22,24 @@ export default createTheme({
         MuiPaper: {
             styleOverrides: {
                 root: {
-                    background: 'rgba(0,0,0,0.05)'
+                    background: '#191919',
                 },
+            }
+        },
+        MuiModal: {
+            styleOverrides: {
+                root: {
+                    backdropFilter: 'blur(5px)'
+                }
+            }
+        },
+        MuiBackdrop: {
+            styleOverrides: {
+                root: {
+                    filter: 'blur(5px)',
+                    WebkitFilter: 'blur(5px)',
+                    backdropFilter: 'blur(5px)'
+                }
             }
         },
         MuiButton: {
@@ -33,7 +49,6 @@ export default createTheme({
                     borderRadius: "10px",
                     "&:hover": {
                         borderRadius: 10,
-                        // boxShadow: "0 3px 5px 2px rgba(255, 255, 255, .1)",
                         transform: "translateY(10%)",
                     },
                 },

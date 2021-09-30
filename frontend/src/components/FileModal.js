@@ -32,7 +32,11 @@ const FileModal = () => {
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                     timeout: 800,
-                    
+                    classes: {
+                        root: {
+                            background: 'blue'
+                        }
+                    }
                 }}
             >
                 <Fade in={open}>

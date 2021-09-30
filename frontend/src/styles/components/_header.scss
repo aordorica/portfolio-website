@@ -1,5 +1,9 @@
 @import "../../../node_modules/rfs/scss.scss";
 
+.section {
+    margin-top: $nav-height;
+}
+
 .navbar-nav a:hover {
     color: $secondary-hover;
 }
@@ -24,6 +28,11 @@ a.is-active {
     border-radius: 1rem;
 }
 
+.nav .active {
+    color: $secondary;
+    border-bottom: solid 2px $secondary;
+}
+
 .menuIcon {
     transform: scale(-1, 1);
 }
@@ -33,11 +42,21 @@ nav a.nav-item {
     margin-right: 2rem;
 }
 
+.nav-drawer a.nav-item {
+    @include font-size(2rem);
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.nav a.nav-item {
+    @include font-size(1.2rem);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 a.nav-item {
-    @include font-size(1.3rem);
     font-weight: 500;
     text-decoration: none;
     color: white;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    transition: border 1s ease-in-out;
 }

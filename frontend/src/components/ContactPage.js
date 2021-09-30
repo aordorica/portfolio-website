@@ -92,7 +92,6 @@ const ContactPage = () => {
                     >
                         <Row
                             className='text-center text-lg-start'
-                            // style={{ marginLeft: "5vw", marginTop: "15vh" }}
                         >
                             <h2 className='title my-0'>
                                 Contact

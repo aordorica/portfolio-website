@@ -7,7 +7,7 @@ import {
     useTheme,
     useMediaQuery,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import DrawerComponent from "./NavDrawer";
 import favicon from "../../public/images/logo_yellow.png";
 
@@ -20,23 +20,38 @@ function Navbar() {
             <CssBaseline />
             <Toolbar>
                 <Typography variant='h4' className='flex-grow-1'>
-                    <Link to='/'>
+                    <NavLink to='/'>
                         <img src={favicon} alt='Logo' width='50' height='50' />
-                    </Link>
+                    </NavLink>
                 </Typography>
                 {isMobile ? (
                     <DrawerComponent />
                 ) : (
                     <div className='nav'>
-                        <Link to='/' className='nav-item'>
+                        <NavLink
+                            to='/'
+                            activeClassName='is-active'
+                            exact={true}
+                            className='nav-item'
+                        >
                             Home
-                        </Link>
-                        <Link to='/portfolio' className='nav-item'>
+                        </NavLink>
+                        <NavLink
+                            to='/portfolio'
+                            activeClassName='is-active'
+                            exact={true}
+                            className='nav-item'
+                        >
                             Portfolio
-                        </Link>
-                        <Link to='/contact' className='nav-item'>
+                        </NavLink>
+                        <NavLink
+                            to='/contact'
+                            activeClassName='is-active'
+                            exact={true}
+                            className='nav-item'
+                        >
                             Contact
-                        </Link>
+                        </NavLink>
                     </div>
                 )}
             </Toolbar>
