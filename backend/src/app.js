@@ -14,9 +14,9 @@ app.get("/api", (req, res) => {
     });
 });
 
-app.post("/api", (req, res) => {
-    console.log("Gotten into the POST section");
-    const emailData = { ...req.body };
+app.post('/api', (req, res) => {
+    console.log('Gotten into the POST section');
+    const emailData = { ...req.body }
     try {
         sendContactEmail({ ...req.body });
         console.log(emailData);

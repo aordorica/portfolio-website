@@ -11,7 +11,7 @@ import { ReactComponent as ContactIcon } from "../../public/images/contact.svg";
 import axios from "axios";
 import contactInfo from "../Data/personInfo.json";
 
-const servURL = "https://www.alanordorica.com/email";
+const servURL = "https://www.alanordorica.com/api";
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
