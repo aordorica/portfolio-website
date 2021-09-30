@@ -32,7 +32,7 @@ const HomePage = () => {
                 className='section justify-content-center d-flex px-4 px-md-5'
                 id='intro'
             >
-                <Intro />
+                <Intro screenSize={smallScreen} />
             </Container>
             <Container
                 fluid

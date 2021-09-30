@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import { useHistory } from "react-router";
 import FileModal from "./FileModal";
 
-export const Intro = () => {
+export const Intro = ({screenSize}) => {
     const history = useHistory();
     const showProjects = () => {
         history.push("/portfolio");
@@ -44,9 +44,11 @@ export const Intro = () => {
                         <FileModal />
                     </Col>
                 </Row>
-                <div className='scrollIcon'>
-                    <ShowMore />
-                </div>
+                {screenSize && (
+                    <div className='scrollIcon'>
+                        <ShowMore />
+                    </div>
+                )}
             </Col>
         </Row>
     );
