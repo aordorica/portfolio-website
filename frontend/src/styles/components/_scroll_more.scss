@@ -1,19 +1,9 @@
-.bounce {
+.scrollIcon {
     position: absolute;
-    bottom: 30px;
+    display: inline-block;
     left: 50%;
-    width: 60px;
-    height: 60px;
-    margin-left: -30px;
-    border: 2px solid #990000;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    -moz-animation: bounce 2s infinite;
-    -o-animation: bounce 2s infinite;
+    bottom: 2rem;
+    transform: translateX(-50%);
 }
 
 @-webkit-keyframes bounce {
@@ -85,6 +75,6 @@
 }
 
 svg.expandBtn {
-    font-size: $icon-small;
+    font-size: $icon-xl;
     border-radius: 50%;
 }

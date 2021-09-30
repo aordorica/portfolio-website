@@ -1,15 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Row, Col, Container } from "react-bootstrap";
-import Header from "./Header";
+import { Container } from "react-bootstrap";
+import NavBar from "./NavBar";
 import Experience from "./Experience";
 import "bootstrap/dist/css/bootstrap.min.css";
 import About from "./About";
 import Particle from "./Particle";
 import { Intro } from "./Intro";
-import { Paper } from "@mui/material";
 
-const HomePage = (props) => {
+const HomePage = () => {
     const [smallScreen, setsmallScreen] = useState(false);
 
     useEffect(() => {
@@ -27,7 +26,7 @@ const HomePage = (props) => {
     return (
         <div>
             <Particle />
-            <Header />
+            <NavBar/>
             <Container
                 fluid
                 className='section justify-content-center d-flex px-4 px-md-5'

@@ -4,13 +4,14 @@ import { useHistory } from "react-router";
 import projects from "../Data/projects.json";
 import { Card, useMediaQuery } from "@mui/material";
 import { Container, Row, Col } from "react-bootstrap";
-import Header from "./Header";
+import NavBar from "./NavBar";
 import { ImageList, ImageListItem } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
 import {ReactComponent as Github } from '../../public/images/github.svg'
 import {ReactComponent as ExternalLink } from '../../public/images/external.svg'
+import {ReactComponent as PortfolioIcon } from '../../public/images/layers.svg'
 
 function useWidth() {
     const theme = useTheme();
@@ -77,12 +78,23 @@ const PortfolioPage = () => {
 
     return (
         <div>
-            <Header />
+            <NavBar/>
             <Container fluid id='portfolio' className='section'>
                 <Row>
                     <Col className='align-content-center'>
-                        <Row className='text-center my-4'>
-                            <h3>Projects</h3>
+                        <Row className='text-center my-4 title'>
+                            <h2 className='title my-0'>
+                                Projects
+                                <SvgIcon
+                                    sx={{
+                                        fontSize: "1.5em",
+                                        marginLeft: "1.2rem",
+                                    }}
+                                    viewBox='0 0 800 800'
+                                >
+                                    <PortfolioIcon />
+                                </SvgIcon>
+                            </h2>
                         </Row>
                         <ImageList cols={cols[useWidth()]}>
                             {projects.map((project, index) => (
@@ -94,7 +106,8 @@ const PortfolioPage = () => {
                                 >
                                     <ImageListItem
                                         sx={{
-                                            transition: "transform 0.5s ease-in-out",
+                                            transition:
+                                                "transform 0.5s ease-in-out",
                                             ":hover": {
                                                 transform: "scale(1.1)",
                                             },

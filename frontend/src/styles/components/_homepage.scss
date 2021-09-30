@@ -1,8 +1,5 @@
 @import "../../../node_modules/rfs/scss.scss";
 
-#intro, #portfolio {
-    margin-top: $nav-height;
-} 
 .section {
     height: calc(100vh - #{$nav-height});
 }
@@ -18,7 +15,12 @@
 }
 
 .section .title {
-    font-size: 2.4rem
+    @include font-size(2.8rem);
+    color: white
+}
+
+.section .subTitle {
+    @include font-size(1.3rem)
 }
 
 .header_tag {

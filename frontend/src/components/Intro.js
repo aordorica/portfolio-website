@@ -1,9 +1,15 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap';
-import ShowMore from './ShowMore';
-import Button from '@mui/material/Button';
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import ShowMore from "./ShowMore";
+import Button from "@mui/material/Button";
+import { useHistory } from "react-router";
+import FileModal from "./FileModal";
 
 export const Intro = () => {
+    const history = useHistory();
+    const showProjects = () => {
+        history.push("/portfolio");
+    };
     return (
         <Row className='mx-auto my-0 home'>
             <Col
@@ -16,30 +22,32 @@ export const Intro = () => {
                     <h3 className='header_tag'>Hi, my name is</h3>
                     <h1 className='header_name mb-0'>Alan Ordorica</h1>
                     <p className='header_sub'>
-                        Software Engineer. Web Developer. Person
+                        Software Engineer. Web Developer.
                     </p>
                     <p className='header_sum mb-0'>
                         I'm a Software Engineer from Oakland, California with a
                         passion for creating technology to elevate people.
                     </p>
                 </Row>
-                <Row className='p-5'>
-                    <Col className='text-md-start text-center'>
+                <Row className='py-4 mx-2'>
+                    <Col className='text-center'>
                         <Button
-                            className='px-4 py-2 info_btn'
+                            className='py-2'
                             color='secondary'
-                            variant='outlined'
+                            variant='contained'
+                            onClick={showProjects}
                         >
                             see my work
                         </Button>
                     </Col>
-                </Row>
-                <Row className='flex-fill'>
-                    <Col className='d-flex flex-column h-100'>
-                        <ShowMore />
+                    <Col>
+                        <FileModal />
                     </Col>
                 </Row>
+                <div className='scrollIcon'>
+                    <ShowMore />
+                </div>
             </Col>
         </Row>
     );
-}
+};

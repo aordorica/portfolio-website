@@ -19,13 +19,31 @@ export default createTheme({
         divider: "rgba(255, 255, 255, 0.12)",
     },
     components: {
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    background: 'rgba(0,0,0,0.05)'
+                },
+            }
+        },
         MuiButton: {
             styleOverrides: {
                 outlined: {
                     transition: "transform 0.2s",
+                    borderRadius: "10px",
                     "&:hover": {
-                        borderRadius: 3,
-                        boxShadow: "0 3px 5px 2px rgba(255, 255, 255, .1)",
+                        borderRadius: 10,
+                        // boxShadow: "0 3px 5px 2px rgba(255, 255, 255, .1)",
+                        transform: "translateY(10%)",
+                    },
+                },
+                contained: {
+                    transition: "transform 0.2s",
+                    borderRadius: "10px",
+                    "&:hover": {
+                        borderRadius: 10,
+                        // boxShadow: "0 3px 5px 2px rgba(255, 255, 255, .1)",
+                        transform: "translateY(10%)",
                     },
                 },
             },
@@ -35,11 +53,9 @@ export default createTheme({
                 root: {
                     backfaceVisibility: false,
                     background: "none",
-                    transition: "transform 0.5s",
+                    transition: "transform 0.5s ease-in-out",
                     "&:hover": {
                         backgroundColor: "none",
-                        // transform: "scale(1.3)",
-                        // animation: "none !important",
                         background: "none",
                     },
                 },
@@ -71,9 +87,23 @@ export default createTheme({
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    color: secondary
-                }
-            }
-        }
+                    color: secondary,
+                },
+            },
+        },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "16px",
+                },
+            },
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "10px",
+                },
+            },
+        },
     },
 });

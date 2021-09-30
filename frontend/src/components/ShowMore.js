@@ -2,7 +2,7 @@ import React from "react";
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from "@mui/material/SvgIcon";
 import Row from "react-bootstrap/Row";
-import { ReactComponent as DownArrowIcon } from "../../public/images/down-arrow.svg";
+import { ReactComponent as DownArrowIcon } from "../../public/images/down_arrow.svg";
 
 export default function ShowMore() {
     const handleNextSection = () => {
@@ -28,11 +28,8 @@ export default function ShowMore() {
                 },
             }}
         >
-            <SvgIcon
+            <DownArrowIcon
                 className='expandBtn bounce-top'
-                color='secondary'
-                component={DownArrowIcon}
-                viewBox='0 0 600 476.6'
             />
         </IconButton>
     );
