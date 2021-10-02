@@ -1,23 +1,14 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import NotFoundPage from '../components/NotFoundPage';
-import HomePage from '../components/HomePage';
-import ContactPage from '../components/ContactPage';
-import ProjectItem from '../components/ProjectItem';
-import PortfolioPage from '../components/PortfolioPage';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import App from './App'
 
-const AppRouter = () => (
-  <BrowserRouter>
-    <div className='app-contain'>
-      <Switch>
-        <Route path="/" component={HomePage} exact={true} />
-        <Route path="/portfolio" component={PortfolioPage} exact={true} />
-        <Route path="/portfolio/:id" component={ProjectItem} />
-        <Route path="/contact" component={ContactPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
+
+const AppRouter = () => {
+    return (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    );
+};
 
 export default AppRouter;

@@ -36,6 +36,7 @@
     "core-js": "^3.18.0",
     "css-loader": "^6.2.0",
     "file-loader": "^6.2.0",
+    "framer-motion": "^4.1.17",
     "jquery": "^3.6.0",
     "node-sass": "^6.0.1",
     "normalize.css": "^8.0.1",

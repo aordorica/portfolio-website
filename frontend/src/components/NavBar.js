@@ -16,7 +16,7 @@ function Navbar() {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
-        <AppBar elevation={10} position='fixed'>
+        <AppBar elevation={10} position='sticky'>
             <CssBaseline />
             <Toolbar>
                 <Typography variant='h4' className='flex-grow-1'>

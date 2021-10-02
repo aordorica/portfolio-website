@@ -10,6 +10,8 @@ import validator from "validator";
 import { ReactComponent as ContactIcon } from "../../public/images/contact.svg";
 import axios from "axios";
 import contactInfo from "../Data/personInfo.json";
+import { motion } from "framer-motion";
+import variants from "../config/transition";
 
 const servURL = "https://www.alanordorica.com/api";
 
@@ -82,146 +84,155 @@ const ContactPage = () => {
     };
 
     return (
-        <div>
-            <NavBar/>
-            <Container fluid id='portfolio' className='section'>
-                <Row className='h-100 mx-1 mx-md-5'>
-                    <Col
-                        lg={4}
-                        className='pt-lg-5 align-self-center align-self-lg-start pt-lg-5 mt-lg-4'
-                    >
-                        <Row
-                            className='text-center text-lg-start'
+        <motion.div initial='initial' animate='enter' variants={variants}>
+            <div>
+                <NavBar />
+                <Container fluid id='contact'>
+                    <Row className='h-100 mx-1 mx-md-5'>
+                        <Col
+                            lg={4}
+                            className='pt-lg-5 align-self-center align-self-lg-start pt-lg-5 mt-lg-4'
                         >
-                            <h2 className='title my-0'>
-                                Contact
-                                <SvgIcon
-                                    sx={{
-                                        fontSize: "1.5em",
-                                        marginLeft: "1.2rem",
-                                    }}
-                                >
-                                    <ContactIcon />
-                                </SvgIcon>
-                            </h2>
-                            <p className='subTitle'>Let's Connect</p>
-                            {mailSent && (
-                                <h3 style={{ color: "green" }}>
-                                    Success! Mail Sent!
-                                </h3>
-                            )}
-                            {contactError && (
-                                <h3 style={{ color: "red" }}>
-                                    Please fill out all the fields correctly
-                                </h3>
-                            )}
-                        </Row>
-                    </Col>
-                    <Col lg={8} className='pb-5 align-self-center'>
-                        <Row className='mb-5'>
-                            <Col className=''>
-                                <Row>
-                                    <Col className='my-3 personInfo'>
-                                        <div>
-                                            <p>Contact details</p>
-                                            <h3>
-                                                <a href={`mailto: ${contactInfo.email}`}>
-                                                    {contactInfo.email}
-                                                </a>
-                                            </h3>
-                                            <h3>{contactInfo.phone}</h3>
-                                        </div>
-                                    </Col>
-                                    <Col className='my-3 personInfo'>
-                                        <div>
-                                            <p>Social Links</p>
-                                            <h3>
-                                                <a href={contactInfo.linkedin}>
-                                                    LinkedIn
-                                                </a>
-                                            </h3>
-                                            <h3>
-                                                <a href={contactInfo.github}>
-                                                    Github
-                                                </a>
-                                            </h3>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col className='my-3 personInfo'>
-                                        <div>
-                                            <p>Location</p>
-                                            <h3>{contactInfo.address}</h3>
-                                        </div>
-                                    </Col>
-                                    <Col className='my-3 personInfo'></Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                        <Row className='justify-content-md-start justify-content-center'>
-                            <Box
-                                component='form'
-                                onSubmit={onFormSubmit}
-                                // style={{ width: "75%" }}
-                            >
-                                <TextField
-                                    color='secondary'
-                                    label='Name'
-                                    variant='outlined'
-                                    placeholder='Johnny Appleseed'
-                                    fullWidth
-                                    sx={{ height: "8vh" }}
-                                    error={!validName}
-                                    onChange={onNameChange}
-                                    onBlur={handleNameEntry}
-                                    value={formData.name}
-                                    name='name'
-                                    helperText={error.name}
-                                />
-                                <TextField
-                                    color='secondary'
-                                    label='Email'
-                                    variant='outlined'
-                                    placeholder='johnny@Appleseed.com'
-                                    margin='normal'
-                                    fullWidth
-                                    sx={{ height: "8vh" }}
-                                    error={!validEmail}
-                                    onBlur={handleEmailValidation}
-                                    value={formData.email}
-                                    onChange={onEmailChange}
-                                    name='email'
-                                    helperText={error.email}
-                                />
-                                <TextField
-                                    color='secondary'
-                                    label='Message'
-                                    variant='outlined'
-                                    placeholder='Hi Alan, Lets talk about something amazing shall we!'
-                                    fullWidth
-                                    rows={4}
-                                    multiline
-                                    onChange={onMessageChange}
-                                    value={formData.message}
-                                    name='message'
-                                />
-                                <Button
-                                    variant='outlined'
-                                    color='secondary'
-                                    type='submit'
-                                    sx={{
-                                        marginTop: "5vh",
-                                    }}
-                                >
-                                    Submit
-                                </Button>
-                            </Box>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+                            <Row className='text-center text-lg-start'>
+                                <h2 className='title my-0'>
+                                    Contact
+                                    <SvgIcon
+                                        sx={{
+                                            fontSize: "1.5em",
+                                            marginLeft: "1.2rem",
+                                        }}
+                                    >
+                                        <ContactIcon />
+                                    </SvgIcon>
+                                </h2>
+                                <p className='subTitle'>Let's Connect</p>
+                                {mailSent && (
+                                    <h3 style={{ color: "green" }}>
+                                        Success! Mail Sent!
+                                    </h3>
+                                )}
+                                {contactError && (
+                                    <h3 style={{ color: "red" }}>
+                                        Please fill out all the fields correctly
+                                    </h3>
+                                )}
+                            </Row>
+                        </Col>
+                        <Col lg={8} className='pb-5 align-self-center'>
+                            <Row className='mb-5'>
+                                <Col className=''>
+                                    <Row>
+                                        <Col className='my-3 personInfo'>
+                                            <div>
+                                                <p>Contact details</p>
+                                                <h3>
+                                                    <a
+                                                        href={`mailto: ${contactInfo.email}`}
+                                                    >
+                                                        {contactInfo.email}
+                                                    </a>
+                                                </h3>
+                                                <h3>{contactInfo.phone}</h3>
+                                            </div>
+                                        </Col>
+                                        <Col className='my-3 personInfo'>
+                                            <div>
+                                                <p>Social Links</p>
+                                                <h3>
+                                                    <a
+                                                        href={
+                                                            contactInfo.linkedin
+                                                        }
+                                                    >
+                                                        LinkedIn
+                                                    </a>
+                                                </h3>
+                                                <h3>
+                                                    <a
+                                                        href={
+                                                            contactInfo.github
+                                                        }
+                                                    >
+                                                        Github
+                                                    </a>
+                                                </h3>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className='my-2 personInfo'>
+                                            <div>
+                                                <p>Location</p>
+                                                <h3>{contactInfo.address}</h3>
+                                            </div>
+                                        </Col>
+                                        <Col className='my-3 personInfo'></Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row className='justify-content-md-start justify-content-center'>
+                                <Box component='form' onSubmit={onFormSubmit}>
+                                    <TextField
+                                        color='secondary'
+                                        label='Name'
+                                        variant='outlined'
+                                        placeholder='Johnny Appleseed'
+                                        fullWidth
+                                        sx={{ height: "8vh" }}
+                                        error={!validName}
+                                        onChange={onNameChange}
+                                        onBlur={handleNameEntry}
+                                        value={formData.name}
+                                        name='name'
+                                        helperText={error.name}
+                                        className='mb-3'
+                                    />
+                                    <TextField
+                                        color='secondary'
+                                        label='Email'
+                                        variant='outlined'
+                                        placeholder='johnny@Appleseed.com'
+                                        margin='normal'
+                                        fullWidth
+                                        sx={{ height: "8vh" }}
+                                        error={!validEmail}
+                                        onBlur={handleEmailValidation}
+                                        value={formData.email}
+                                        onChange={onEmailChange}
+                                        name='email'
+                                        helperText={error.email}
+                                        className='mb-3'
+                                    />
+                                    <TextField
+                                        color='secondary'
+                                        label='Message'
+                                        variant='outlined'
+                                        placeholder='Hi Alan, Lets talk about something amazing shall we!'
+                                        fullWidth
+                                        rows={4}
+                                        multiline
+                                        onChange={onMessageChange}
+                                        value={formData.message}
+                                        name='message'
+                                        className='mt-3'
+                                    />
+                                    <Button
+                                        variant='outlined'
+                                        color='secondary'
+                                        type='submit'
+                                        sx={{
+                                            marginTop: "5vh",
+                                        }}
+                                    >
+                                        Submit
+                                    </Button>
+                                </Box>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        </motion.div>
     );
 };
 
