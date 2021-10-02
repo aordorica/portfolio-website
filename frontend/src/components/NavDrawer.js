@@ -7,7 +7,7 @@ import {
     ListItemText,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import NavLink from "react-router-dom/NavLink";
+import {NavLink} from "react-router-dom";
 import SortSharpIcon from "@mui/icons-material/SortSharp";
 
 function NavDrawer() {

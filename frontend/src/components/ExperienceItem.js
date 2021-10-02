@@ -16,14 +16,14 @@ export default function ExperienceItem({
     return (
         <Row className='expItem pt-4 pt-md-0'>
             <Col>
-                <Row>
-                    <h3 className='headline px-3 mx-3'>
+                <Row className='mx-0'>
+                    <h3 className='headline px-3'>
                         <span className='work-title'>{title}</span>
                         <span className='company'> @ {company}</span>
                     </h3>
-                    <p className='dates mx-3 px-3'>{dates}</p>
+                    <p className='dates px-3'>{dates}</p>
                 </Row>
-                <Row className='px-4'>
+                <Row className='px-3'>
                     <ul>
                         {responsibilities.map((point, index) => (
                             <li key={index}>{point}</li>

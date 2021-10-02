@@ -1,9 +1,12 @@
+@import "../../../node_modules/rfs/scss.scss";
+
 .about-sum {
-    font-size: 1.8vh;
+    @include font-size(1.2rem);
 }
 
 .about-profile {
     text-align: center;
+    text-align: -webkit-center;
     text-align: -moz-center;
 }
 

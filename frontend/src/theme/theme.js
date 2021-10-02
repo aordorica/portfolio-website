@@ -22,25 +22,25 @@ export default createTheme({
         MuiPaper: {
             styleOverrides: {
                 root: {
-                    background: '#191919',
+                    background: "#191919",
                 },
-            }
+            },
         },
         MuiModal: {
             styleOverrides: {
                 root: {
-                    backdropFilter: 'blur(5px)'
-                }
-            }
+                    backdropFilter: "blur(5px)",
+                },
+            },
         },
         MuiBackdrop: {
             styleOverrides: {
                 root: {
-                    filter: 'blur(5px)',
-                    WebkitFilter: 'blur(5px)',
-                    backdropFilter: 'blur(5px)'
-                }
-            }
+                    filter: "blur(5px)",
+                    WebkitFilter: "blur(5px)",
+                    backdropFilter: "blur(5px)",
+                },
+            },
         },
         MuiButton: {
             styleOverrides: {
@@ -118,6 +118,21 @@ export default createTheme({
                 root: {
                     borderRadius: "10px",
                 },
+            },
+        },
+        MuiCollapse: {
+            styleOverrides: {
+                root: {
+                    maskImage:
+                        "linear-gradient(to bottom, black 50%, transparent 100%)",
+                    WebkitMaskImage:
+                        "linear-gradient(to bottom, black 50%, transparent 100%)",
+                },
+                entered: {
+                    maskImage: 'none',
+                    WebkitMaskImage: 'none',
+                    transition: 'all 2s'
+                }
             },
         },
     },

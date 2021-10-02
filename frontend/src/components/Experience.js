@@ -68,7 +68,6 @@ export default ({ screenSize, children }) => {
                         />
                     </Col>
                 </Row>
-                {children}
             </Col>
         </Row>
     );

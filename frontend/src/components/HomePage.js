@@ -38,6 +38,7 @@ const HomePage = () => {
                 fluid
                 className='section justify-content-center d-flex px-4 px-md-5'
                 id='about'
+                style={{border: 'solid 1px white'}}
             >
                 <About screenSize={smallScreen} />
             </Container>
@@ -45,6 +46,9 @@ const HomePage = () => {
                 fluid
                 className='section justify-content-center d-flex px-0 px-md-5'
                 id='experience'
+                style={{
+                    border: '1px solid white'
+                }}
             >
                 <Experience screenSize={smallScreen} />
             </Container>
