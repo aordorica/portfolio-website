@@ -11,8 +11,9 @@
                 ""
             ],
             "responsibilities": [
-                "Collaborated with a small team of student designers to spearhead a new brand and design system for Scout’s inaugural student-led design conference at Northeastern",
-                "Developed, unit tested and deployed web, mobile, and native applications using various languages and frameworks including Java, JavaScript, Node.js, React, Express, Flutter and other frameworks and tools"
+                "Utilized languages, frameworks, and tools, such as Java, JavaScript, Node.js, React, Express, and Flutter to develop, test, and implement web, mobile, and native applications.",
+                "Successfully developed multiple backend and frontend systems.",
+                "Deployed specific programming technologies, developed programming codes, fixed technical errors, and processed data."
             ]
         },
         {
@@ -31,14 +32,14 @@
             ]
         },
         {
-            "title": "Data Intern",
+            "title": "Data Analyst",
             "pseudo": "Data Analytics Intern",
             "company": "CARECEN",
             "desc": "",
             "dates": "Jun 2019 - Aug 2019",
             "accomplishments": [],
             "responsibilities": [
-                "Designed and built statistical analysis models to create a predictive analysis of resources and impactful visual models",
+                "Designed and built statistical analysis models to create a predictive analysis of resources and impactful visual models.",
                 "Collected and cleansed and analyzed large sets of structured and unstructured data using R data cleaning techniques."
             ]
         },
@@ -46,12 +47,12 @@
             "title": "Genius",
             "pseudo": "Mac and iOS Genius",
             "company": "Apple",
-            "desc": "Apple Certified Mac and iOS Technician (ACMT) with over 4+ years technical IT support experience",
+            "desc": "Apple Certified Mac and iOS Technician (ACMT) with over 4+ years technical IT support experience.",
             "dates": "Oct 2017 - Jun 2021",
             "accomplishments": [],
             "responsibilities": [
                 "Trained and mentored over 30+ technicians in diagnosing, troubleshooting and repairing all Mac and iOS devices.",
-                "Boosted store customer satisfaction ratings by 20% by increasing team technical skill proficiency and mentorship"
+                "Boosted store customer satisfaction ratings by 20% by increasing team technical skill proficiency and by leveraging existing workflows."
             ]
         },
         {
@@ -61,7 +62,11 @@
             "desc": "",
             "dates": "Aug 2011 - Oct 2017",
             "accomplishments": [],
-            "responsibilities": []
+            "responsibilities": [
+                "Responsible for the overall direction, coordination, and evaluation of several departments as well as overall store sales success.",
+                "Managed, supervised and provided leadership to multiple department associates.",
+                "Interacted with vendors, prepared purchase orders, tracked status of requisitions and orders."
+            ]
         }
     ]
 }
