@@ -15,7 +15,7 @@ const HomePage = () => {
         handlesmallScreen();
     });
     const handlesmallScreen = () => {
-        if (window.innerWidth < 700) {
+        if (window.innerWidth < 768) {
             setsmallScreen(false);
         } else {
             setsmallScreen(true);

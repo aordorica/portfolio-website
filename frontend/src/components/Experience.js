@@ -19,12 +19,12 @@ export default ({ screenSize, children }) => {
 
     return (
         <Row className='h-75 w-100 align-content-center align-self-md-center justify-content-center'>
-            <Col className='h-75 my-auto py-auto' sx={{border: '2px solid red'}} md={12} xl={6}>
+            <Col className='h-75 my-auto py-auto' sx={{border: '2px solid red'}} sm={12} md={10} xl={8}>
                 <Row className='justify-content-center text-center'>
                     <Col className='text-md-end' md={2}>
                         <WorkIcon color='secondary' sx={{fontSize: '4rem'}} />
                     </Col>
-                    <Col className='text-md-start align-self-center' md={6}>
+                    <Col className='text-md-start align-self-center' md={8}>
                         <h2 className='title m-0'>Work Experience</h2>
                     </Col>
                 </Row>

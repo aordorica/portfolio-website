@@ -6,5 +6,6 @@
     "github": "https://github.com/aordorica",
     "linkedin": "https://www.linkedin.com/in/alanodev/",
     "portfolio": "alanordorica.com",
-    "about": "Hi, my name is Alan Ordorica, a Bay Area native and lover of all things technology! I developed an interest in technology in my early days of high school when I built my first 'website', if you could call it that. From there developed a passion for software and recently recived my degree in Computer Engineering from San Francisco State University. Since then I have had the privilege of working with amazing people at Apple's CI Tech team in SWE! I am currently pursuing a career in Software Engineering and am open to new opportunities, where I can showcase my skillset in both back-end and front-end services."
+    "about": "Hi, my name is Alan Ordorica, a Bay Area native and lover of all things technology! I developed an interest in technology in my early days of high school when I built my first 'website', if you could call it that. From there developed a passion for software and recently recived my degree in Computer Engineering from San Francisco State University. Since then I have had the privilege of working with amazing people at Apple's CI Tech team and I am currently pursuing a career in Software Engineering.",
+    "skills": ["React", "Flutter", "Swift", "Node.js", "Docker", "Python", "Java", "Ansible"]
 }

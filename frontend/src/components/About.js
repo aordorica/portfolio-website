@@ -3,25 +3,15 @@ import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import data from "../Data/personInfo.json";
 import profile from "../../public/images/profile.jpg";
-import { IconButton, Box, Collapse, Button, CardMedia } from "@mui/material";
+import { Box, Collapse, Button, CardMedia } from "@mui/material";
 import AboutIcon from "@mui/icons-material/PersonOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { styled } from "@mui/material/styles";
 
 export default ({ screenSize }) => {
     const [expanded, setExpanded] = useState(false);
     const handleCollapse = () => {
         setExpanded(!expanded);
     };
-
-    const aboutWidth = () => {
-        const screenWidth = window.innerWidth
-        if(screenWidth > 800 && screenWidth < 1440) {
-            return '100%'
-        } else {
-            return '70vw'
-        }
-    }
 
     const CollapsedSum = () => (
         <div>
@@ -57,7 +47,13 @@ export default ({ screenSize }) => {
 
     return (
         <Row className='about align-content-center justify-content-center'>
-            <Col xl={8} style={{ zIndex: 101, width: window.innerWidth > 1920 ? '70%' : '100%' }}>
+            <Col
+                xl={8}
+                style={{
+                    zIndex: 101,
+                    width: window.innerWidth > 1920 ? "70%" : "100%",
+                }}
+            >
                 <Row className='justify-content-center text-center my-auto'>
                     <Col className='about_icon p-0 text-md-end' md={2}>
                         <AboutIcon
@@ -81,9 +77,19 @@ export default ({ screenSize }) => {
                             style={{ maxWidth: screenSize ? "25vh" : "20vh" }}
                         />
                     </Col>
-                    <Col xl={6} className='about-sum text-center align-self-center'>
+                    <Col
+                        xl={6}
+                        className='about-sum text-center align-self-center'
+                    >
                         {screenSize ? <ExpandSum /> : <CollapsedSum />}
                     </Col>
+                    <Row>
+                        {data.skills.map((item) => {
+                            <Col sm={6}>
+                                <p>{item}</p>
+                            </Col>;
+                        })}
+                    </Row>
                 </Row>
             </Col>
         </Row>

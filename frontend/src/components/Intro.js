@@ -13,9 +13,10 @@ export const Intro = ({screenSize}) => {
     return (
         <Row className='mx-auto my-0 home'>
             <Col
+                lg={9}
                 xl={6}
                 md={12}
-                className='align-self-center px-md-5 px-0 offset-xl-3'
+                className='align-self-center px-md-5 px-0 offset-lg-2 offset-xl-3'
                 style={{ zIndex: 101 }}
             >
                 <Row>
