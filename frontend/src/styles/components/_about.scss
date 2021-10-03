@@ -19,14 +19,8 @@
     box-shadow: 10px -10px 0 0px $bg-main, 10px -10px 0 1px $secondary;
 }
 
-#about .aboutItem li::marker {
-    content: none
-    // content: "›";
-    // color: $secondary;
-    // font-size: 1.8rem;
-}
-
 #about li {
+    list-style-type: none;
     @include font-size(1rem);
     font-weight: 200;
     line-height: 1.7rem;
