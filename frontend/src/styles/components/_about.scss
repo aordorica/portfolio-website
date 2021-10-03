@@ -18,3 +18,26 @@
 .profile:hover {
     box-shadow: 10px -10px 0 0px $bg-main, 10px -10px 0 1px $secondary;
 }
+
+#about .aboutItem li::marker {
+    content: none
+    // content: "›";
+    // color: $secondary;
+    // font-size: 1.8rem;
+}
+
+#about li {
+    @include font-size(1rem);
+    font-weight: 200;
+    line-height: 1.7rem;
+    padding-bottom: 1rem;
+    padding-left: 27px;
+    position: relative;
+    &::before {
+        content: "›";
+        font-size: 2.3em;
+        color: $secondary;
+        position: absolute;
+        left: 0px;
+    }
+}

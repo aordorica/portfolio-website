@@ -16,13 +16,14 @@ export default ({ screenSize }) => {
     const CollapsedSum = () => (
         <div>
             <Box className='text-start'>
-                <Collapse in={expanded} collapsedSize={70}>
+                <Collapse timeout={1000} in={expanded} collapsedSize={70}>
                     {data.about}
                 </Collapse>
             </Box>
             <Button
                 size='large'
                 onClick={handleCollapse}
+                sx={{ color: "#f5cb5c" }}
                 endIcon={
                     <ExpandMoreIcon
                         sx={{
@@ -34,16 +35,12 @@ export default ({ screenSize }) => {
                     />
                 }
             >
-                Read More
+                <a>Read {expanded ? "Less" : "More"}</a>
             </Button>
         </div>
     );
 
-    const ExpandSum = () => (
-        <div className='text-start'>
-            {data.about}
-        </div>
-    )
+    const ExpandSum = () => <div className='text-start'>{data.about}</div>;
 
     return (
         <Row className='about align-content-center justify-content-center'>
@@ -81,15 +78,17 @@ export default ({ screenSize }) => {
                         xl={6}
                         className='about-sum text-center align-self-center'
                     >
-                        {screenSize ? <ExpandSum /> : <CollapsedSum />}
+                        <Row>
+                            {screenSize ? <ExpandSum /> : <CollapsedSum />}
+                        </Row>
+                        <Row className='ms-5 ps-2'>
+                            {data.skills.map((skill, index) => (
+                                <Col className='aboutItem text-start' key={index} sm={4} xs={6}>
+                                    <li>{skill}</li>
+                                </Col>
+                            ))}
+                        </Row>
                     </Col>
-                    <Row>
-                        {data.skills.map((item) => {
-                            <Col sm={6}>
-                                <p>{item}</p>
-                            </Col>;
-                        })}
-                    </Row>
                 </Row>
             </Col>
         </Row>
