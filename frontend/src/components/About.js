@@ -10,6 +10,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default ({ screenSize }) => {
     const [expanded, setExpanded] = useState(false);
     const handleCollapse = () => {
+        // document.documentElement.style.setProperty("height")
         setExpanded(!expanded);
     };
 

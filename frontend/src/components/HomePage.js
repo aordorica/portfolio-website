@@ -41,6 +41,9 @@ const HomePage = () => {
                     fluid
                     className='section justify-content-center d-flex px-4 px-md-5'
                     id='about'
+                    style={{
+                        height: smallScreen ? '' : '100%'
+                    }}
                 >
                     <About screenSize={smallScreen} />
                 </Container>
