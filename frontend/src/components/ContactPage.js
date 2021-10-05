@@ -132,7 +132,13 @@ const ContactPage = () => {
                                                         {contactInfo.email}
                                                     </a>
                                                 </h3>
-                                                <h3>{contactInfo.phone}</h3>
+                                                <h3>
+                                                    <a
+                                                        href={`tel: +1${contactInfo.phone}`}
+                                                    >
+                                                        (510) 314-9967
+                                                    </a>
+                                                </h3>
                                             </div>
                                         </Col>
                                         <Col className='my-3 personInfo'>
