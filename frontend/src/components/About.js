@@ -82,7 +82,7 @@ export default ({ screenSize }) => {
                         <Row>
                             {screenSize ? <ExpandSum /> : <CollapsedSum />}
                         </Row>
-                        <Row className='ms-5 ps-2'>
+                        <Row className='ms-5 mt-3 ps-2'>
                             {data.skills.map((skill, index) => (
                                 <Col className='aboutItem text-start' key={index} sm={4} xs={6}>
                                     <li>{skill}</li>

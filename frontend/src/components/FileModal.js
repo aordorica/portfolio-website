@@ -34,7 +34,7 @@ const FileModal = () => {
                     timeout: 800,
                     classes: {
                         root: {
-                            background: 'blue'
+                            // background: 'blue'
                         }
                     }
                 }}
@@ -53,6 +53,9 @@ const FileModal = () => {
                             boxShadow: 24,
                             borderRadius: "16px",
                             p: 4,
+                            ":focus": {
+                                outline: 'none'
+                            }
                         }}
                     >
                         <Row className='text-center align-content-center h-100'>
