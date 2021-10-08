@@ -35,8 +35,8 @@ const FileModal = () => {
                     classes: {
                         root: {
                             // background: 'blue'
-                        }
-                    }
+                        },
+                    },
                 }}
             >
                 <Fade in={open}>
@@ -54,8 +54,8 @@ const FileModal = () => {
                             borderRadius: "16px",
                             p: 4,
                             ":focus": {
-                                outline: 'none'
-                            }
+                                outline: "none",
+                            },
                         }}
                     >
                         <Row className='text-center align-content-center h-100'>
@@ -64,7 +64,7 @@ const FileModal = () => {
                                     size='large'
                                     variant='outlined'
                                     color='secondary'
-                                    href='https://docs.google.com/document/d/19XWiWpNBLXXYKnQzJTQc_J6e5RpHsyJ9/edit?usp=sharing&ouid=105452074128000047162&rtpof=true&sd=true'
+                                    href='https://docs.google.com/document/d/1yCtshAo_0wmego-jqL6t6xru71ykBPgG/edit?usp=sharing&ouid=105452074128000047162&rtpof=true&sd=true'
                                 >
                                     docx
                                 </Button>
@@ -74,7 +74,7 @@ const FileModal = () => {
                                     size='large'
                                     variant='outlined'
                                     color='secondary'
-                                    href='https://drive.google.com/file/d/1m3VNLAvFBdrbulo6oEJ_X4pn_icokIWT/view?usp=sharing'
+                                    href='https://drive.google.com/file/d/1Dw26WBQ2JOUNFsWy742aDlmSvlwdh6zU/view?usp=sharing'
                                 >
                                     pdf
                                 </Button>
